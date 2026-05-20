@@ -45,7 +45,7 @@ When you run the command, you will see a main menu:
 antigravity-cli Ecosystem
 =========================
 
-? Select an action:
+> Select an action:
 ❯ 📦 Browse & Install Selected (Explore all 151 plugins)
   🔍 Search & Install Selected (Find plugins by keyword)
   ✅ Installed Plugins (Manage currently installed plugins)
@@ -57,7 +57,7 @@ antigravity-cli Ecosystem
 If you select "Search & Install Selected", the CLI opens a fuzzy-search prompt. Type a keyword to find relevant skills.
 
 ```text
-? Search plugins: debug
+> Search plugins: debug
 
 [x] systematic-debugging (systematic-debugging)
     Use when encountering any bug, test failure, or unexpected behavior...
@@ -79,7 +79,7 @@ When you start an `antigravity-cli` agent, it automatically scans these two dire
 Select "Installed Plugins" from the main menu to view what is currently active.
 
 ```text
-? Installed Plugins (Select a plugin to manage):
+> Installed Plugins (Select a plugin to manage):
 ❯ 🗑️ Uninstall Selected Plugins
   👤 [Global] Avoid AI Writing (avoid-ai-writing)
   📂 [Local] Systematic Debugging (systematic-debugging)
@@ -94,13 +94,6 @@ The CLI includes a `safeResolve` boundary layer that blocks malicious file opera
 
 A built-in validator checks every skill before installation to ensure the metadata formats correctly and the instructions are written in English.
 
-## Featured Skills
-
-| Skill Name | ID | Core Focus |
-| :--- | :--- | :--- |
-| **Superpowers** | `superpowers` | 7-phase structural agent software engineering protocol. |
-| **Avoid AI Writing** | `avoid-ai-writing` | Audits and rewrites outputs to remove robotic phrases and filler. |
-| **Systematic Debugging** | `systematic-debugging` | Scientific hypothesis testing with isolated scratch files. |
 
 ## Developer Guide
 
