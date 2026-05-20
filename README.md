@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="assets/ag_plugin_banner.png" alt="ag-plugin banner" width="100%" style="border-radius: 8px;" />
-</p>
-
-<h1 align="center">🛸 antigravity-cli Plugin Ecosystem (`ag-plugin`)</h1>
+<h1 align="center"> antigravity-cli Plugin Manager (`ag-plugin`)</h1>
 
 <p align="center">
   <b>Supercharge your AI Agent with 150+ expert-grade capabilities, robust security, and a beautiful interactive CLI dashboard.</b>
