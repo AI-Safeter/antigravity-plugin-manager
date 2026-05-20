@@ -1,0 +1,175 @@
+const path = require('path');
+const os = require('os');
+const fs = require('fs-extra');
+const chalk = require('chalk');
+const { spinner, note, confirm, isCancel } = require('@clack/prompts');
+const { select, input } = require('@inquirer/prompts');
+
+const GLOBAL_PLUGIN_DIR = path.join(os.homedir(), '.antigravity/plugins');
+const GLOBAL_SKILLS_DIR = path.join(os.homedir(), '.gemini/antigravity-cli/skills');
+
+const LOCAL_PLUGIN_DIR = path.join(process.cwd(), '.antigravity/plugins');
+const LOCAL_SKILLS_DIR = path.join(process.cwd(), '.agents/skills');
+
+const V2_CYAN = chalk.hex('#22D3EE');
+
+const CLACK_THEME = {
+  prefix: {
+    idle: chalk.hex('#8B5CF6')('◆ '),
+    done: chalk.hex('#22D3EE')('▲ '),
+  },
+  icon: {
+    cursor: chalk.hex('#8B5CF6')('❯ '),
+    checked: chalk.hex('#22D3EE')('● '),
+    unchecked: chalk.gray('○ '),
+  },
+  style: {
+    message: (text) => chalk.white.bold(text),
+    description: (text) => chalk.dim(text),
+    keysHelpTip: (keys) => {
+      return chalk.dim(
+        keys.map(([key, action]) => `${chalk.bold(key)} ${action}`).join(' • ')
+      );
+    }
+  }
+};
+
+function safeResolve(baseDir, targetName) {
+  const resolvedBase = path.resolve(baseDir);
+  const resolvedTarget = path.resolve(resolvedBase, targetName);
+  const relative = path.relative(resolvedBase, resolvedTarget);
+  if (relative === '' || relative.startsWith('..') || path.isAbsolute(relative)) {
+    throw new Error(`Security Exception: Path traversal attempt blocked for '${targetName}'`);
+  }
+  return resolvedTarget;
+}
+
+function isInquirerCancel(err) {
+  return err && (
+    err.name === 'ExitPromptError' ||
+    err.name === 'AbortPromptError' ||
+    (err.message && (err.message.includes('force closed') || err.message.includes('aborted')))
+  );
+}
+
+async function runWithEscape(promptFn, config) {
+  const controller = new AbortController();
+  const handleKeypress = (_, key) => {
+    if (key && key.name === 'escape') {
+      controller.abort();
+    }
+  };
+  
+  if (process.stdin.isTTY) {
+    process.stdin.setRawMode(true);
+  }
+  process.stdin.resume();
+  process.stdin.on('keypress', handleKeypress);
+
+  try {
+    return await promptFn(config, { signal: controller.signal });
+  } finally {
+    process.stdin.off('keypress', handleKeypress);
+  }
+}
+
+async function getInstalledPlugins() {
+  const readDirs = async (dir) => {
+    if (!(await fs.pathExists(dir))) return [];
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    return entries.filter(e => e.isDirectory()).map(e => e.name);
+  };
+
+  const globalPlugins = await readDirs(GLOBAL_PLUGIN_DIR);
+  const globalSkills = await readDirs(GLOBAL_SKILLS_DIR);
+  const globalList = Array.from(new Set([...globalPlugins, ...globalSkills]));
+
+  const localPlugins = await readDirs(LOCAL_PLUGIN_DIR);
+  const localSkills = await readDirs(LOCAL_SKILLS_DIR);
+  const localList = Array.from(new Set([...localPlugins, ...localSkills]));
+
+  const allInstalled = Array.from(new Set([...globalList, ...localList]));
+  return {
+    all: allInstalled,
+    global: globalList,
+    local: localList
+  };
+}
+
+async function installPluginsCore(selectedIds, registry, scope) {
+  if (selectedIds.length === 0) return { success: [], fail: [] };
+
+  const basePluginDir = scope === 'user' ? GLOBAL_PLUGIN_DIR : LOCAL_PLUGIN_DIR;
+  const baseSkillDir = scope === 'user' ? GLOBAL_SKILLS_DIR : LOCAL_SKILLS_DIR;
+
+  const results = { success: [], fail: [] };
+
+  for (const id of selectedIds) {
+    const plugin = registry.find(p => p.id === id);
+    if (!plugin) continue;
+
+    try {
+      const sourceDir = safeResolve(path.join(__dirname, '../../plugins'), plugin.id);
+      const skillTarget = safeResolve(baseSkillDir, plugin.id);
+      const pluginTarget = safeResolve(basePluginDir, plugin.id);
+
+      if (!(await fs.pathExists(sourceDir))) {
+        throw new Error(`Source plugin directory does not exist for '${id}'`);
+      }
+
+      // Remove pre-existing directories, files, or symlinks to ensure clean & safe copying
+      for (const target of [skillTarget, pluginTarget]) {
+        try {
+          const exists = await fs.pathExists(target);
+          let isSym = false;
+          try {
+            const stat = await fs.lstat(target);
+            isSym = stat.isSymbolicLink();
+          } catch (statErr) {
+            // Target does not exist or cannot be stat'd
+          }
+          if (exists || isSym) {
+            await fs.remove(target);
+          }
+        } catch (cleanupErr) {
+          // Ignore cleanup failures; copying will attempt or fail safely
+        }
+      }
+
+      await fs.ensureDir(path.dirname(skillTarget));
+      await fs.ensureDir(path.dirname(pluginTarget));
+      await fs.copy(sourceDir, skillTarget);
+      await fs.copy(sourceDir, pluginTarget);
+      results.success.push(plugin.name);
+    } catch (err) {
+      results.fail.push(`${plugin.name}: ${err.message}`);
+    }
+  }
+
+  return results;
+}
+
+async function uninstallPlugin(id, scope) {
+  const basePluginDir = scope === 'user' ? GLOBAL_PLUGIN_DIR : LOCAL_PLUGIN_DIR;
+  const baseSkillDir = scope === 'user' ? GLOBAL_SKILLS_DIR : LOCAL_SKILLS_DIR;
+
+  const skillTarget = safeResolve(baseSkillDir, id);
+  const pluginTarget = safeResolve(basePluginDir, id);
+
+  await fs.remove(skillTarget);
+  await fs.remove(pluginTarget);
+}
+
+module.exports = {
+  GLOBAL_PLUGIN_DIR,
+  GLOBAL_SKILLS_DIR,
+  LOCAL_PLUGIN_DIR,
+  LOCAL_SKILLS_DIR,
+  getInstalledPlugins,
+  installPluginsCore,
+  isInquirerCancel,
+  safeResolve,
+  uninstallPlugin,
+  runWithEscape,
+  CLACK_THEME
+};

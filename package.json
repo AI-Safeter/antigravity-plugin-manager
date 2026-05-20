@@ -1,0 +1,60 @@
+{
+  "name": "antigravity-plugin-manager",
+  "version": "2.0.0",
+  "description": "High-performance interactive CLI plugin manager for the antigravity-cli ecosystem. Discover, validate, and batch-integrate 150+ expert agent skills.",
+  "main": "src/ag-plugin-v2.js",
+  "bin": {
+    "ag-plugin": "src/ag-plugin-v2.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "validate": "node scripts/validate-plugin.js",
+    "registry": "node scripts/update-registry.js",
+    "new-skill": "node scripts/create-skill.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AI-Safeter/antigravity-plugin-manager.git"
+  },
+  "keywords": [
+    "antigravity",
+    "antigravity-cli",
+    "agent-skills",
+    "mcp",
+    "mcp-server",
+    "llm-agent",
+    "interactive-cli",
+    "plugin-manager"
+  ],
+  "author": "AI-Safeter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AI-Safeter/antigravity-plugin-manager/issues"
+  },
+  "homepage": "https://github.com/AI-Safeter/antigravity-plugin-manager#readme",
+  "dependencies": {
+    "@clack/prompts": "^1.4.0",
+    "@inquirer/prompts": "^8.4.3",
+    "axios": "^1.16.1",
+    "boxen": "^8.0.1",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "commander": "^14.0.3",
+    "fs-extra": "^11.3.5",
+    "fuse.js": "^7.3.0",
+    "js-yaml": "^4.1.1",
+    "ora": "^9.4.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.6"
+  },
+  "files": [
+    "src",
+    "plugins",
+    "scripts",
+    "registry.json",
+    "README.md",
+    "LICENSE",
+    "setup.sh"
+  ]
+}

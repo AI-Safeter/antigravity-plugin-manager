@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+scratch/
+*.log
+.npm/
+.env
+.antigravity/
+.agents/
+.antigravitycli/
+.gemini/
