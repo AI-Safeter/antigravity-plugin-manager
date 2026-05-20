@@ -1,5 +1,5 @@
 {
-  "name": "antigravity-plugin-manager",
+  "name": "@ai-safeter/antigravity-plugin-manager",
   "version": "2.0.0",
   "description": "High-performance interactive CLI plugin manager for the antigravity-cli ecosystem. Discover, validate, and batch-integrate 150+ expert agent skills.",
   "main": "src/ag-plugin-v2.js",
