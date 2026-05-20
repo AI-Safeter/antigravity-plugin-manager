@@ -118,7 +118,7 @@ function interactiveSearchCheckbox(registry, installed) {
       console.log(`${V2_VIOLET(border)}`);
       console.log(` ${chalk.bold('Name:')}        ${safeName}`);
       console.log(` ${chalk.bold('ID:')}          ${safeId}`);
-      console.log(` ${chalk.bold('Repository:')}  ${safeRepo}`);
+
       console.log(` ${chalk.bold('Status:')}      ${isInstalled ? chalk.green('Installed') : (isSelected ? V2_CYAN('Selected for install') : chalk.gray('Not selected'))}`);
       console.log(`${V2_VIOLET(border)}`);
       console.log(` ${chalk.bold('Description:')}`);
@@ -330,7 +330,7 @@ function interactiveSearchCheckbox(registry, installed) {
           }
 
           const hoverMarker = isHovered ? V2_VIOLET('❯ ') : '  ';
-          const firstLine = `  ${hoverMarker}${prefix} ${nameStr} ${chalk.gray('·')} ${repoStr}`;
+          const firstLine = `  ${hoverMarker}${prefix} ${nameStr}`;
           
           const truncatedDesc = safeDesc.length > (boxWidth - 10) ? safeDesc.substring(0, boxWidth - 13) + '...' : safeDesc;
           const secondLine = `      ${chalk.gray(truncatedDesc)}`;

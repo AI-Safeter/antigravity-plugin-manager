@@ -26,6 +26,24 @@ npm install -g @beidawuli/antigravity-plugin-manager
 ag-plugin
 ```
 
+## Interface and Usage
+
+The CLI operates through a fast, interactive terminal menu. 
+
+![Main Menu](images/main_menu.png)
+
+You can browse the entire collection of skills sequentially:
+
+![Browse Plugins](images/browse_plugins.png)
+
+Or you can fuzzy-search the registry for specific keywords.
+
+![Search Plugins](images/search_plugins.png)
+
+When you're done, review your active local and global installations from the management screen:
+
+![Installed Plugins](images/installed_plugins.png)
+
 ## Contributing
 
 You can contribute new skills to the repository. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting pull requests, style rules, and validation checks.
