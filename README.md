@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/ag_plugin_banner.png" alt="ag-plugin banner" width="100%" style="border-radius: 8px;" />
-</p>
-
 <h1 align="center">antigravity-cli Plugin Manager (`ag-plugin`)</h1>
 <p align="center">
   <b>Install and manage custom skills for your AI agent.</b>
