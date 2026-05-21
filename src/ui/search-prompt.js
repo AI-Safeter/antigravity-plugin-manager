@@ -306,13 +306,10 @@ function interactiveSearchCheckbox(registry, installed) {
             prefix = chalk.gray('○');
           }
 
-          const cleanRepo = getCleanRepo(p.repository);
           const safeName = sanitizeTerminalInput(p.name);
-          const safeRepo = sanitizeTerminalInput(cleanRepo);
           const safeDesc = sanitizeTerminalInput(p.description || '');
 
           let nameStr = safeName;
-          let repoStr = chalk.gray(safeRepo);
 
           if (isHovered) {
             nameStr = chalk.bold.white(safeName);

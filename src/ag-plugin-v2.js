@@ -10,6 +10,16 @@ const { generateRegistry, REGISTRY_SCHEMA_VERSION, mergeBuiltinFlags } = require
 
 const DEFAULT_REGISTRY_PATH = path.join(__dirname, '../registry.json');
 const USER_REGISTRY_PATH = path.join(os.homedir(), '.antigravity/registry.json');
+const CATEGORIES_PATH = path.join(__dirname, '../categories.json');
+
+function loadCategoriesMeta() {
+  try {
+    const data = require(CATEGORIES_PATH);
+    return (data && Array.isArray(data.categories)) ? data.categories : [];
+  } catch (err) {
+    return [];
+  }
+}
 
 const {
   GLOBAL_PLUGIN_DIR,
@@ -136,12 +146,46 @@ async function handleInstall(selectedIds, registry) {
 async function browseAndInstall(registry) {
   const { all: installed } = await getInstalledPlugins();
   const installedSet = new Set(installed);
+  const categoriesMeta = loadCategoriesMeta();
+
+  // Step 1: ask which category to browse (or "All").
+  let filteredRegistry = registry;
+  if (categoriesMeta.length > 0) {
+    // Count plugins per category so we can show "(N)" hints.
+    const counts = {};
+    registry.forEach(p => {
+      const c = p.category || 'uncategorized';
+      counts[c] = (counts[c] || 0) + 1;
+    });
+    const categoryChoices = [
+      { name: `🌐 All Categories (${registry.length})`, value: '__all__' },
+      ...categoriesMeta
+        .filter(c => counts[c.id])
+        .sort((a, b) => (a.order || 99) - (b.order || 99))
+        .map(c => ({ name: `${c.label} (${counts[c.id]})`, value: c.id }))
+    ];
+    let categoryChoice;
+    try {
+      categoryChoice = await runWithEscape(select, {
+        message: 'Browse by category:',
+        choices: categoryChoices,
+        pageSize: 20,
+        theme: CLACK_THEME
+      });
+    } catch (err) {
+      if (isInquirerCancel(err)) return;
+      throw err;
+    }
+    if (categoryChoice !== '__all__') {
+      filteredRegistry = registry.filter(p => p.category === categoryChoice);
+    }
+  }
 
   let selectedIds;
   try {
     selectedIds = await runWithEscape(checkbox, {
       message: `Select plugins (Space: toggle, Enter: install, Esc: go back):`,
-      choices: registry.map(p => ({
+      choices: filteredRegistry.map(p => ({
         name: `${installedSet.has(p.id) ? chalk.green('● ') : '  '}${p.name} (${p.id})`,
         value: p.id,
         description: p.description.substring(0, 80)

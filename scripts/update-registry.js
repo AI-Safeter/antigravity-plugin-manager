@@ -37,6 +37,22 @@ function loadCuratedSkills() {
   }
 }
 
+function loadCategories() {
+  // categories.json is the source of truth for what's KEPT in the registry
+  // and which category each kept skill belongs to. If present, only skills
+  // listed in `assignments` are included in the registry output.
+  const categoriesPath = path.join(__dirname, '../categories.json');
+  try {
+    const data = fs.readJsonSync(categoriesPath);
+    return {
+      assignments: (data && data.assignments) || {},
+      categories: (data && data.categories) || []
+    };
+  } catch (err) {
+    return { assignments: {}, categories: [] };
+  }
+}
+
 async function findSkills(dir) {
   const results = [];
   try {
@@ -152,6 +168,8 @@ async function generateRegistry(options = {}) {
 
   const sources = await loadSources(options.sources);
   const curated = loadCuratedSkills();
+  const { assignments: categoryAssignments } = loadCategories();
+  const hasCategoryFilter = Object.keys(categoryAssignments).length > 0;
 
   // Optionally clone any missing remote source caches up-front. This is what
   // `npm run registry` does so a first-time contributor doesn't need to know
@@ -194,6 +212,9 @@ async function generateRegistry(options = {}) {
         const skillPath = path.join(pluginsDir, folder, 'SKILL.md');
         if (!(await fs.pathExists(skillPath))) continue;
 
+        // Filter: only include local plugins listed in categories.json
+        if (hasCategoryFilter && !categoryAssignments[folder]) continue;
+
         let content;
         try {
           content = await fs.readFile(skillPath, 'utf8');
@@ -208,7 +229,8 @@ async function generateRegistry(options = {}) {
           description: 'No description available',
           repository: pkgRepo,
           type: 'skill',
-          source: 'local'
+          source: 'local',
+          category: categoryAssignments[folder] || 'uncategorized'
         };
 
         const match = content.match(/^---([\s\S]*?)---/);
@@ -241,8 +263,16 @@ async function generateRegistry(options = {}) {
           source.id === 'claude-scientific-skills' ||
           source.id === 'claude-plugins-official';
         const isCurated = !!curated[skillId];
+        const isCategorized = hasCategoryFilter && !!categoryAssignments[skillId];
 
-        if (!includeAllFromSource && !isCurated) continue;
+        // When categories.json is present, it is the source of truth: only
+        // skills explicitly assigned to a category are included. Otherwise
+        // fall back to the legacy includeAll/curated logic.
+        if (hasCategoryFilter) {
+          if (!isCategorized) continue;
+        } else if (!includeAllFromSource && !isCurated) {
+          continue;
+        }
 
         let content;
         try {
@@ -259,7 +289,8 @@ async function generateRegistry(options = {}) {
           repository: source.url,
           type: 'skill',
           source: source.id,
-          relativeSkillDir
+          relativeSkillDir,
+          category: categoryAssignments[skillId] || 'uncategorized'
         };
 
         if (isCurated) {
