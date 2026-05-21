@@ -51,7 +51,7 @@ The dashboard is the entry point. The footer line shows the current catalog size
 
 ![Manage Sources](images/manage_sources.png)
 
-## What's inside (v3.2.1)
+## What's inside
 
 | Category | Count | | Category | Count |
 |---|---:|---|---|---:|
