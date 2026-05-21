@@ -68,5 +68,34 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin",
     "enabled": true,
     "builtin": true
+  },
+  {
+    "id": "awesome-cursorrules",
+    "name": "Awesome Cursor Rules (PatrickJS)",
+    "url": "https://github.com/PatrickJS/awesome-cursorrules",
+    "enabled": true,
+    "builtin": true,
+    "format": "mdc"
+  },
+  {
+    "id": "terminalskills-skills",
+    "name": "TerminalSkills (1000+ skills)",
+    "url": "https://github.com/TerminalSkills/skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "addyosmani-agent-skills",
+    "name": "Addy Osmani Agent Skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "wshobson-agents",
+    "name": "Wshobson Agents",
+    "url": "https://github.com/wshobson/agents",
+    "enabled": true,
+    "builtin": true
   }
 ]

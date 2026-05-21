@@ -124,7 +124,14 @@ async function installPluginsCore(selectedIds, registry, scope) {
     if (!plugin) continue;
 
     try {
-      let sourceDir;
+      // Two source layouts are supported:
+      //   - Folder skill: source has a directory containing SKILL.md (+ assets).
+      //     plugin.relativeSkillDir points to that directory.
+      //   - Single-file skill: source ships a one-file rule like awesome-cursorrules'
+      //     .mdc files. plugin.relativeSkillFile points to the single file; we
+      //     install it as <target>/<basename> inside a fresh skill folder.
+      let sourceDir = null;
+      let sourceFile = null;
       if (plugin.source && plugin.source !== 'local') {
         const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', plugin.source);
         if (!(await fs.pathExists(cacheDir))) {
@@ -135,7 +142,11 @@ async function installPluginsCore(selectedIds, registry, scope) {
             throw new Error(`Failed to clone remote repository '${plugin.repository}': ${cloneErr.message}`);
           }
         }
-        sourceDir = safeResolve(cacheDir, plugin.relativeSkillDir);
+        if (plugin.relativeSkillFile) {
+          sourceFile = safeResolve(cacheDir, plugin.relativeSkillFile);
+        } else {
+          sourceDir = safeResolve(cacheDir, plugin.relativeSkillDir);
+        }
       } else {
         sourceDir = safeResolve(path.join(__dirname, '../../plugins'), plugin.id);
       }
@@ -143,8 +154,11 @@ async function installPluginsCore(selectedIds, registry, scope) {
       const skillTarget = safeResolve(baseSkillDir, plugin.id);
       const pluginTarget = safeResolve(basePluginDir, plugin.id);
 
-      if (!(await fs.pathExists(sourceDir))) {
+      if (sourceDir && !(await fs.pathExists(sourceDir))) {
         throw new Error(`Source plugin directory does not exist at ${sourceDir} for '${id}'`);
+      }
+      if (sourceFile && !(await fs.pathExists(sourceFile))) {
+        throw new Error(`Source plugin file does not exist at ${sourceFile} for '${id}'`);
       }
 
       // Remove pre-existing directories, files, or symlinks to ensure clean & safe copying
@@ -173,7 +187,7 @@ async function installPluginsCore(selectedIds, registry, scope) {
       // user's filesystem. A skill repo with `link -> ~/.ssh/id_rsa` would
       // otherwise become a readable file in ~/.antigravity/plugins/<id>/.
       const copyOpts = {};
-      if (plugin.source && plugin.source !== 'local') {
+      if (plugin.source && plugin.source !== 'local' && sourceDir) {
         copyOpts.filter = (src) => {
           const stat = fs.lstatSync(src);
           if (stat.isSymbolicLink()) {
@@ -181,6 +195,22 @@ async function installPluginsCore(selectedIds, registry, scope) {
           }
           return true;
         };
+      }
+
+      // Single-file source path (awesome-cursorrules .mdc rules): make a
+      // folder per target and drop the upstream file inside, alongside a
+      // generated SKILL.md whose body verbatim mirrors the .mdc content.
+      if (sourceFile) {
+        const content = await fs.readFile(sourceFile, 'utf8');
+        const fileBasename = path.basename(sourceFile);
+        const skillMd = `---\nname: ${plugin.name}\ndescription: ${JSON.stringify(plugin.description || '').slice(1, -1)}\nupstream: ${plugin.repository}\n---\n\n${content}\n`;
+        for (const target of [skillTarget, pluginTarget]) {
+          await fs.ensureDir(target);
+          await fs.writeFile(path.join(target, fileBasename), content);
+          await fs.writeFile(path.join(target, 'SKILL.md'), skillMd);
+        }
+        results.success.push(plugin.name);
+        continue;
       }
 
       // PLUGIN_DIR is the canonical "installed" marker (see getInstalledPlugins).

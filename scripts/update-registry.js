@@ -76,6 +76,29 @@ async function findSkills(dir) {
   return results;
 }
 
+// awesome-cursorrules ships each rule as a top-level <name>.mdc file with
+// YAML frontmatter (description, globs, alwaysApply) and a markdown body.
+// We treat each .mdc as a single-file skill: registry id is derived from
+// the filename stem, description is pulled from frontmatter, and the install
+// path copies the .mdc into the user's plugins dir as the skill's body.
+async function findCursorRuleMdcs(dir) {
+  const results = [];
+  try {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.isFile() && entry.name.endsWith('.mdc')) {
+        results.push(path.join(dir, entry.name));
+      } else if (entry.isDirectory() && !entry.name.startsWith('.')) {
+        const sub = await findCursorRuleMdcs(path.join(dir, entry.name));
+        results.push(...sub);
+      }
+    }
+  } catch (err) {
+    // ignore
+  }
+  return results;
+}
+
 // Forward-fix for users whose ~/.antigravity/sources.json predates the "builtin"
 // flag: stamp builtin=true onto entries whose id matches a shipped default.
 // Without this, the "Remove Source" flow would treat all built-in registries
@@ -251,6 +274,54 @@ async function generateRegistry(options = {}) {
     } else {
       const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', source.id);
       if (!(await fs.pathExists(cacheDir))) continue;
+
+      // awesome-cursorrules uses single-file .mdc rules rather than SKILL.md folders.
+      if (source.format === 'mdc') {
+        const mdcFiles = await findCursorRuleMdcs(cacheDir);
+        for (const mdcFile of mdcFiles) {
+          const relativeFile = path.relative(cacheDir, mdcFile);
+          const stem = path.basename(mdcFile, '.mdc')
+            .replace(/-cursorrules-prompt-file$/, '')
+            .replace(/-cursorrules-pro$/, '')
+            .replace(/-cursorrules$/, '');
+          const skillId = `${source.id}--${stem}`.toLowerCase();
+
+          const isCategorized = hasCategoryFilter && !!categoryAssignments[skillId];
+          if (hasCategoryFilter && !isCategorized) continue;
+
+          let content;
+          try {
+            content = await fs.readFile(mdcFile, 'utf8');
+          } catch (err) {
+            continue;
+          }
+
+          const displayName = stem.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          const meta = {
+            id: skillId,
+            name: displayName,
+            description: 'Cursor rule from awesome-cursorrules.',
+            repository: source.url,
+            type: 'skill',
+            source: source.id,
+            relativeSkillFile: relativeFile,
+            category: categoryAssignments[skillId] || 'uncategorized'
+          };
+
+          const m = content.match(/^---([\s\S]*?)---/);
+          if (m) {
+            try {
+              const parsed = yaml.load(m[1]);
+              if (parsed && parsed.description) meta.description = String(parsed.description);
+            } catch (e) {
+              // keep default description
+            }
+          }
+          plugins.push(meta);
+          remoteCount++;
+        }
+        continue;
+      }
 
       const skillFiles = await findSkills(cacheDir);
       for (const skillFile of skillFiles) {

@@ -1743,6 +1743,1316 @@
       "source": "compound-engineering-plugin",
       "relativeSkillDir": "tests/fixtures/sample-plugin/skills/skill-one",
       "category": "workflow"
+    },
+    {
+      "id": "awesome-cursorrules--ai-agent-specialist",
+      "name": "Ai Agent Specialist",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/ai-agent-specialist.mdc",
+      "category": "ai-ml"
+    },
+    {
+      "id": "awesome-cursorrules--android-jetpack-compose",
+      "name": "Android Jetpack Compose",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/android-jetpack-compose-cursorrules-prompt-file.mdc",
+      "category": "mobile-game"
+    },
+    {
+      "id": "awesome-cursorrules--angular-typescript",
+      "name": "Angular Typescript",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/angular-typescript-cursorrules-prompt-file.mdc",
+      "category": "frontend"
+    },
+    {
+      "id": "awesome-cursorrules--anti-overengineering",
+      "name": "Anti Overengineering",
+      "description": "Prevent AI over-engineering by keeping changes scoped, simple, and directly tied to the user's request",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/anti-overengineering.mdc",
+      "category": "workflow"
+    },
+    {
+      "id": "awesome-cursorrules--anti-sycophancy-code-discipline",
+      "name": "Anti Sycophancy Code Discipline",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/anti-sycophancy-code-discipline-cursorrules-prompt-file.mdc",
+      "category": "workflow"
+    },
+    {
+      "id": "awesome-cursorrules--astro-typescript",
+      "name": "Astro Typescript",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/astro-typescript-cursorrules-prompt-file.mdc",
+      "category": "frontend"
+    },
+    {
+      "id": "awesome-cursorrules--blender-python-addon",
+      "name": "Blender Python Addon",
+      "description": "Blender Python add-on rules for operators, panels, properties, registration, testing, and API-safe scripting",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/blender-python-addon.mdc",
+      "category": "mobile-game"
+    },
+    {
+      "id": "awesome-cursorrules--chrome-extension-dev-js-typescript",
+      "name": "Chrome Extension Dev Js Typescript",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/chrome-extension-dev-js-typescript-cursorrules-pro.mdc",
+      "category": "frontend"
+    },
+    {
+      "id": "awesome-cursorrules--clean-code",
+      "name": "Clean Code",
+      "description": "Guidelines for writing clean, maintainable, and human-readable code. Apply these rules when writing or reviewing code to ensure consistency and quality.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/clean-code.mdc",
+      "category": "architecture"
+    },
+    {
+      "id": "awesome-cursorrules--cloudflare-email-telegram",
+      "name": "Cloudflare Email Telegram",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cloudflare-email-telegram-cursorrules-prompt-file.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--cloudflare-workers-hono-angular-saas",
+      "name": "Cloudflare Workers Hono Angular Saas",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cloudflare-workers-hono-angular-saas-cursorrules-prompt-file.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--code-guidelines",
+      "name": "Code Guidelines",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/code-guidelines-cursorrules-prompt-file.mdc",
+      "category": "workflow"
+    },
+    {
+      "id": "awesome-cursorrules--cypress-accessibility-testing",
+      "name": "Cypress Accessibility Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cypress-accessibility-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--cypress-api-testing",
+      "name": "Cypress Api Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cypress-api-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--cypress-defect-tracking",
+      "name": "Cypress Defect Tracking",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cypress-defect-tracking-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--cypress-e2e-testing",
+      "name": "Cypress E2e Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cypress-e2e-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--cypress-integration-testing",
+      "name": "Cypress Integration Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/cypress-integration-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--docker",
+      "name": "Docker",
+      "description": "Docker production rules. Pinned versions, multi-stage builds, non-root user, minimal attack surface.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/docker.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--elixir-phoenix-docker-setup-cursorrules-prompt-fil",
+      "name": "Elixir Phoenix Docker Setup Cursorrules Prompt Fil",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/elixir-phoenix-docker-setup-cursorrules-prompt-fil.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--gherkin-style-testing",
+      "name": "Gherkin Style Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/gherkin-style-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--jest-unit-testing",
+      "name": "Jest Unit Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/jest-unit-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--kubernetes-mkdocs-documentation-cursorrules-prompt",
+      "name": "Kubernetes Mkdocs Documentation Cursorrules Prompt",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/kubernetes-mkdocs-documentation-cursorrules-prompt.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--nextjs-vercel-supabase",
+      "name": "Nextjs Vercel Supabase",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/nextjs-vercel-supabase-cursorrules-prompt-file.mdc",
+      "category": "vendor"
+    },
+    {
+      "id": "awesome-cursorrules--nextjs15-supabase",
+      "name": "Nextjs15 Supabase",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/nextjs15-supabase-cursorrules-prompt-file.mdc",
+      "category": "vendor"
+    },
+    {
+      "id": "awesome-cursorrules--nodejs-mongodb-cursorrules-prompt-file-tutorial",
+      "name": "Nodejs Mongodb Cursorrules Prompt File Tutorial",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/nodejs-mongodb-cursorrules-prompt-file-tutorial.mdc",
+      "category": "databases"
+    },
+    {
+      "id": "awesome-cursorrules--pandas-scikit-learn-guide",
+      "name": "Pandas Scikit Learn Guide",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/pandas-scikit-learn-guide-cursorrules-prompt-file.mdc",
+      "category": "data-eng"
+    },
+    {
+      "id": "awesome-cursorrules--playwright-accessibility-testing",
+      "name": "Playwright Accessibility Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/playwright-accessibility-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--playwright-api-testing",
+      "name": "Playwright Api Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/playwright-api-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--playwright-defect-tracking",
+      "name": "Playwright Defect Tracking",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/playwright-defect-tracking-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--playwright-e2e-testing",
+      "name": "Playwright E2e Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/playwright-e2e-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--playwright-integration-testing",
+      "name": "Playwright Integration Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/playwright-integration-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--postgresql",
+      "name": "Postgresql",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/postgresql.mdc",
+      "category": "databases"
+    },
+    {
+      "id": "awesome-cursorrules--pyspark-etl-best-practices",
+      "name": "Pyspark Etl Best Practices",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/pyspark-etl-best-practices-cursorrules-prompt-file.mdc",
+      "category": "data-eng"
+    },
+    {
+      "id": "awesome-cursorrules--qa-bug-report",
+      "name": "Qa Bug Report",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/qa-bug-report-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--scala-kafka",
+      "name": "Scala Kafka",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/scala-kafka-cursorrules-prompt-file.mdc",
+      "category": "data-eng"
+    },
+    {
+      "id": "awesome-cursorrules--security-devsecops-ssdls-appsec",
+      "name": "Security Devsecops Ssdls Appsec",
+      "description": "Cursor rules for secure coding, secret handling, dependency hygiene, authentication, authorization, security testing, and compliance documentation.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/security-devsecops-ssdls-appsec.mdc",
+      "category": "security"
+    },
+    {
+      "id": "awesome-cursorrules--shopify-theme-dev-liquid",
+      "name": "Shopify Theme Dev Liquid",
+      "description": "Best practices for Shopify theme development with Liquid, JavaScript, and CSS",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/shopify-theme-dev-liquid.mdc",
+      "category": "vendor"
+    },
+    {
+      "id": "awesome-cursorrules--snowflake-snowpark-dbt",
+      "name": "Snowflake Snowpark Dbt",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/snowflake-snowpark-dbt-cursorrules-prompt-file.mdc",
+      "category": "data-eng"
+    },
+    {
+      "id": "awesome-cursorrules--tailwind-react-firebase",
+      "name": "Tailwind React Firebase",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/tailwind-react-firebase-cursorrules-prompt-file.mdc",
+      "category": "vendor"
+    },
+    {
+      "id": "awesome-cursorrules--typescript-expo-jest-detox",
+      "name": "Typescript Expo Jest Detox",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/typescript-expo-jest-detox-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "awesome-cursorrules--typescript-nextjs-supabase",
+      "name": "Typescript Nextjs Supabase",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/typescript-nextjs-supabase-cursorrules-prompt-file.mdc",
+      "category": "vendor"
+    },
+    {
+      "id": "awesome-cursorrules--typescript-nodejs-react-vite-cursorrules-prompt-fi",
+      "name": "Typescript Nodejs React Vite Cursorrules Prompt Fi",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/typescript-nodejs-react-vite-cursorrules-prompt-fi.mdc",
+      "category": "build-tooling"
+    },
+    {
+      "id": "awesome-cursorrules--typescript-vite-tailwind",
+      "name": "Typescript Vite Tailwind",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/typescript-vite-tailwind-cursorrules-prompt-file.mdc",
+      "category": "build-tooling"
+    },
+    {
+      "id": "awesome-cursorrules--vercel-deployment",
+      "name": "Vercel Deployment",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/vercel-deployment-cursorrules-prompt-file.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--vercel-deployment",
+      "name": "Vercel Deployment",
+      "description": "Best practices for Vercel deployments including serverless functions, Edge Runtime, middleware, caching, environment variables, and CI/CD configuration",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/vercel-deployment.mdc",
+      "category": "devops"
+    },
+    {
+      "id": "awesome-cursorrules--vitest-unit-testing",
+      "name": "Vitest Unit Testing",
+      "description": "Cursor rule from awesome-cursorrules.",
+      "repository": "https://github.com/PatrickJS/awesome-cursorrules",
+      "type": "skill",
+      "source": "awesome-cursorrules",
+      "relativeSkillFile": "rules/vitest-unit-testing-cursorrules-prompt-file.mdc",
+      "category": "testing"
+    },
+    {
+      "id": "terminalskills-skills--skills--actix-web",
+      "name": "actix-web",
+      "description": "Actix Web is a powerful, high-performance web framework for Rust. It provides\nasync handlers, type-safe extractors, middleware, and integrates with the Rust\necosystem for building fast, reliable, and memory-safe web services.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/actix-web",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--adonisjs",
+      "name": "adonisjs",
+      "description": "Build full-stack web applications with AdonisJS — a batteries-included Node.js framework with ORM, auth, validation, and mailer built-in. Use when someone asks to \"build a web app with Node.js\", \"Laravel for Node.js\", \"full-stack Node framework\", \"AdonisJS\", \"batteries-included backend\", or \"Node.js with built-in ORM and auth\". Covers Lucid ORM, auth (sessions, tokens, social), VineJS validation, Edge templates, and deployment.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/adonisjs",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--airflow",
+      "name": "airflow",
+      "description": "Apache Airflow is a platform for programmatically authoring, scheduling, and monitoring workflows.\nLearn to write DAGs, use operators, set up connections, configure scheduling,\nand deploy with Docker Compose.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/airflow",
+      "category": "data-eng"
+    },
+    {
+      "id": "terminalskills-skills--skills--apache-spark",
+      "name": "apache-spark",
+      "description": "Process large-scale data with Apache Spark. Use when a user asks to process big data, run distributed computations, build ETL pipelines, perform data analysis at scale, or use PySpark for data engineering.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/apache-spark",
+      "category": "data-eng"
+    },
+    {
+      "id": "terminalskills-skills--skills--aws-lambda",
+      "name": "aws-lambda",
+      "description": "You are an expert in AWS Lambda, Amazon's serverless compute service. You help developers build event-driven applications using Lambda functions triggered by API Gateway, S3 events, SQS queues, DynamoDB streams, and scheduled events — with support for Node.js, Python, Go, Rust, Java, and container images, automatic scaling from zero to thousands of concurrent executions, and pay-per-invocation pricing.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/aws-lambda",
+      "category": "devops"
+    },
+    {
+      "id": "terminalskills-skills--skills--clickhouse",
+      "name": "clickhouse",
+      "description": "ClickHouse is a columnar OLAP database built for real-time analytical queries over massive datasets. It supports a familiar SQL interface with powerful aggregation functions, materialized views for pre-computed rollups, and high-throughput inserts that make it ideal for event tracking, time-series analytics, and ad-hoc exploration of billions of rows.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/clickhouse",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--cloudflare",
+      "name": "cloudflare",
+      "description": "Protect and accelerate websites with Cloudflare. Use when a user asks to add CDN, DDoS protection, DNS management, SSL, WAF, or edge computing to a website or API.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/cloudflare",
+      "category": "devops"
+    },
+    {
+      "id": "terminalskills-skills--skills--cypress",
+      "name": "cypress",
+      "description": "Assists with end-to-end testing of web applications using Cypress. Use when writing E2E tests, setting up component testing, configuring CI pipelines with parallelization, or building custom test commands. Trigger words: cypress, e2e testing, end-to-end, cypress run, cy.get, integration testing, browser testing.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/cypress",
+      "category": "testing"
+    },
+    {
+      "id": "terminalskills-skills--skills--dbt",
+      "name": "dbt",
+      "description": "dbt (data build tool) transforms data in your warehouse using SQL SELECT statements.\nLearn project setup, models, tests, documentation, incremental materializations,\nand integration with data warehouses like PostgreSQL, BigQuery, and Snowflake.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/dbt",
+      "category": "data-eng"
+    },
+    {
+      "id": "terminalskills-skills--skills--django",
+      "name": "django",
+      "description": "Django is a batteries-included Python web framework that follows the model-template-view\npattern. It provides an ORM, admin interface, authentication, and everything needed to\nbuild full-featured web applications rapidly and securely.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/django",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--fastapi",
+      "name": "fastapi",
+      "description": "FastAPI is a modern, high-performance Python web framework for building APIs.\nIt leverages Python type hints and Pydantic for automatic validation, serialization,\nand OpenAPI documentation generation with async/await support out of the box.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/fastapi",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--flask",
+      "name": "flask",
+      "description": "Flask is a lightweight Python micro web framework that provides the essentials\nfor web development without imposing structure. It uses Jinja2 templates and\nWerkzeug WSGI toolkit, with a rich ecosystem of extensions for databases, auth, and more.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/flask",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--github-actions",
+      "name": "github-actions",
+      "description": "Build CI/CD pipelines with GitHub Actions — workflows, jobs, steps, triggers, caching, artifacts, matrix builds, secrets, environments, reusable workflows, and custom actions. Use when tasks involve automating tests, builds, deployments, code quality checks, or any GitHub-triggered automation.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/github-actions",
+      "category": "devops"
+    },
+    {
+      "id": "terminalskills-skills--skills--jest",
+      "name": "jest",
+      "description": "Jest is a comprehensive JavaScript testing framework built by Meta, designed for zero-configuration testing of JavaScript and TypeScript applications. It provides a complete ecosystem for unit testing, integration testing, and snapshot testing with built-in code coverage, mocking capabilities, and parallel test execution. Jest works seamlessly with React, Node.js, Angular, Vue, and virtually any JavaScript project, making it the most widely adopted testing framework in the ecosystem.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/jest",
+      "category": "testing"
+    },
+    {
+      "id": "terminalskills-skills--skills--kafka",
+      "name": "kafka",
+      "description": "Build event-driven systems with Apache Kafka. Use when a user asks to set up message streaming, implement event sourcing, build pub/sub systems, process real-time data streams, or connect microservices with async messaging.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/kafka",
+      "category": "data-eng"
+    },
+    {
+      "id": "terminalskills-skills--skills--langchain",
+      "name": "langchain",
+      "description": "Build LLM-powered applications with LangChain. Use when a user asks to create AI chains, build RAG pipelines, implement agents with tools, set up document loaders, create vector stores, build conversational AI, implement prompt templates, chain LLM calls, add memory to chatbots, or orchestrate language model workflows. Covers LangChain v0.3+ with LCEL (LangChain Expression Language), structured output, tool calling, retrieval, and production deployment patterns.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/langchain",
+      "category": "ai-ml"
+    },
+    {
+      "id": "terminalskills-skills--skills--meilisearch",
+      "name": "meilisearch",
+      "description": "Add fast, typo-tolerant full-text search with Meilisearch. Use when a user asks to add search to an app, implement full-text search, set up a search engine, replace Elasticsearch with something simpler, add autocomplete or instant search, build a product catalog search, index documents for search, configure search relevancy, add faceted filtering, or deploy a self-hosted search engine. Covers indexing, querying, facets, filtering, sorting, multi-tenancy, and integration with Node.js, Python, and REST API.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/meilisearch",
+      "category": "vendor"
+    },
+    {
+      "id": "terminalskills-skills--skills--mongodb",
+      "name": "mongodb",
+      "description": "Assists with designing document schemas, building aggregation pipelines, managing indexes, and operating MongoDB clusters. Use when working with flexible schemas, nested documents, horizontal scaling, Atlas Search, or vector search for AI applications. Trigger words: mongodb, mongo, document database, aggregation, atlas, nosql.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/mongodb",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--mysql",
+      "name": "mysql",
+      "description": "MySQL is the world's most popular open-source relational database management system.\nLearn installation, SQL queries, indexing strategies, replication setup,\nand client integration with Node.js (mysql2) and Python (mysql-connector).\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/mysql",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--neo4j",
+      "name": "neo4j",
+      "description": "Neo4j is the leading graph database for connected data. Learn Cypher query language,\nnode and relationship modeling, graph algorithms, and integration with Node.js\nusing the official neo4j-driver.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/neo4j",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--nestjs",
+      "name": "nestjs",
+      "description": "NestJS is a progressive TypeScript framework for building scalable server-side\napplications on Node.js. It uses decorators, modules, dependency injection, and\nan opinionated architecture inspired by Angular.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/nestjs",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--nx",
+      "name": "nx",
+      "description": "Build and manage monorepos with Nx. Use when a user asks to set up a monorepo, manage multiple packages/apps, cache builds, run affected tests, or migrate from Lerna.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/nx",
+      "category": "build-tooling"
+    },
+    {
+      "id": "terminalskills-skills--skills--ollama",
+      "name": "ollama",
+      "description": "Run LLMs locally with Ollama. Use when a user asks to run AI models locally, self-host a language model, use LLaMA or Mistral on their machine, run offline AI, build a local chatbot, avoid sending data to cloud AI providers, generate text without API costs, fine-tune or customize local models, or set up a private AI inference server. Covers model management, API usage, Modelfile customization, GPU acceleration, and integration with LangChain and other frameworks.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/ollama",
+      "category": "ai-ml"
+    },
+    {
+      "id": "terminalskills-skills--skills--pandas",
+      "name": "pandas",
+      "description": "Assists with loading, cleaning, transforming, and analyzing tabular data using pandas. Use when importing CSV/Excel/SQL data, handling missing values, performing groupby aggregations, merging datasets, working with time series, or building analysis-ready datasets. Trigger words: pandas, dataframe, csv, groupby, merge, time series, data cleaning.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/pandas",
+      "category": "data-eng"
+    },
+    {
+      "id": "terminalskills-skills--skills--pgvector",
+      "name": "pgvector",
+      "description": "Store and search vector embeddings in PostgreSQL with pgvector — no separate vector database needed. Use when someone asks to \"vector search in Postgres\", \"store embeddings\", \"pgvector\", \"similarity search\", \"RAG with Postgres\", \"semantic search in existing database\", or \"add AI search to my app without a separate vector DB\". Covers vector columns, indexing (IVFFlat, HNSW), similarity search, and integration with ORMs.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/pgvector",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--pinecone",
+      "name": "pinecone",
+      "description": "Pinecone is a managed vector database for AI and machine learning applications.\nLearn to create indexes, upsert embeddings, query by similarity, use namespaces\nand metadata filtering for semantic search and RAG pipelines.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/pinecone",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--poetry",
+      "name": "poetry",
+      "description": "Manage Python projects with Poetry. Use when a user asks to manage Python dependencies, create virtual environments, publish packages to PyPI, handle dependency resolution, or set up a Python project structure.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/poetry",
+      "category": "build-tooling"
+    },
+    {
+      "id": "terminalskills-skills--skills--polars",
+      "name": "polars",
+      "description": "Polars is a blazingly fast DataFrame library written in Rust with a Python API.\nLearn eager and lazy evaluation, expressions, groupby, joins, and how Polars\noutperforms pandas for large datasets through parallel execution.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/polars",
+      "category": "data-eng"
+    },
+    {
+      "id": "terminalskills-skills--skills--prisma",
+      "name": "prisma",
+      "description": "You are an expert in Prisma, the TypeScript ORM with a declarative schema, auto-generated type-safe client, migrations, and studio GUI. You help developers model databases with Prisma Schema Language, generate a fully typed client that catches query errors at compile time, run zero-downtime migrations, and integrate with Postgres, MySQL, SQLite, MongoDB, CockroachDB, and PlanetScale.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/prisma",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--pydantic",
+      "name": "pydantic",
+      "description": "Validate and serialize data with Pydantic. Use when a user asks to validate API inputs, parse JSON/env config, define data models in Python, serialize objects, or implement data validation with type hints.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/pydantic",
+      "category": "build-tooling"
+    },
+    {
+      "id": "terminalskills-skills--skills--pytest",
+      "name": "pytest",
+      "description": "Test Python code with pytest. Use when a user asks to write unit tests, set up test fixtures, mock dependencies, run async tests, measure coverage, or implement test-driven development in Python.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/pytest",
+      "category": "testing"
+    },
+    {
+      "id": "terminalskills-skills--skills--qdrant",
+      "name": "qdrant",
+      "description": "You are an expert in Qdrant, the high-performance vector search engine written in Rust. You help developers build semantic search, RAG retrieval, recommendation systems, and anomaly detection with billion-scale vector collections, advanced filtering, multi-vector support, and hybrid search — providing sub-millisecond query latency with rich payload filtering that other vector DBs can't match.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/qdrant",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--rails",
+      "name": "rails",
+      "description": "Ruby on Rails is a full-stack web framework following convention over configuration.\nIt provides ActiveRecord ORM, Action Controller, Action View templates, Action Cable\nfor WebSockets, and generators for rapid application development.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/rails",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--redis",
+      "name": "redis",
+      "description": "Build applications with Redis — caching, session storage, pub/sub, streams, rate limiting, leaderboards, and queues. Use when tasks involve in-memory data storage, real-time messaging, distributed locking, or performance optimization with caching layers.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/redis",
+      "category": "databases"
+    },
+    {
+      "id": "terminalskills-skills--skills--resend",
+      "name": "resend",
+      "description": "You are an expert in Resend, the developer-first email API. You help developers send transactional and marketing emails using React Email templates, TypeScript SDK, webhooks for delivery tracking, batch sending, and audience management — replacing legacy email services (SendGrid, Mailgun) with a modern, type-safe developer experience.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/resend",
+      "category": "vendor"
+    },
+    {
+      "id": "terminalskills-skills--skills--sentry",
+      "name": "sentry",
+      "description": "Assists with monitoring application errors, performance, and user experience using Sentry. Use when integrating Sentry SDKs, configuring alerting, analyzing stack traces, uploading source maps, or tracking release health in production. Trigger words: sentry, error monitoring, error tracking, performance monitoring, source maps, session replay.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/sentry",
+      "category": "vendor"
+    },
+    {
+      "id": "terminalskills-skills--skills--shopify",
+      "name": "shopify",
+      "description": "Build and customize Shopify stores — themes with Liquid, Storefront API, custom apps, and headless commerce with Hydrogen. Use when someone asks to \"build a Shopify store\", \"Shopify theme\", \"Liquid templates\", \"Shopify API\", \"Shopify app\", \"headless Shopify\", \"Hydrogen storefront\", \"customize Shopify\", \"Shopify product management\", or \"e-commerce with Shopify\". Covers Liquid templating, theme development, Storefront/Admin APIs, custom apps, checkout extensions, and Hydrogen (React-based headless).",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/shopify",
+      "category": "vendor"
+    },
+    {
+      "id": "terminalskills-skills--skills--spring-boot",
+      "name": "spring-boot",
+      "description": "Spring Boot is a Java framework that simplifies building production-ready applications.\nIt provides auto-configuration, embedded servers, and opinionated defaults for REST APIs,\ndata access with JPA, security, and monitoring via Actuator.\n",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/spring-boot",
+      "category": "backend"
+    },
+    {
+      "id": "terminalskills-skills--skills--turborepo",
+      "name": "turborepo",
+      "description": "Assists with managing JavaScript/TypeScript monorepos using Turborepo. Use when configuring build pipelines, setting up caching, pruning workspaces for Docker, or optimizing CI/CD for monorepo projects. Trigger words: turborepo, turbo, monorepo, pipeline, workspace, remote cache, turbo.json.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/turborepo",
+      "category": "build-tooling"
+    },
+    {
+      "id": "terminalskills-skills--skills--vite",
+      "name": "vite",
+      "description": "Assists with configuring and using Vite as a frontend build tool for modern web applications. Use when setting up dev servers, optimizing production builds, configuring plugins, migrating from Webpack or CRA, or building component libraries. Trigger words: vite, build tool, HMR, hot module replacement, vite config, rollup, bundling.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/vite",
+      "category": "build-tooling"
+    },
+    {
+      "id": "terminalskills-skills--skills--vitest",
+      "name": "vitest",
+      "description": "You are an expert in Vitest, the Vite-native testing framework. You help developers write and run unit tests, integration tests, and component tests with native TypeScript support, Jest-compatible API, built-in mocking, code coverage, snapshot testing, and watch mode — leveraging Vite's transform pipeline for instant test execution without separate compilation.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/vitest",
+      "category": "testing"
+    },
+    {
+      "id": "terminalskills-skills--skills--vllm",
+      "name": "vllm",
+      "description": "You are an expert in vLLM, the high-throughput LLM serving engine. You help developers deploy open-source models (Llama, Mistral, Qwen, Phi, Gemma) with PagedAttention for efficient memory management, continuous batching, tensor parallelism for multi-GPU, OpenAI-compatible API, and quantization support — achieving 2-24x higher throughput than HuggingFace Transformers for production LLM serving.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/vllm",
+      "category": "ai-ml"
+    },
+    {
+      "id": "terminalskills-skills--skills--zod",
+      "name": "zod",
+      "description": "You are an expert in Zod, the TypeScript-first schema declaration and validation library. You help developers define schemas that validate data at runtime AND infer TypeScript types at compile time — eliminating the need to write types and validators separately. Used for API input validation, form validation, environment variables, config files, and any data boundary.",
+      "repository": "https://github.com/TerminalSkills/skills",
+      "type": "skill",
+      "source": "terminalskills-skills",
+      "relativeSkillDir": "skills/zod",
+      "category": "build-tooling"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--api-and-interface-design",
+      "name": "api-and-interface-design",
+      "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/api-and-interface-design",
+      "category": "backend"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--browser-testing-with-devtools",
+      "name": "browser-testing-with-devtools",
+      "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/browser-testing-with-devtools",
+      "category": "testing"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--ci-cd-and-automation",
+      "name": "ci-cd-and-automation",
+      "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/ci-cd-and-automation",
+      "category": "devops"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--code-review-and-quality",
+      "name": "code-review-and-quality",
+      "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/code-review-and-quality",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--code-simplification",
+      "name": "code-simplification",
+      "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/code-simplification",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--context-engineering",
+      "name": "context-engineering",
+      "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/context-engineering",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--debugging-and-error-recovery",
+      "name": "debugging-and-error-recovery",
+      "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/debugging-and-error-recovery",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--deprecation-and-migration",
+      "name": "deprecation-and-migration",
+      "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/deprecation-and-migration",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--documentation-and-adrs",
+      "name": "documentation-and-adrs",
+      "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/documentation-and-adrs",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--doubt-driven-development",
+      "name": "doubt-driven-development",
+      "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/doubt-driven-development",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--frontend-ui-engineering",
+      "name": "frontend-ui-engineering",
+      "description": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/frontend-ui-engineering",
+      "category": "frontend"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--git-workflow-and-versioning",
+      "name": "git-workflow-and-versioning",
+      "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/git-workflow-and-versioning",
+      "category": "devops"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--idea-refine",
+      "name": "idea-refine",
+      "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers on \"ideate\", \"refine this idea\", or \"stress-test my plan\".",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/idea-refine",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--incremental-implementation",
+      "name": "incremental-implementation",
+      "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/incremental-implementation",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--interview-me",
+      "name": "interview-me",
+      "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when the user explicitly invokes (\"interview me\", \"grill me\", \"are we sure?\", \"stress-test my thinking\"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/interview-me",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--performance-optimization",
+      "name": "performance-optimization",
+      "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/performance-optimization",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--planning-and-task-breakdown",
+      "name": "planning-and-task-breakdown",
+      "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/planning-and-task-breakdown",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--security-and-hardening",
+      "name": "security-and-hardening",
+      "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/security-and-hardening",
+      "category": "security"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--shipping-and-launch",
+      "name": "shipping-and-launch",
+      "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/shipping-and-launch",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--source-driven-development",
+      "name": "source-driven-development",
+      "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/source-driven-development",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--spec-driven-development",
+      "name": "spec-driven-development",
+      "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/spec-driven-development",
+      "category": "workflow"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--test-driven-development",
+      "name": "test-driven-development",
+      "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/test-driven-development",
+      "category": "testing"
+    },
+    {
+      "id": "addyosmani-agent-skills--skills--using-agent-skills",
+      "name": "using-agent-skills",
+      "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "type": "skill",
+      "source": "addyosmani-agent-skills",
+      "relativeSkillDir": "skills/using-agent-skills",
+      "category": "workflow"
+    },
+    {
+      "id": "wshobson-agents--plugins--backend-development--skills--cqrs-implementation",
+      "name": "cqrs-implementation",
+      "description": "Implement Command Query Responsibility Segregation for scalable architectures. Use when separating read and write models, optimizing query performance, or building event-sourced systems.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/backend-development/skills/cqrs-implementation",
+      "category": "architecture"
+    },
+    {
+      "id": "wshobson-agents--plugins--backend-development--skills--event-store-design",
+      "name": "event-store-design",
+      "description": "Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure, choosing event store technologies, or implementing event persistence patterns.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/backend-development/skills/event-store-design",
+      "category": "architecture"
+    },
+    {
+      "id": "wshobson-agents--plugins--backend-development--skills--microservices-patterns",
+      "name": "microservices-patterns",
+      "description": "Design microservices architectures with service boundaries, event-driven communication, and resilience patterns. Use when building distributed systems, decomposing monoliths, or implementing microservices.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/backend-development/skills/microservices-patterns",
+      "category": "architecture"
+    },
+    {
+      "id": "wshobson-agents--plugins--backend-development--skills--projection-patterns",
+      "name": "projection-patterns",
+      "description": "Build read models and projections from event streams. Use when implementing CQRS read sides, building materialized views, or optimizing query performance in event-sourced systems.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/backend-development/skills/projection-patterns",
+      "category": "architecture"
+    },
+    {
+      "id": "wshobson-agents--plugins--backend-development--skills--saga-orchestration",
+      "name": "saga-orchestration",
+      "description": "Implement saga patterns for distributed transactions and cross-aggregate workflows. Use this skill when implementing distributed transactions across microservices where 2PC is unavailable, designing compensating actions for failed order workflows that span inventory, payment, and shipping services, building event-driven saga coordinators for travel booking systems that must roll back hotel, flight, and car rental reservations atomically, or debugging stuck saga states in production where compensation steps never complete.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/backend-development/skills/saga-orchestration",
+      "category": "architecture"
+    },
+    {
+      "id": "wshobson-agents--plugins--backend-development--skills--workflow-orchestration-patterns",
+      "name": "workflow-orchestration-patterns",
+      "description": "Design durable workflows with Temporal for distributed systems. Covers workflow vs activity separation, saga patterns, state management, and determinism constraints. Use when building long-running processes, distributed transactions, or microservice orchestration.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/backend-development/skills/workflow-orchestration-patterns",
+      "category": "architecture"
+    },
+    {
+      "id": "wshobson-agents--plugins--blockchain-web3--skills--defi-protocol-templates",
+      "name": "defi-protocol-templates",
+      "description": "Implement DeFi protocols with production-ready templates for staking, AMMs, governance, and lending systems. Use when building decentralized finance applications or smart contract protocols.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/blockchain-web3/skills/defi-protocol-templates",
+      "category": "languages"
+    },
+    {
+      "id": "wshobson-agents--plugins--blockchain-web3--skills--nft-standards",
+      "name": "nft-standards",
+      "description": "Implement NFT standards (ERC-721, ERC-1155) with proper metadata handling, minting strategies, and marketplace integration. Use when creating NFT contracts, building NFT marketplaces, or implementing digital asset systems.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/blockchain-web3/skills/nft-standards",
+      "category": "languages"
+    },
+    {
+      "id": "wshobson-agents--plugins--blockchain-web3--skills--solidity-security",
+      "name": "solidity-security",
+      "description": "Master smart contract security best practices to prevent common vulnerabilities and implement secure Solidity patterns. Use when writing smart contracts, auditing existing contracts, or implementing security measures for blockchain applications.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/blockchain-web3/skills/solidity-security",
+      "category": "security"
+    },
+    {
+      "id": "wshobson-agents--plugins--blockchain-web3--skills--web3-testing",
+      "name": "web3-testing",
+      "description": "Test smart contracts comprehensively using Hardhat and Foundry with unit tests, integration tests, and mainnet forking. Use when testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/blockchain-web3/skills/web3-testing",
+      "category": "testing"
+    },
+    {
+      "id": "wshobson-agents--plugins--cicd-automation--skills--deployment-pipeline-design",
+      "name": "deployment-pipeline-design",
+      "description": "Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment orchestration. Use this skill when designing zero-downtime deployment pipelines, implementing canary rollout strategies, setting up multi-environment promotion workflows, or debugging failed deployment gates in CI/CD.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/cicd-automation/skills/deployment-pipeline-design",
+      "category": "devops"
+    },
+    {
+      "id": "wshobson-agents--plugins--cicd-automation--skills--gitlab-ci-patterns",
+      "name": "gitlab-ci-patterns",
+      "description": "Build GitLab CI/CD pipelines with multi-stage workflows, caching, and distributed runners for scalable automation. Use when implementing GitLab CI/CD, optimizing pipeline performance, or setting up automated testing and deployment.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/cicd-automation/skills/gitlab-ci-patterns",
+      "category": "devops"
+    },
+    {
+      "id": "wshobson-agents--plugins--cicd-automation--skills--secrets-management",
+      "name": "secrets-management",
+      "description": "Implement secure secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, or native platform solutions. Use when handling sensitive credentials, rotating secrets, or securing CI/CD environments.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/cicd-automation/skills/secrets-management",
+      "category": "security"
+    },
+    {
+      "id": "wshobson-agents--plugins--systems-programming--skills--memory-safety-patterns",
+      "name": "memory-safety-patterns",
+      "description": "Implement memory-safe programming with RAII, ownership, smart pointers, and resource management across Rust, C++, and C. Use when writing safe systems code, managing resources, or preventing memory bugs.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/systems-programming/skills/memory-safety-patterns",
+      "category": "languages"
+    },
+    {
+      "id": "wshobson-agents--plugins--systems-programming--skills--rust-async-patterns",
+      "name": "rust-async-patterns",
+      "description": "Master Rust async programming with Tokio, async traits, error handling, and concurrent patterns. Use when building async Rust applications, implementing concurrent systems, or debugging async code.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/systems-programming/skills/rust-async-patterns",
+      "category": "languages"
+    },
+    {
+      "id": "wshobson-agents--plugins--ui-design--skills--design-system-patterns",
+      "name": "design-system-patterns",
+      "description": "Build scalable design systems with design tokens, theming infrastructure, and component architecture patterns. Use when creating design tokens, implementing theme switching, building component libraries, or establishing design system foundations.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/ui-design/skills/design-system-patterns",
+      "category": "frontend"
+    },
+    {
+      "id": "wshobson-agents--plugins--ui-design--skills--interaction-design",
+      "name": "interaction-design",
+      "description": "Design and implement microinteractions, motion design, transitions, and user feedback patterns. Use when adding polish to UI interactions, implementing loading states, or creating delightful user experiences.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/ui-design/skills/interaction-design",
+      "category": "frontend"
+    },
+    {
+      "id": "wshobson-agents--plugins--ui-design--skills--responsive-design",
+      "name": "responsive-design",
+      "description": "Implement modern responsive layouts using container queries, fluid typography, CSS Grid, and mobile-first breakpoint strategies. Use when building adaptive interfaces, implementing fluid layouts, or creating component-level responsive behavior.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/ui-design/skills/responsive-design",
+      "category": "frontend"
+    },
+    {
+      "id": "wshobson-agents--plugins--ui-design--skills--visual-design-foundations",
+      "name": "visual-design-foundations",
+      "description": "Apply typography, color theory, spacing systems, and iconography principles to create cohesive visual designs. Use when establishing design tokens, building style guides, or improving visual hierarchy and consistency.",
+      "repository": "https://github.com/wshobson/agents",
+      "type": "skill",
+      "source": "wshobson-agents",
+      "relativeSkillDir": "plugins/ui-design/skills/visual-design-foundations",
+      "category": "frontend"
     }
   ]
 }

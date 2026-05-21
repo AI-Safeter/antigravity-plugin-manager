@@ -1,7 +1,7 @@
 {
   "name": "@beidawuli/antigravity-plugin-manager",
-  "version": "3.0.0",
-  "description": "Interactive CLI plugin manager for the antigravity-cli ecosystem. All skills sourced from upstream open-source repositories — no AI-authored content.",
+  "version": "3.1.0",
+  "description": "Interactive CLI plugin manager for the antigravity-cli ecosystem. 300+ agent skills aggregated from popular open-source repositories, all 16 categories covered.",
   "main": "src/ag-plugin-v2.js",
   "bin": {
     "ag-plugin": "src/ag-plugin-v2.js"
@@ -24,7 +24,8 @@
     "mcp-server",
     "llm-agent",
     "interactive-cli",
-    "plugin-manager"
+    "plugin-manager",
+    "cursorrules"
   ],
   "author": "AI-Safeter",
   "license": "MIT",
