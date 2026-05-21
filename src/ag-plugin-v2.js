@@ -181,41 +181,31 @@ async function browseAndInstall(registry) {
     }
   }
 
-  // Step 2: ask whether to install everything in this scope, or hand-pick.
-  // Saves users from manually toggling 99 items just to grab a whole category.
+  // Single checkbox: "Install all" sentinel sits at the top, individual
+  // plugins below. Toggling the sentinel + Enter installs everything;
+  // toggling specific items + Enter installs just those.
+  const SELECT_ALL = '__select_all__';
   const scopeLabel = filteredRegistry === registry
     ? `all ${filteredRegistry.length} plugins`
     : `all ${filteredRegistry.length} in this category`;
   const notInstalledCount = filteredRegistry.filter(p => !installedSet.has(p.id)).length;
-  let pickMode;
-  try {
-    pickMode = await runWithEscape(select, {
-      message: 'How would you like to select?',
-      choices: [
-        { name: `✅ Install ${scopeLabel}`, value: 'all', description: `${notInstalledCount} not yet installed` },
-        { name: `📋 Pick individually with checkboxes`, value: 'pick' },
-        { name: `⬅️  Back`, value: 'back' }
-      ],
-      theme: CLACK_THEME
-    });
-  } catch (err) {
-    if (isInquirerCancel(err)) return;
-    throw err;
-  }
-  if (pickMode === 'back') return;
 
   let selectedIds;
-  if (pickMode === 'all') {
-    selectedIds = filteredRegistry.map(p => p.id);
-  } else {
-    try {
-      selectedIds = await runWithEscape(checkbox, {
-      message: `Select plugins (Space: toggle, 'a' toggle all, Enter: install, Esc: go back):`,
-      choices: filteredRegistry.map(p => ({
-        name: `${installedSet.has(p.id) ? chalk.green('● ') : '  '}${p.name} (${p.id})`,
-        value: p.id,
-        description: p.description.substring(0, 80)
-      })),
+  try {
+    selectedIds = await runWithEscape(checkbox, {
+      message: `Select plugins (Space: toggle, Enter: install, Esc: back):`,
+      choices: [
+        {
+          name: chalk.bold.hex('#22D3EE')(`✅ Install ${scopeLabel}`),
+          value: SELECT_ALL,
+          description: `${notInstalledCount} not yet installed`
+        },
+        ...filteredRegistry.map(p => ({
+          name: `${installedSet.has(p.id) ? chalk.green('● ') : '  '}${p.name} (${p.id})`,
+          value: p.id,
+          description: p.description.substring(0, 80)
+        }))
+      ],
       pageSize: 15,
       theme: {
         ...CLACK_THEME,
@@ -230,12 +220,14 @@ async function browseAndInstall(registry) {
         }
       }
     });
-    } catch (err) {
-      if (isInquirerCancel(err)) {
-        return; // Return silently to main dashboard
-      }
-      throw err;
-    }
+  } catch (err) {
+    if (isInquirerCancel(err)) return;
+    throw err;
+  }
+
+  // If the sentinel was checked, expand to every plugin in the current scope.
+  if (selectedIds && selectedIds.includes(SELECT_ALL)) {
+    selectedIds = filteredRegistry.map(p => p.id);
   }
 
   if (selectedIds && selectedIds.length > 0) {
