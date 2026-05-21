@@ -20,24 +20,6 @@
       "category": "frontend"
     },
     {
-      "id": "apache-airflow",
-      "name": "Apache Airflow",
-      "description": "Data orchestration pipelines, DAG configurations, task scheduling, and data lineage tracking.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
-      "id": "apache-spark",
-      "name": "Apache Spark",
-      "description": "Large-scale distributed data processing, PySpark scripts, streaming datasets, and cluster resources.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
       "id": "api-documenter",
       "name": "api-documenter",
       "description": "Master API documentation with OpenAPI 3.1, AI-powered tools, and modern developer experience practices. Create interactive docs, generate SDKs, and build comprehensive developer portals. Use PROACTIVELY for API documentation or developer portal creation.",
@@ -47,18 +29,9 @@
       "category": "workflow"
     },
     {
-      "id": "api-security-hardening",
-      "name": "API Security Hardening",
-      "description": "CORS policies, rate limits, request schema validations, and query injection prevention.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "security"
-    },
-    {
       "id": "astro-static-sites",
-      "name": "Astro Static Sites",
-      "description": "Expert in Astro, partial hydration, islands architecture, and extremely fast content-focused websites.",
+      "name": "astro-static-sites",
+      "description": "Build content-heavy sites with Astro v4+ using islands architecture, content collections, and selective hydration. Use when scaffolding marketing pages, blogs, or docs that ship minimal JS, mixing React/Vue/Svelte components, or choosing between prerendering and SSR.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -66,8 +39,8 @@
     },
     {
       "id": "auth-implementation",
-      "name": "Auth Implementation",
-      "description": "Authentication and authorization patterns, OAuth2 flows, RBAC/ABAC models, and SAML.",
+      "name": "auth-implementation",
+      "description": "Authentication implementation covering sessions vs tokens, secure cookies, CSRF defenses, password hashing with Argon2id/bcrypt, MFA TOTP, email verification, magic links, and account recovery. Use when building login, signup, password reset, MFA, or session management, or when reviewing an auth surface for common attack vectors.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -84,17 +57,8 @@
     },
     {
       "id": "aws-cloud-patterns",
-      "name": "AWS Cloud Patterns",
-      "description": "AWS serverless deployments, IAM security, VPC networking, EC2/S3/Lambda architectures.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "azure-cloud-patterns",
-      "name": "Azure Cloud Patterns",
-      "description": "Microsoft Azure architectures, Active Directory security, AKS clusters, and App Services.",
+      "name": "aws-cloud-patterns",
+      "description": "AWS architecture patterns covering IAM, VPC, S3, Lambda, RDS, SQS/SNS/EventBridge, CloudWatch, and IaC choices. Use when designing or reviewing AWS deployments, debugging permission errors, choosing between Lambda/ECS/Fargate, picking between CDK and Terraform, or controlling cloud spend.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -110,24 +74,6 @@
       "category": "languages"
     },
     {
-      "id": "bun-runtime",
-      "name": "Bun Runtime",
-      "description": "Bun runtime environment, super-fast bundling, package manager, and high-performance modern APIs.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "clean-code-craft",
-      "name": "Clean Code Craft",
-      "description": "SOLID principles, code readability, refactoring tech debt, and clean code craftsmanship.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "architecture"
-    },
-    {
       "id": "clerk-auth",
       "name": "clerk-auth",
       "description": "Clerk authentication for Next.js, React, and Remix apps. Use this skill when integrating ClerkProvider, useUser, useAuth, signIn/signUp components, organizations and multi-tenant auth, JWT templates, webhooks for user sync, or protecting API routes with auth() and clerkMiddleware.",
@@ -137,31 +83,13 @@
       "category": "vendor"
     },
     {
-      "id": "clickhouse-olap",
-      "name": "ClickHouse OLAP",
-      "description": "Column-oriented database management systems, massive analytics queries, and real-time clickstream data.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
       "id": "cloudflare-workers",
-      "name": "Cloudflare Workers",
-      "description": "Edge computing development, global serverless workers, KV storage, and edge caching strategies.",
+      "name": "cloudflare-workers",
+      "description": "Cloudflare Workers edge runtime with V8 isolates, wrangler CLI, and bindings (KV, R2, D1, Queues, Durable Objects, Workers AI, Vectorize). Use when building or debugging Workers, choosing between Cloudflare storage primitives, hitting CPU or subrequest limits, or wiring cron triggers and Durable Objects.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
       "category": "devops"
-    },
-    {
-      "id": "code-documentation-generator",
-      "name": "Code Documentation Generator",
-      "description": "Generating structured codebase docstrings, markdown architectures, and clean developer guides.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "workflow"
     },
     {
       "id": "code-reviewer",
@@ -171,15 +99,6 @@
       "type": "skill",
       "source": "local",
       "category": "workflow"
-    },
-    {
-      "id": "container-security",
-      "name": "Container Security",
-      "description": "Docker security profiles, rootless execution, image signature verification, and runtime audits.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "security"
     },
     {
       "id": "cpp-pro",
@@ -198,15 +117,6 @@
       "type": "skill",
       "source": "local",
       "category": "ai-ml"
-    },
-    {
-      "id": "cryptography-expert",
-      "name": "Cryptography Expert",
-      "description": "Data hashing (bcrypt/argon2), asymmetric keys, secure communication protocols, and signing.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "security"
     },
     {
       "id": "csharp-pro",
@@ -228,44 +138,17 @@
     },
     {
       "id": "cypress-e2e",
-      "name": "Cypress E2E Testing",
-      "description": "Cypress integration testing, web application testing, mock request servers, and UI validation.",
+      "name": "cypress-e2e",
+      "description": "Write reliable Cypress end-to-end and component tests with cy.get, cy.intercept, fixtures, custom commands, retries, and parallel CI. Use when authoring or stabilising Cypress specs, hunting flaky tests, mocking the network with cy.intercept, or splitting a suite across CI shards.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
       "category": "testing"
     },
     {
-      "id": "data-lakehouse",
-      "name": "Data Lakehouse",
-      "description": "Delta Lake structures, Iceberg tables, columnar data formats (Parquet), and analytical queries.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
-      "id": "dbt-data-build-tool",
-      "name": "dbt Data Build Tool",
-      "description": "dbt data transformation models, test macros, documentation generation, and SQL transformations.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
       "id": "ddd-strategic-design",
       "name": "ddd-strategic-design",
       "description": "Design DDD strategic artifacts including subdomains, bounded contexts, and ubiquitous language for complex business domains.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "architecture"
-    },
-    {
-      "id": "design-patterns-classic",
-      "name": "Design Patterns",
-      "description": "Gang of Four design patterns, creational, structural, and behavioral OOP patterns.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -282,21 +165,12 @@
     },
     {
       "id": "docker-containers",
-      "name": "Docker Containers",
-      "description": "Docker image optimization, multi-stage builds, container security, and local sandbox configs.",
+      "name": "docker-containers",
+      "description": "Author production-grade Dockerfiles and Compose files. Covers multi-stage builds, BuildKit, image layering, .dockerignore, healthchecks, non-root users, multi-arch images, and image size optimization. Use when writing or reviewing Dockerfile, docker-compose.yml, building container images, debugging large or slow builds, or hardening containers for production.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
       "category": "devops"
-    },
-    {
-      "id": "drizzle-orm",
-      "name": "Drizzle ORM",
-      "description": "Sleek, lightweight, type-safe SQL query building, schema migrations, and zero overhead.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
     },
     {
       "id": "dspy-prompt-optimization",
@@ -308,31 +182,13 @@
       "category": "ai-ml"
     },
     {
-      "id": "dynamodb-pro",
-      "name": "DynamoDB Pro",
-      "description": "Serverless NoSQL database designs, single-table design, secondary indexes, and global tables.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "elasticsearch",
-      "name": "Elasticsearch",
-      "description": "Full-text search engines, document indexing, analytical search, and ELK stack log monitoring.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
       "id": "electron-development",
       "name": "electron-development",
       "description": "Master Electron desktop app development with secure IPC, contextIsolation, preload scripts, multi-process architecture, electron-builder packaging, code signing, and auto-update.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
-      "category": "mobile-game"
+      "category": "frontend"
     },
     {
       "id": "elixir-pro",
@@ -353,15 +209,6 @@
       "category": "build-tooling"
     },
     {
-      "id": "event-driven-architecture",
-      "name": "Event-Driven Architecture",
-      "description": "Event broker setups, pub-sub designs, message formatting, and asynchronous event streams.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "architecture"
-    },
-    {
       "id": "event-sourcing-architect",
       "name": "event-sourcing-architect",
       "description": "Expert in event sourcing, CQRS, and event-driven architecture patterns. Masters event store design, projection building, saga orchestration, and eventual consistency patterns. Use PROACTIVELY for event-sourced systems, audit trails, or temporal queries.",
@@ -372,8 +219,8 @@
     },
     {
       "id": "express-nodejs",
-      "name": "Express Node.js",
-      "description": "Node.js Express microservices, middleware routing, error control, and highly-scalable server engines.",
+      "name": "express-nodejs",
+      "description": "Build HTTP APIs and web servers with Express.js on Node.js. Covers routing, middleware order, request/response API, error-handling middleware, async/await patterns, body parsing, static files, security middleware (helmet, CORS), and production hardening.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -398,33 +245,6 @@
       "category": "backend"
     },
     {
-      "id": "firebase-integration",
-      "name": "Firebase Integration",
-      "description": "Firestore real-time databases, Google auth, Firebase storage, and cloud messaging.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "flask-pro",
-      "name": "Flask Pro",
-      "description": "Microservice API development using Flask, SQLAlchmey, extension integration, and lightweight servers.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "flutter-development",
-      "name": "Flutter Development",
-      "description": "Cross-platform mobile and web application architecture, custom rendering, and BLoC state management.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
-    },
-    {
       "id": "frontend-design",
       "name": "frontend-design",
       "description": "Build distinctive, high-end frontend interfaces and layouts. Focuses on premium typography, structural hierarchy, grid systems, and thoughtful animations while avoiding generic design patterns.",
@@ -435,30 +255,12 @@
     },
     {
       "id": "gcp-cloud-patterns",
-      "name": "GCP Cloud Patterns",
-      "description": "Google Cloud Platform setups, GKE containers, Cloud Run APIs, IAM roles, and storage buckets.",
+      "name": "gcp-cloud-patterns",
+      "description": "Google Cloud patterns covering IAM, Cloud Run, Cloud Functions, Cloud Storage, Pub/Sub, BigQuery, Firestore, and Cloud Build. Use when designing or reviewing GCP architectures, debugging permission errors, picking between Cloud Run and GKE, modeling BigQuery tables, or untangling project vs organization permissions.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
       "category": "devops"
-    },
-    {
-      "id": "gdpr-compliance",
-      "name": "GDPR Compliance",
-      "description": "Data privacy compliance, user data encryption, right-to-be-forgotten setups, and privacy logs.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "security"
-    },
-    {
-      "id": "gemini-api-expert",
-      "name": "Gemini API Expert",
-      "description": "Google Gemini models, structured JSON outputs, multimodal prompting, and system configuration.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
     },
     {
       "id": "git-advanced-workflows",
@@ -480,8 +282,8 @@
     },
     {
       "id": "gitlab-ci-pipelines",
-      "name": "GitLab CI Pipelines",
-      "description": "GitLab runner setups, stage configurations, caching strategies, and robust deployments.",
+      "name": "gitlab-ci-pipelines",
+      "description": "Design GitLab CI/CD pipelines with stages, rules, caching, artifacts, includes/extends, parent-child pipelines, environments, and monorepo patterns. Use when authoring or refactoring .gitlab-ci.yml, debugging rules vs only/except, tuning cache hit rates, or splitting a large pipeline into reusable components.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -515,18 +317,9 @@
       "category": "backend"
     },
     {
-      "id": "grpc-services",
-      "name": "gRPC Services",
-      "description": "Protocol Buffers, gRPC stream patterns, microservice communication, and high-performance RPC systems.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
       "id": "helm-charts",
-      "name": "Helm Charts",
-      "description": "Kubernetes package management, templates, custom charts, and deployment upgrades.",
+      "name": "helm-charts",
+      "description": "Author and operate Helm 3 charts for Kubernetes. Covers Chart.yaml, values.yaml, Go-template syntax, helm install/upgrade/rollback, dependencies, hooks, helm test, OCI repositories, and values override patterns. Use when packaging a Kubernetes app for distribution, debugging template rendering, managing chart releases, upgrading dependencies, or designing a configurable values schema.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -543,8 +336,8 @@
     },
     {
       "id": "huggingface-models",
-      "name": "Hugging Face Models",
-      "description": "Model repository hubs, transformer pipelines, local model execution, and tokenizers.",
+      "name": "huggingface-models",
+      "description": "Use models, datasets, and tooling from the Hugging Face Hub with Transformers 4.40+. Covers AutoTokenizer/AutoModel/pipeline, model cards, the datasets library, the Inference API and Inference Endpoints, accelerate for multi-GPU, quantization with bitsandbytes/AWQ/GPTQ, and the modern hf CLI from huggingface_hub.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -569,18 +362,9 @@
       "category": "languages"
     },
     {
-      "id": "javascript-pro",
-      "name": "JavaScript Pro",
-      "description": "Master of modern ECMAScript standards, asynchronous flows, runtime execution engines, and optimal design patterns.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "languages"
-    },
-    {
       "id": "jest-typescript",
-      "name": "Jest TypeScript Testing",
-      "description": "TypeScript testing setups, Jest mocks, mock functions, and high-performance test runners.",
+      "name": "jest-typescript",
+      "description": "Configure and write Jest tests in TypeScript using ts-jest or Babel, with mocking, snapshots, async assertions, and coverage. Use when authoring or debugging Jest tests for TypeScript code, picking between ts-jest and @swc/jest, or hunting down type errors in jest.config.ts and jest.mock factories.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -596,15 +380,6 @@
       "category": "mobile-game"
     },
     {
-      "id": "junit-testing",
-      "name": "JUnit Testing",
-      "description": "Java testing frameworks, JUnit 5 features, Mockito mocking, and backend transaction tests.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
-    },
-    {
       "id": "jupyter-notebooks",
       "name": "jupyter-notebooks",
       "description": "Jupyter notebook patterns and discipline. Use this skill when authoring or refactoring .ipynb files, debugging hidden-state and out-of-order execution bugs, extracting cells into Python modules, parameterizing notebooks with papermill, version-controlling notebooks via jupytext, or using cell/line magics. Triggers: jupyter, ipynb, notebook, kernel, magic, papermill, jupytext, nbconvert, ipykernel.",
@@ -615,35 +390,17 @@
     },
     {
       "id": "jwt-oauth2-flows",
-      "name": "JWT & OAuth2 Flows",
-      "description": "JSON Web Tokens security, signing keys, token expirations, and secure login flows.",
+      "name": "jwt-oauth2-flows",
+      "description": "JWT structure, signing algorithms, and OAuth2/OIDC flows including authorization code with PKCE, client credentials, and refresh tokens. Use when integrating an OAuth2 provider, validating tokens on a server, choosing HS256 vs RS256, debugging redirect URIs, or distinguishing ID tokens from access tokens.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
       "category": "security"
     },
     {
-      "id": "kafka-streaming",
-      "name": "Kafka Data Streaming",
-      "description": "Apache Kafka event brokers, topic configurations, producer/consumer streams, and schema registries.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
-      "id": "kotlin-pro",
-      "name": "Kotlin Pro",
-      "description": "Specialist in multiplatform development, Android ecosystems, coroutines, and clean modern styling.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "languages"
-    },
-    {
       "id": "kubernetes",
-      "name": "Kubernetes Orchestration",
-      "description": "Deployment architectures, pods, services, ingress routing, Helm deployments, and cluster management.",
+      "name": "kubernetes",
+      "description": "Write and review Kubernetes manifests for Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, and HPAs. Covers kubectl essentials, namespaces, labels/selectors, resource requests/limits, liveness/readiness/startup probes, and rolling updates. Use when authoring YAML for a K8s cluster, debugging pod scheduling or crashloops, configuring autoscaling, or hardening workloads for production.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -651,8 +408,8 @@
     },
     {
       "id": "langchain-agent-orchestrator",
-      "name": "LangChain Agent Orchestration",
-      "description": "LangChain workflows, custom tool definitions, memory architectures, and multi-agent systems.",
+      "name": "langchain-agent-orchestrator",
+      "description": "Compose LLM applications with LangChain 0.3+ (Python and JS). Covers LCEL (Runnable composition with the pipe operator), chat models, output parsers, retrievers and RAG, tools and agents via create_react_agent / LangGraph, LangSmith tracing, memory, and the anti-patterns that come from over-abstracting.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -666,33 +423,6 @@
       "type": "skill",
       "source": "local",
       "category": "ai-ml"
-    },
-    {
-      "id": "laravel-pro",
-      "name": "Laravel Pro",
-      "description": "PHP Laravel expert implementing Eloquent ORM, Blade, queues, routing, and clean MVC patterns.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "llamaindex-data-framework",
-      "name": "LlamaIndex Data Framework",
-      "description": "LlamaIndex ingestion pipelines, index configurations, query engines, and metadata filters.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "load-testing-k6",
-      "name": "Load Testing with k6",
-      "description": "Grafana k6 load test scripts, virtual user configurations, API thresholds, and server benchmarks.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
     },
     {
       "id": "mdx-content",
@@ -723,8 +453,8 @@
     },
     {
       "id": "mongodb",
-      "name": "MongoDB",
-      "description": "NoSQL document modeling, indexing, aggregation pipelines, and high-availability replica sets.",
+      "name": "mongodb",
+      "description": "Design and operate MongoDB schemas, indexes, and aggregation pipelines. Use for document modeling (embed vs reference), compound/multikey/TTL/text/geospatial indexes, $match/$group/$lookup pipelines, transactions, replica sets, sharding, and change streams.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -732,8 +462,8 @@
     },
     {
       "id": "mysql",
-      "name": "MySQL Database",
-      "description": "MySQL storage engines, transaction isolation, query tuning, and replication setups.",
+      "name": "mysql",
+      "description": "Design and tune MySQL/MariaDB schemas and queries. Use for InnoDB engine specifics, B-tree/FULLTEXT/spatial indexes, JOIN planning with EXPLAIN, transactions and isolation levels, binlog replication, JSON columns, performance schema, and common config tuning.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -741,8 +471,8 @@
     },
     {
       "id": "neo4j-graph",
-      "name": "Neo4j Graph Database",
-      "description": "Graph data modeling, Cypher queries, relationship patterns, and complex network traversals.",
+      "name": "neo4j-graph",
+      "description": "Model and query graph data with Neo4j. Covers nodes/relationships/properties, the Cypher query language (MATCH/WHERE/CREATE/MERGE), constraints and indexes, the official Bolt drivers, APOC procedures, graph data modeling, and common patterns like variable-length paths and shortest path.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -750,8 +480,8 @@
     },
     {
       "id": "nestjs-patterns",
-      "name": "NestJS Patterns",
-      "description": "Modular enterprise architectures using NestJS, dependency injection, and microservices patterns.",
+      "name": "nestjs-patterns",
+      "description": "Build NestJS applications with modules, providers, controllers, and the request lifecycle (Guards, Interceptors, Pipes, Filters). Use when scaffolding modules, wiring DI, adding validation with class-validator, integrating TypeORM or Prisma, or deciding global vs feature scope.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -776,15 +506,6 @@
       "category": "frontend"
     },
     {
-      "id": "nginx-configuration",
-      "name": "NGINX Configuration",
-      "description": "Web server management, reverse proxies, load balancing, SSL encryption, and high-performance caching.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
       "id": "nx-monorepo",
       "name": "nx-monorepo",
       "description": "Nx for monorepo management with code generation, project dependency graph, affected commands, and computation caching. Use this skill when initializing an Nx workspace, authoring project.json or nx.json, defining targets and executors, running nx generate for scaffolding, using nx affected, nx graph, nx run-many, or migrating from Lerna/Turborepo. Triggers: nx, nx.json, project.json, nx generate, nx affected, nx graph, nx run-many, nx migrate, nx release, nx cloud, target defaults, named inputs, executors.",
@@ -804,8 +525,8 @@
     },
     {
       "id": "openai-api-expert",
-      "name": "OpenAI API Expert",
-      "description": "OpenAI API integration, GPT models, embedding generation, tool calling, and fine-tuning configurations.",
+      "name": "openai-api-expert",
+      "description": "Build production integrations against the OpenAI API. Covers the Responses API and Chat Completions, streaming over SSE, tool/function calling, structured outputs with json_schema, embeddings, prompt caching, retries with exponential backoff, model selection across gpt-4o/o3/o4-mini, and multimodal image inputs.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -839,15 +560,6 @@
       "category": "databases"
     },
     {
-      "id": "phoenix-elixir",
-      "name": "Phoenix Elixir",
-      "description": "Phoenix framework, LiveView real-time systems, PubSub event flows, and high-concurrency websockets.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
       "id": "php-pro",
       "name": "php-pro",
       "description": "Write idiomatic PHP code with generators, iterators, SPL data structures, and modern OOP features. Use PROACTIVELY for high-performance PHP applications.",
@@ -876,8 +588,8 @@
     },
     {
       "id": "playwright",
-      "name": "Playwright E2E Testing",
-      "description": "Playwright browser automation, cross-browser tests, page object models, and test reporters.",
+      "name": "playwright",
+      "description": "Write Playwright tests in TypeScript with auto-waiting locators, fixtures, traces, network mocking, and parallel projects. Use when authoring page.locator-based specs, debugging with the trace viewer, mocking with page.route, generating tests with codegen, or running cross-browser matrices in CI.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -912,8 +624,8 @@
     },
     {
       "id": "prisma-orm",
-      "name": "Prisma ORM",
-      "description": "Prisma data modeling, migrations, type-safe database access, and clean schema architectures.",
+      "name": "prisma-orm",
+      "description": "Model data and write type-safe queries with Prisma. Use for schema.prisma syntax, relations (1:1, 1:n, m:n), prisma generate vs prisma migrate dev, the Prisma Client API (findMany, create, upsert, transactions, $queryRaw), middleware/extensions, and soft-delete patterns.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -921,8 +633,8 @@
     },
     {
       "id": "prometheus-monitoring",
-      "name": "Prometheus Monitoring",
-      "description": "Prometheus metrics collection, Grafana dashboards, alerting rules, and system observability.",
+      "name": "prometheus-monitoring",
+      "description": "Design Prometheus-based monitoring. Covers PromQL fundamentals, scrape configuration, recording and alerting rules, Alertmanager routing, service discovery, exporters, the four metric types (counter, gauge, histogram, summary), and the RED and USE methods. Use when authoring scrape configs, writing PromQL queries or alert rules, instrumenting an application, or designing dashboards and SLOs.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -947,15 +659,6 @@
       "category": "ai-ml"
     },
     {
-      "id": "pwa-implementation",
-      "name": "PWA Implementation",
-      "description": "Progressive Web Apps, service workers, offline database caching, push notifications, and installation.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
       "id": "pydantic-ai-agents",
       "name": "pydantic-ai-agents",
       "description": "PydanticAI typed agent framework from the Pydantic team for building production LLM agents with structured outputs and dependency injection. Use this skill when defining an `Agent` with a system prompt and typed `result_type`, registering tools via `@agent.tool`, wiring runtime dependencies through `RunContext[Deps]`, streaming responses with `agent.run_stream`, or switching providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Ollama) without changing agent code.",
@@ -975,8 +678,8 @@
     },
     {
       "id": "pytest-expert",
-      "name": "Pytest Expert",
-      "description": "Python testing setups, fixtures, parameterized unit tests, mock frameworks, and pytest configs.",
+      "name": "pytest-expert",
+      "description": "Write idiomatic pytest tests with fixtures, parametrize, markers, monkeypatch, tmp_path, and key plugins (pytest-mock, pytest-asyncio, pytest-cov). Use when authoring or refactoring Python tests, structuring conftest.py, debugging fixture scope or finalizer order, or adding coverage gates in CI.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1001,15 +704,6 @@
       "category": "databases"
     },
     {
-      "id": "rabbitmq-queues",
-      "name": "RabbitMQ Queues",
-      "description": "Message queues, AMQP routing exchanges, queue bindings, and backpressure configurations.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
       "id": "rag-implementation",
       "name": "rag-implementation",
       "description": "Build Retrieval-Augmented Generation (RAG) systems for LLM applications with vector databases and semantic search. Use when implementing knowledge-grounded AI, building document Q&A systems, or integrating LLMs with external knowledge bases.",
@@ -1017,15 +711,6 @@
       "type": "skill",
       "source": "local",
       "category": "ai-ml"
-    },
-    {
-      "id": "rails-expert",
-      "name": "Rails Expert",
-      "description": "Ruby on Rails master, rapid feature development, ActiveRecord optimization, and clean database logic.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
     },
     {
       "id": "react-best-practices",
@@ -1046,18 +731,9 @@
       "category": "frontend"
     },
     {
-      "id": "react-native-pro",
-      "name": "React Native Pro",
-      "description": "Advanced hybrid mobile development, native bridge optimization, and high-performance UI components.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
-    },
-    {
       "id": "redis-caching",
-      "name": "Redis Caching",
-      "description": "In-memory caching architectures, Redis data structures, pub-sub clusters, and fast session storage.",
+      "name": "redis-caching",
+      "description": "Use Redis as a cache, session store, queue, or real-time pub/sub layer. Covers data types (string, hash, list, set, sorted set, stream, hyperloglog, geo), TTL and eviction policies, Lua scripting with EVAL, pipelining, MULTI/EXEC transactions, RDB vs AOF persistence, and Redis Streams.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1080,15 +756,6 @@
       "type": "skill",
       "source": "local",
       "category": "vendor"
-    },
-    {
-      "id": "resilience-engineering",
-      "name": "Resilience Engineering",
-      "description": "Fault-tolerant designs, retry mechanisms, backoffs, and active circuit-breaker routing.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "architecture"
     },
     {
       "id": "ruby-pro",
@@ -1164,8 +831,8 @@
     },
     {
       "id": "spring-boot-expert",
-      "name": "Spring Boot Expert",
-      "description": "Enterprise Java backend design, Spring Boot, Spring Security, JPA Hibernate, and transaction safety.",
+      "name": "spring-boot-expert",
+      "description": "Build and operate Spring Boot 3 services on Java 21. Covers auto-configuration, starters, REST controllers, Spring Data JPA, Jakarta Bean Validation, profiles, Actuator, externalized configuration, and testing with @SpringBootTest plus Testcontainers.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1182,8 +849,8 @@
     },
     {
       "id": "sqlite-expert",
-      "name": "SQLite Expert",
-      "description": "Embedded database architectures, file systems, ultra-fast queries, and local application caching.",
+      "name": "sqlite-expert",
+      "description": "Use SQLite for embedded, single-file databases. Covers file-based deployment, WAL journal mode, PRAGMA tuning (synchronous, foreign_keys, journal_mode), FTS5 full-text search, the JSON1 extension, common table expressions, the sqlite3 CLI, and when SQLite is the right choice vs a client-server database.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1209,8 +876,8 @@
     },
     {
       "id": "supabase-backend",
-      "name": "Supabase Backend",
-      "description": "PostgREST API, real-time database, Supabase authentication, and serverless edge functions.",
+      "name": "supabase-backend",
+      "description": "Build backends on Supabase (Postgres, Auth, Storage, Edge Functions, Realtime). Covers Row Level Security policies, the supabase-js client, realtime subscriptions, storage buckets, edge functions in Deno, and database migrations via the Supabase CLI. Use when designing RLS, wiring a frontend to Supabase, writing edge functions, managing migrations, or debugging auth and JWT claims.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1218,21 +885,12 @@
     },
     {
       "id": "svelte-expert",
-      "name": "Svelte Expert",
-      "description": "Svelte and SvelteKit specialist focusing on compiled UI components, stores, and zero-runtime overhead.",
+      "name": "svelte-expert",
+      "description": "Build Svelte 5 components and SvelteKit apps using runes ($state, $derived, $effect, $props), stores, actions, transitions, and file-based routing. Use when authoring .svelte or .svelte.ts files, migrating from legacy reactivity, or wiring +page/+server endpoints.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
       "category": "frontend"
-    },
-    {
-      "id": "swift-pro",
-      "name": "Swift Pro",
-      "description": "Expert in iOS/macOS architecture, SwiftUI, performance tuning, and modern declarative styling.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "languages"
     },
     {
       "id": "swiftui-app",
@@ -1281,8 +939,8 @@
     },
     {
       "id": "terraform",
-      "name": "Terraform IaC",
-      "description": "Infrastructure as Code, state management, provider configurations, and multi-environment clouds.",
+      "name": "terraform",
+      "description": "Write and review Terraform code for cloud infrastructure. Covers providers, resources, modules, remote state backends (S3, GCS, azurerm), variables and outputs, for_each and count, workspaces, drift detection, terraform import, and the plan/apply lifecycle. Use when authoring HCL, refactoring modules, fixing state issues, importing existing resources, or reviewing IaC changes.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1353,8 +1011,8 @@
     },
     {
       "id": "vitest-pro",
-      "name": "Vitest Pro",
-      "description": "Fast ESM-based test running, mock libraries, Vite environment tests, and watch mode setups.",
+      "name": "vitest-pro",
+      "description": "Configure and write Vitest tests with Vite-native speed, ESM-first semantics, in-source testing, vi.mock hoisting, browser mode, and Jest migration. Use when setting up vitest.config.ts, picking between c8 and istanbul coverage, debugging vi.mock hoist order, or porting a Jest suite over.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1371,8 +1029,8 @@
     },
     {
       "id": "vue-pro",
-      "name": "Vue Pro",
-      "description": "Expert in Vue 3, Composition API, Pinia state management, and high-performance frontend components.",
+      "name": "vue-pro",
+      "description": "Build production Vue 3 apps with the Composition API, script setup, Pinia, and Vue Router. Use when writing or refactoring Vue single-file components, designing reactive state, wiring routes, or tuning render performance.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -1380,17 +1038,8 @@
     },
     {
       "id": "web-accessibility-wcag",
-      "name": "Web Accessibility & WCAG",
-      "description": "Expert in WCAG compliance, ARIA attributes, semantic HTML markup, and screen reader optimization.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "web-performance-seo",
-      "name": "Web Performance & SEO",
-      "description": "Core Web Vitals tuning, meta tags, schema markup structure, crawler index optimization, and load speed.",
+      "name": "web-accessibility-wcag",
+      "description": "Make web UIs conform to WCAG 2.2 AA using semantic HTML, correct ARIA, keyboard support, focus management, and sufficient color contrast. Use when reviewing components for a11y, fixing axe/Lighthouse findings, building forms or modals, or auditing keyboard navigation.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
