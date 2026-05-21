@@ -96,7 +96,7 @@ async function getRegistry() {
 
 function showHeader() {
   console.clear();
-  const title = ` ${V2_VIOLET.bold('ANTIGRAVITY-CLI')} ${V2_CYAN.bold('PLUGIN MANAGER')} `;
+  const title = ` ${V2_VIOLET.bold('ANTIGRAVITY-CLI')} ${V2_CYAN.bold('PLUGIN')} `;
   const line = V2_VIOLET('━'.repeat(title.length));
   console.log(`\n${line}\n${title}\n${line}\n`);
 }

@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-emerald.svg" alt="License: MIT"></a>
   <a href="https://antigravity.google"><img src="https://img.shields.io/badge/Antigravity-2.0-blueviolet" alt="Antigravity"></a>
-  <a href="https://www.npmjs.com/package/@beidawuli/antigravity-plugin-manager"><img src="https://img.shields.io/badge/npm-v3.3.0-blue.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@beidawuli/antigravity-plugin-manager"><img src="https://img.shields.io/badge/npm-v3.3.1-blue.svg" alt="npm version"></a>
 </p>
 
 `ag-plugin` is a CLI plugin manager for `antigravity-cli`. It indexes 309 agent skills across 16 categories from 13 public open-source repositories. The dashboard has four actions: browse by category, fuzzy-search by keyword, list and uninstall what you have, and add or sync upstream sources. Skill content stays at its upstream source; the manager indexes it and routes installs.

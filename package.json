@@ -1,7 +1,7 @@
 {
   "name": "@beidawuli/antigravity-plugin-manager",
-  "version": "3.3.0",
-  "description": "Interactive CLI plugin manager for the antigravity-cli ecosystem. 309 agent skills aggregated from 13 popular open-source repositories.",
+  "version": "3.3.1",
+  "description": "Antigravity-CLI Plugin. 309 community agent skills aggregated from 13 popular open-source repositories, one-command install.",
   "main": "src/ag-plugin-v2.js",
   "bin": {
     "ag-plugin": "src/ag-plugin-v2.js"
@@ -14,11 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AI-Safeter/antigravity-plugin-manager.git"
+    "url": "git+https://github.com/AI-Safeter/antigravity-cli-plugin.git"
   },
   "keywords": [
     "antigravity",
     "antigravity-cli",
+    "antigravity-plugin",
     "agent-skills",
     "mcp",
     "mcp-server",
@@ -30,9 +31,9 @@
   "author": "AI-Safeter",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AI-Safeter/antigravity-plugin-manager/issues"
+    "url": "https://github.com/AI-Safeter/antigravity-cli-plugin/issues"
   },
-  "homepage": "https://github.com/AI-Safeter/antigravity-plugin-manager#readme",
+  "homepage": "https://github.com/AI-Safeter/antigravity-cli-plugin#readme",
   "dependencies": {
     "@clack/prompts": "^1.4.0",
     "@inquirer/prompts": "^8.4.3",

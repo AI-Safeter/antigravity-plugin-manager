@@ -179,7 +179,7 @@ async function generateRegistry(options = {}) {
   const registryPath = options.registryPath || defaultRegistryPath;
   const isShippedRegistry = path.resolve(registryPath) === path.resolve(defaultRegistryPath);
 
-  let pkgRepo = 'https://github.com/AI-Safeter/antigravity-plugin-manager';
+  let pkgRepo = 'https://github.com/AI-Safeter/antigravity-cli-plugin';
   try {
     const pkg = await fs.readJson(path.join(__dirname, '../package.json'));
     if (pkg && pkg.repository && pkg.repository.url) {
