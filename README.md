@@ -1,16 +1,16 @@
 <h1 align="center">antigravity-cli Plugin Manager (ag-plugin)</h1>
 
 <p align="center">
-  <b>Discover and install 300+ agent skills from popular open-source repositories.</b>
+  <b>Install agent skills from public open-source repositories.</b>
 </p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-emerald.svg" alt="License: MIT"></a>
   <a href="https://antigravity.google"><img src="https://img.shields.io/badge/Antigravity-2.0-blueviolet" alt="Antigravity"></a>
-  <a href="https://www.npmjs.com/package/@beidawuli/antigravity-plugin-manager"><img src="https://img.shields.io/badge/npm-v3.2.0-blue.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@beidawuli/antigravity-plugin-manager"><img src="https://img.shields.io/badge/npm-v3.2.1-blue.svg" alt="npm version"></a>
 </p>
 
-`ag-plugin` is an interactive CLI plugin manager for the `antigravity-cli` ecosystem. It aggregates **309 agent skills across 16 categories** from **13 popular open-source repositories** — Anthropic's official skills, the K-Dense scientific suite, Matt Pocock's TypeScript skills, the Superpowers methodology pack, PatrickJS's awesome-cursorrules, addyosmani's agent-skills, and more. All content is human-authored and lives upstream; this tool just provides discovery, search, and one-command install.
+`ag-plugin` is a CLI plugin manager for the `antigravity-cli` toolchain. It indexes 309 agent skills across 16 categories, pulling from 13 upstream repositories: Anthropic's official skills, K-Dense's scientific skills, Matt Pocock's skills, obra's superpowers, PatrickJS's awesome-cursorrules, addyosmani's agent-skills, EveryInc's compound-engineering-plugin, quodsoler's unreal-engine-skills, wshobson's agents, TerminalSkills/skills, alirezarezvani's claude-skills, sickn33's antigravity-awesome-skills, and the local plugins shipped with this repo. All content is human-authored and lives upstream. This tool handles discovery, search, and install.
 
 ## Prerequisites
 
@@ -31,23 +31,21 @@ On first run, the tool clones each enabled source repo into `~/.antigravity/cach
 
 ## Interface
 
-The CLI is a fast interactive terminal menu:
-
 ![Main Menu](images/main_menu.png)
 
-**Browse by category** lets you scope to one of 16 categories before picking — or grab the whole category in one keystroke via the "Install all N plugins" choice:
+**Browse by category** scopes the list to one of 16 categories. From there, "Install all N plugins" grabs the whole category in one go, or you can pick individually with the checkbox.
 
 ![Browse Plugins](images/browse_plugins.png)
 
-**Search** fuzzy-matches across name, description, and skill ID:
+**Search** fuzzy-matches across name, description, and skill ID.
 
 ![Search Plugins](images/search_plugins.png)
 
-**Installed plugins** lists everything in your user-global (`~/.antigravity/plugins/`) and project-local (`./.antigravity/plugins/`) scopes:
+**Installed plugins** lists everything in your user-global (`~/.antigravity/plugins/`) and project-local (`./.antigravity/plugins/`) scopes.
 
 ![Installed Plugins](images/installed_plugins.png)
 
-## What's inside (v3.2.0)
+## What's inside (v3.2.1)
 
 | Category | Count | | Category | Count |
 |---|---:|---|---|---:|
@@ -64,7 +62,7 @@ The CLI is a fast interactive terminal menu:
 
 ## Upstream sources
 
-All skills are sourced from these public repositories — no in-tree authoring, no AI-generated bodies. Each retains its original license; this manager is a routing layer.
+Each skill comes from one of these public repositories. The manager doesn't modify upstream content; it copies the original SKILL.md (or, for awesome-cursorrules, the original `.mdc` file plus a generated wrapper) into your plugins directory at install time. Each upstream repo retains its own license.
 
 | Source | Skills | URL |
 |---|---:|---|
@@ -82,28 +80,27 @@ All skills are sourced from these public repositories — no in-tree authoring, 
 | anthropics / claude-plugins-official | 4 | https://github.com/anthropics/claude-plugins-official |
 | alirezarezvani / claude-skills | 1 | https://github.com/alirezarezvani/claude-skills |
 
-PatrickJS/awesome-cursorrules ships single-file `.mdc` Cursor rules; the manager wraps each into a SKILL.md folder at install time. All other sources use the SKILL.md convention natively.
-
 ## Managing sources
 
-Use **⚙️ Manage Skill Sources** from the main menu to enable/disable a source, add a new custom Git repository, or sync (pull latest + rebuild registry). Custom sources you add are stored in `~/.antigravity/sources.json` and persist across upgrades.
+The **Manage Skill Sources** menu lets you enable or disable a source, add a custom Git repository, or sync (pull latest and rebuild the registry). Custom sources you add are stored in `~/.antigravity/sources.json` and persist across upgrades.
 
 ## How it works
 
-1. `sources.json` lists upstream repos and their format (`SKILL.md` folders or `.mdc` single-files).
-2. The registry generator clones each enabled source into `~/.antigravity/cache/sources/`, recursively finds skills, and emits `registry.json` with metadata only.
-3. `categories.json` is the source of truth for which skills ship and what category each belongs to — a skill not assigned in `categories.json` is filtered out at registry-build time.
-4. Install copies the upstream skill folder (or single .mdc file) into your user-global or project-local `plugins/` directory. The upstream content is never modified.
+1. `sources.json` lists upstream repos and their format (SKILL.md folders or `.mdc` single-files).
+2. The registry generator clones each enabled source into `~/.antigravity/cache/sources/`, recursively finds skills, and writes `registry.json` with metadata only.
+3. `categories.json` decides which skills ship and where they live in the UI. A skill not listed in `categories.json` is filtered out at registry-build time.
+4. Install copies the upstream skill folder (or single `.mdc` file) into your user-global or project-local `plugins/` directory.
 
 ## Contributing
 
-You can contribute by:
-- **Suggesting a new upstream source**: open an issue with the repo URL and what it adds.
-- **Adding a category assignment**: edit `categories.json` to surface skills already in cached upstream repos.
-- **Authoring a local skill**: see [CONTRIBUTING.md](CONTRIBUTING.md) for the SKILL.md format.
+You can contribute in three ways:
 
-Run `npm run validate` to verify any changes pass the static checks before opening a PR.
+1. Suggest a new upstream source by opening an issue with the repo URL and what it adds.
+2. Add a category assignment in `categories.json` to surface skills already in cached upstream repos.
+3. Author a local skill following the SKILL.md format described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Run `npm run validate` before opening a PR to verify any changes pass the static checks.
 
 ## License
 
-This project's tooling is MIT-licensed (see [LICENSE](LICENSE)). Skills themselves remain under their respective upstream licenses, which are preserved at install time.
+The tooling is MIT-licensed (see [LICENSE](LICENSE)). Skills themselves remain under their respective upstream licenses, which are preserved at install time.
