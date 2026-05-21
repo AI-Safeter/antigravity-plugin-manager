@@ -40,5 +40,33 @@
     "url": "https://github.com/anthropics/claude-plugins-official",
     "enabled": true,
     "builtin": true
+  },
+  {
+    "id": "superpowers",
+    "name": "Superpowers (obra)",
+    "url": "https://github.com/obra/superpowers",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "mattpocock-skills",
+    "name": "Matt Pocock Skills",
+    "url": "https://github.com/mattpocock/skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "unreal-engine-skills",
+    "name": "Unreal Engine Skills (quodsoler)",
+    "url": "https://github.com/quodsoler/unreal-engine-skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "compound-engineering-plugin",
+    "name": "Compound Engineering (EveryInc)",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "enabled": true,
+    "builtin": true
   }
 ]

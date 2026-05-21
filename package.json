@@ -1,7 +1,7 @@
 {
   "name": "@beidawuli/antigravity-plugin-manager",
-  "version": "2.3.0",
-  "description": "Interactive CLI plugin manager for the antigravity-cli ecosystem. 157 quality-audited agent skills across 16 categories.",
+  "version": "3.0.0",
+  "description": "Interactive CLI plugin manager for the antigravity-cli ecosystem. All skills sourced from upstream open-source repositories — no AI-authored content.",
   "main": "src/ag-plugin-v2.js",
   "bin": {
     "ag-plugin": "src/ag-plugin-v2.js"

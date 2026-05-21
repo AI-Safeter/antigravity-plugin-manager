@@ -2,15 +2,6 @@
   "schemaVersion": 1,
   "plugins": [
     {
-      "id": "algolia-search",
-      "name": "algolia-search",
-      "description": "Algolia hosted search-as-a-service for indexing, ranking, faceting, and search-as-you-type UIs. Use this skill when integrating Algolia indexing pipelines, configuring relevance and custom ranking, building InstantSearch React or Vue UIs, setting up replicas for sort orders, or using secured API keys for multi-tenant search.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
       "id": "angular",
       "name": "angular",
       "description": "Modern Angular (v20+) expert with deep knowledge of Signals, Standalone Components, Zoneless applications, SSR/Hydration, and reactive patterns.",
@@ -29,24 +20,6 @@
       "category": "workflow"
     },
     {
-      "id": "astro-static-sites",
-      "name": "astro-static-sites",
-      "description": "Build content-heavy sites with Astro v4+ using islands architecture, content collections, and selective hydration. Use when scaffolding marketing pages, blogs, or docs that ship minimal JS, mixing React/Vue/Svelte components, or choosing between prerendering and SSR.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "auth-implementation",
-      "name": "auth-implementation",
-      "description": "Authentication implementation covering sessions vs tokens, secure cookies, CSRF defenses, password hashing with Argon2id/bcrypt, MFA TOTP, email verification, magic links, and account recovery. Use when building login, signup, password reset, MFA, or session management, or when reviewing an auth surface for common attack vectors.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "security"
-    },
-    {
       "id": "avoid-ai-writing",
       "name": "avoid-ai-writing",
       "description": "Audit and rewrite content to remove AI writing patterns (\"AI-isms\"). Use this skill when asked to \"remove AI-isms,\" \"clean up AI writing,\" \"edit writing for AI patterns,\" \"audit writing for AI tells,\" or \"make this sound less like AI.\" Supports a detection-only mode that flags patterns without rewriting.",
@@ -56,15 +29,6 @@
       "category": "workflow"
     },
     {
-      "id": "aws-cloud-patterns",
-      "name": "aws-cloud-patterns",
-      "description": "AWS architecture patterns covering IAM, VPC, S3, Lambda, RDS, SQS/SNS/EventBridge, CloudWatch, and IaC choices. Use when designing or reviewing AWS deployments, debugging permission errors, choosing between Lambda/ECS/Fargate, picking between CDK and Terraform, or controlling cloud spend.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
       "id": "bash-linux",
       "name": "bash-linux",
       "description": "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems.",
@@ -72,24 +36,6 @@
       "type": "skill",
       "source": "local",
       "category": "languages"
-    },
-    {
-      "id": "clerk-auth",
-      "name": "clerk-auth",
-      "description": "Clerk authentication for Next.js, React, and Remix apps. Use this skill when integrating ClerkProvider, useUser, useAuth, signIn/signUp components, organizations and multi-tenant auth, JWT templates, webhooks for user sync, or protecting API routes with auth() and clerkMiddleware.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
-      "id": "cloudflare-workers",
-      "name": "cloudflare-workers",
-      "description": "Cloudflare Workers edge runtime with V8 isolates, wrangler CLI, and bindings (KV, R2, D1, Queues, Durable Objects, Workers AI, Vectorize). Use when building or debugging Workers, choosing between Cloudflare storage primitives, hitting CPU or subrequest limits, or wiring cron triggers and Durable Objects.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
     },
     {
       "id": "code-reviewer",
@@ -110,15 +56,6 @@
       "category": "languages"
     },
     {
-      "id": "crewai-agents",
-      "name": "crewai-agents",
-      "description": "CrewAI multi-agent orchestration framework for role-based agents collaborating on tasks. Use this skill when defining `Agent`s with role/goal/backstory, decomposing work into `Task`s with expected outputs, assembling them in a `Crew` with `Process.sequential` or `Process.hierarchical`, attaching tools (Serper, browser, file IO, custom `BaseTool`), enabling short/long-term memory, or running flows with `CrewAI Flow` for deterministic control flow.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
       "id": "csharp-pro",
       "name": "csharp-pro",
       "description": "Write modern C# code with advanced features like records, pattern matching, and async/await. Optimizes .NET applications, implements enterprise patterns, and ensures comprehensive testing. Use PROACTIVELY for C# refactoring, performance optimization, or complex .NET solutions.",
@@ -126,24 +63,6 @@
       "type": "skill",
       "source": "local",
       "category": "languages"
-    },
-    {
-      "id": "cuda-gpu-programming",
-      "name": "cuda-gpu-programming",
-      "description": "NVIDIA CUDA programming for GPU kernels in CUDA C++, PyCUDA, Numba, and CuPy. Use this skill when writing kernels with thread/block/grid indexing, using the memory hierarchy (global, shared, constant, registers, L1/L2), launching with `<<<grid,block>>>`, synchronizing with `__syncthreads()` or cooperative groups, compiling with `nvcc`, profiling with Nsight Systems/Compute, or choosing between raw CUDA, PyCUDA, Numba `@cuda.jit`, and CuPy.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "cypress-e2e",
-      "name": "cypress-e2e",
-      "description": "Write reliable Cypress end-to-end and component tests with cy.get, cy.intercept, fixtures, custom commands, retries, and parallel CI. Use when authoring or stabilising Cypress specs, hunting flaky tests, mocking the network with cy.intercept, or splitting a suite across CI shards.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
     },
     {
       "id": "ddd-strategic-design",
@@ -164,24 +83,6 @@
       "category": "backend"
     },
     {
-      "id": "docker-containers",
-      "name": "docker-containers",
-      "description": "Author production-grade Dockerfiles and Compose files. Covers multi-stage builds, BuildKit, image layering, .dockerignore, healthchecks, non-root users, multi-arch images, and image size optimization. Use when writing or reviewing Dockerfile, docker-compose.yml, building container images, debugging large or slow builds, or hardening containers for production.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "dspy-prompt-optimization",
-      "name": "dspy-prompt-optimization",
-      "description": "DSPy from Stanford NLP for programmatic prompting and automatic prompt/weight optimization. Use this skill when defining LM pipelines with Signatures and Modules (Predict, ChainOfThought, ReAct, ProgramOfThought), compiling them with optimizers (BootstrapFewShot, BootstrapFewShotWithRandomSearch, MIPROv2, COPRO, BootstrapFinetune), measuring quality with `dspy.Evaluate` and metrics, or migrating from hand-tuned prompt strings to declarative LM programs.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
       "id": "electron-development",
       "name": "electron-development",
       "description": "Master Electron desktop app development with secure IPC, contextIsolation, preload scripts, multi-process architecture, electron-builder packaging, code signing, and auto-update.",
@@ -200,15 +101,6 @@
       "category": "languages"
     },
     {
-      "id": "esbuild-bundler",
-      "name": "esbuild-bundler",
-      "description": "esbuild for extremely fast JS/TS bundling and transpilation. Use this skill when bundling Node libraries, building CLI tools, transpiling TS/JSX without typechecking, replacing babel/tsc for speed, writing esbuild plugins, configuring the JS or Go API, setting up watch mode, or producing ESM/CJS/IIFE outputs. Triggers: esbuild, esbuild.build, esbuild plugin, tsup, bundle TypeScript fast, transpile TSX, replace babel, replace tsc, esbuild loader, jsx factory, esbuild watch.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
       "id": "event-sourcing-architect",
       "name": "event-sourcing-architect",
       "description": "Expert in event sourcing, CQRS, and event-driven architecture patterns. Masters event store design, projection building, saga orchestration, and eventual consistency patterns. Use PROACTIVELY for event-sourced systems, audit trails, or temporal queries.",
@@ -218,27 +110,9 @@
       "category": "architecture"
     },
     {
-      "id": "express-nodejs",
-      "name": "express-nodejs",
-      "description": "Build HTTP APIs and web servers with Express.js on Node.js. Covers routing, middleware order, request/response API, error-handling middleware, async/await patterns, body parsing, static files, security middleware (helmet, CORS), and production hardening.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
       "id": "fastapi-pro",
       "name": "fastapi-pro",
       "description": "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and Pydantic V2. Master microservices, WebSockets, and modern Python async patterns. Use PROACTIVELY for FastAPI development, async optimization, or API architecture.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "fastify-nodejs",
-      "name": "fastify-nodejs",
-      "description": "Fastify high-performance Node.js web framework with JSON Schema validation, plugin encapsulation, lifecycle hooks, and type providers. Use this skill when building production HTTP APIs on Node, defining route schemas for validation and serialization, organizing code with `fastify-plugin`, or wiring up TypeBox/Zod type providers for end-to-end types.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local",
@@ -252,15 +126,6 @@
       "type": "skill",
       "source": "local",
       "category": "frontend"
-    },
-    {
-      "id": "gcp-cloud-patterns",
-      "name": "gcp-cloud-patterns",
-      "description": "Google Cloud patterns covering IAM, Cloud Run, Cloud Functions, Cloud Storage, Pub/Sub, BigQuery, Firestore, and Cloud Build. Use when designing or reviewing GCP architectures, debugging permission errors, picking between Cloud Run and GKE, modeling BigQuery tables, or untangling project vs organization permissions.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
     },
     {
       "id": "git-advanced-workflows",
@@ -281,15 +146,6 @@
       "category": "devops"
     },
     {
-      "id": "gitlab-ci-pipelines",
-      "name": "gitlab-ci-pipelines",
-      "description": "Design GitLab CI/CD pipelines with stages, rules, caching, artifacts, includes/extends, parent-child pipelines, environments, and monorepo patterns. Use when authoring or refactoring .gitlab-ci.yml, debugging rules vs only/except, tuning cache hit rates, or splitting a large pipeline into reusable components.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
       "id": "go-concurrency-patterns",
       "name": "go-concurrency-patterns",
       "description": "Master Go concurrency with goroutines, channels, sync primitives, and context. Use when building concurrent Go applications, implementing worker pools, or debugging race conditions.",
@@ -299,15 +155,6 @@
       "category": "languages"
     },
     {
-      "id": "godot-engine",
-      "name": "godot-engine",
-      "description": "Godot 4 game development. Covers the node and scene system, GDScript syntax (typed variables, signals, await), exported variables shown in the Inspector, physics layers and masks, AnimationPlayer vs Tween for animation, autoload singletons, and when to choose C# over GDScript. Use this skill when authoring or reviewing Godot 4 projects in GDScript or C#.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
-    },
-    {
       "id": "graphql-architect",
       "name": "graphql-architect",
       "description": "Master modern GraphQL with federation, performance optimization, and enterprise security. Build scalable schemas, implement advanced caching, and design real-time systems. Use PROACTIVELY for GraphQL architecture or performance optimization.",
@@ -315,33 +162,6 @@
       "type": "skill",
       "source": "local",
       "category": "backend"
-    },
-    {
-      "id": "helm-charts",
-      "name": "helm-charts",
-      "description": "Author and operate Helm 3 charts for Kubernetes. Covers Chart.yaml, values.yaml, Go-template syntax, helm install/upgrade/rollback, dependencies, hooks, helm test, OCI repositories, and values override patterns. Use when packaging a Kubernetes app for distribution, debugging template rendering, managing chart releases, upgrading dependencies, or designing a configurable values schema.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "hono-edge-framework",
-      "name": "hono-edge-framework",
-      "description": "Hono ultralight web framework that runs on Cloudflare Workers, Bun, Deno, Node, Vercel, and Lambda. Use this skill when building edge APIs, picking the right adapter, using middleware (cors, logger, jwt), serving JSX at the edge, or exporting a type-safe `hc` RPC client from a Hono app.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "huggingface-models",
-      "name": "huggingface-models",
-      "description": "Use models, datasets, and tooling from the Hugging Face Hub with Transformers 4.40+. Covers AutoTokenizer/AutoModel/pipeline, model cards, the datasets library, the Inference API and Inference Endpoints, accelerate for multi-GPU, quantization with bitsandbytes/AWQ/GPTQ, and the modern hf CLI from huggingface_hub.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
     },
     {
       "id": "incident-responder",
@@ -362,87 +182,6 @@
       "category": "languages"
     },
     {
-      "id": "jest-typescript",
-      "name": "jest-typescript",
-      "description": "Configure and write Jest tests in TypeScript using ts-jest or Babel, with mocking, snapshots, async assertions, and coverage. Use when authoring or debugging Jest tests for TypeScript code, picking between ts-jest and @swc/jest, or hunting down type errors in jest.config.ts and jest.mock factories.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
-    },
-    {
-      "id": "jetpack-compose",
-      "name": "jetpack-compose",
-      "description": "Jetpack Compose for Android UI. Covers composable functions, state hoisting, remember and mutableStateOf, side-effect APIs (LaunchedEffect, DisposableEffect, rememberCoroutineScope, produceState), Material 3 components and theming, Compose Navigation with type-safe routes, and previews. Use this skill when building or refactoring Android UI in Kotlin with Jetpack Compose.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
-    },
-    {
-      "id": "jupyter-notebooks",
-      "name": "jupyter-notebooks",
-      "description": "Jupyter notebook patterns and discipline. Use this skill when authoring or refactoring .ipynb files, debugging hidden-state and out-of-order execution bugs, extracting cells into Python modules, parameterizing notebooks with papermill, version-controlling notebooks via jupytext, or using cell/line magics. Triggers: jupyter, ipynb, notebook, kernel, magic, papermill, jupytext, nbconvert, ipykernel.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
-      "id": "jwt-oauth2-flows",
-      "name": "jwt-oauth2-flows",
-      "description": "JWT structure, signing algorithms, and OAuth2/OIDC flows including authorization code with PKCE, client credentials, and refresh tokens. Use when integrating an OAuth2 provider, validating tokens on a server, choosing HS256 vs RS256, debugging redirect URIs, or distinguishing ID tokens from access tokens.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "security"
-    },
-    {
-      "id": "kubernetes",
-      "name": "kubernetes",
-      "description": "Write and review Kubernetes manifests for Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, and HPAs. Covers kubectl essentials, namespaces, labels/selectors, resource requests/limits, liveness/readiness/startup probes, and rolling updates. Use when authoring YAML for a K8s cluster, debugging pod scheduling or crashloops, configuring autoscaling, or hardening workloads for production.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "langchain-agent-orchestrator",
-      "name": "langchain-agent-orchestrator",
-      "description": "Compose LLM applications with LangChain 0.3+ (Python and JS). Covers LCEL (Runnable composition with the pipe operator), chat models, output parsers, retrievers and RAG, tools and agents via create_react_agent / LangGraph, LangSmith tracing, memory, and the anti-patterns that come from over-abstracting.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "langfuse-observability",
-      "name": "langfuse-observability",
-      "description": "Langfuse LLM observability for traces, generations, scoring, prompt versioning, datasets, and eval pipelines. Use this skill when instrumenting LLM apps with traces and spans, capturing token usage and latency, managing prompts as versioned assets, running offline evals against datasets, or integrating with LangChain, LlamaIndex, OpenAI SDK, or Vercel AI SDK.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "mdx-content",
-      "name": "mdx-content",
-      "description": "MDX (Markdown + JSX) authoring and tooling. Use this skill when writing or fixing .mdx files, configuring remark/rehype plugins, wiring MDX into Next.js, Astro, or Docusaurus, defining MDXProvider component mappings, handling frontmatter, or debugging MDX v3 vs v2 compilation errors. Triggers: mdx, @mdx-js, remark, rehype, MDXProvider, next-mdx-remote, contentlayer, astro mdx, docusaurus.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "documents"
-    },
-    {
-      "id": "meilisearch",
-      "name": "meilisearch",
-      "description": "Meilisearch open-source search engine for fast, typo-tolerant search. Use this skill when self-hosting Meilisearch or using Meilisearch Cloud, defining indexes and documents, configuring filterable and sortable attributes, tuning ranking rules, building search-as-you-type UIs, or comparing against Algolia and Typesense.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
       "id": "microservices-patterns",
       "name": "microservices-patterns",
       "description": "Design microservices architectures with service boundaries, event-driven communication, and resilience patterns. Use when building distributed systems, decomposing monoliths, or implementing microservices.",
@@ -450,51 +189,6 @@
       "type": "skill",
       "source": "local",
       "category": "architecture"
-    },
-    {
-      "id": "mongodb",
-      "name": "mongodb",
-      "description": "Design and operate MongoDB schemas, indexes, and aggregation pipelines. Use for document modeling (embed vs reference), compound/multikey/TTL/text/geospatial indexes, $match/$group/$lookup pipelines, transactions, replica sets, sharding, and change streams.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "mysql",
-      "name": "mysql",
-      "description": "Design and tune MySQL/MariaDB schemas and queries. Use for InnoDB engine specifics, B-tree/FULLTEXT/spatial indexes, JOIN planning with EXPLAIN, transactions and isolation levels, binlog replication, JSON columns, performance schema, and common config tuning.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "neo4j-graph",
-      "name": "neo4j-graph",
-      "description": "Model and query graph data with Neo4j. Covers nodes/relationships/properties, the Cypher query language (MATCH/WHERE/CREATE/MERGE), constraints and indexes, the official Bolt drivers, APOC procedures, graph data modeling, and common patterns like variable-length paths and shortest path.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "nestjs-patterns",
-      "name": "nestjs-patterns",
-      "description": "Build NestJS applications with modules, providers, controllers, and the request lifecycle (Guards, Interceptors, Pipes, Filters). Use when scaffolding modules, wiring DI, adding validation with class-validator, integrating TypeORM or Prisma, or deciding global vs feature scope.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "nextauth-authjs",
-      "name": "nextauth-authjs",
-      "description": "Auth.js (formerly NextAuth.js) v5 for Next.js authentication. Use this skill when configuring providers (OAuth, credentials, email), callbacks (jwt, session, signIn), session strategies (JWT vs database), Edge-compatible middleware, or migrating from NextAuth v4 to Auth.js v5.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
     },
     {
       "id": "nextjs-app-router-patterns",
@@ -506,60 +200,6 @@
       "category": "frontend"
     },
     {
-      "id": "nx-monorepo",
-      "name": "nx-monorepo",
-      "description": "Nx for monorepo management with code generation, project dependency graph, affected commands, and computation caching. Use this skill when initializing an Nx workspace, authoring project.json or nx.json, defining targets and executors, running nx generate for scaffolding, using nx affected, nx graph, nx run-many, or migrating from Lerna/Turborepo. Triggers: nx, nx.json, project.json, nx generate, nx affected, nx graph, nx run-many, nx migrate, nx release, nx cloud, target defaults, named inputs, executors.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "ollama-local-llm",
-      "name": "ollama-local-llm",
-      "description": "Ollama for running open-source large language models locally on Mac, Linux, and Windows. Use this skill when setting up local LLM inference, pulling models like Llama 3.1, Qwen2.5, DeepSeek-R1, or Mistral, writing Modelfiles, calling the OpenAI-compatible API at localhost:11434, choosing quantization levels (Q4_K_M, Q5_K_M, Q8_0, FP16), or integrating Ollama with LangChain, LlamaIndex, LiteLLM, or Open WebUI.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "openai-api-expert",
-      "name": "openai-api-expert",
-      "description": "Build production integrations against the OpenAI API. Covers the Responses API and Chat Completions, streaming over SSE, tool/function calling, structured outputs with json_schema, embeddings, prompt caching, retries with exponential backoff, model selection across gpt-4o/o3/o4-mini, and multimodal image inputs.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "opentelemetry-instrumentation",
-      "name": "opentelemetry-instrumentation",
-      "description": "OpenTelemetry instrumentation for traces, metrics, and logs using the OTLP exporter, auto-instrumentation libraries, and semantic conventions. Use this skill when adding distributed tracing to services, exporting telemetry to Jaeger/Tempo/Honeycomb/Datadog, configuring the OTel Collector, or following OpenTelemetry semantic conventions.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "pandas-numpy",
-      "name": "pandas-numpy",
-      "description": "pandas and NumPy idiomatic Python data manipulation. Use this skill when loading or cleaning tabular data, writing vectorized operations instead of for-loops, choosing between .loc/.iloc/.at/.iat, performing groupby aggregations, merging or joining DataFrames, or optimizing memory usage with categorical and nullable dtypes. Triggers: pandas, numpy, DataFrame, Series, iterrows, vectorize, groupby, merge, SettingWithCopyWarning.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "data-eng"
-    },
-    {
-      "id": "pgvector-postgres",
-      "name": "pgvector-postgres",
-      "description": "pgvector extension for storing and searching vector embeddings in PostgreSQL. Use this skill when adding semantic search to a Postgres database, building RAG over existing relational data, choosing between HNSW and IVFFlat indexes, or combining vector similarity with metadata filters and full-text search (tsvector).",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
       "id": "php-pro",
       "name": "php-pro",
       "description": "Write idiomatic PHP code with generators, iterators, SPL data structures, and modern OOP features. Use PROACTIVELY for high-performance PHP applications.",
@@ -567,51 +207,6 @@
       "type": "skill",
       "source": "local",
       "category": "languages"
-    },
-    {
-      "id": "pinecone-vector-db",
-      "name": "pinecone-vector-db",
-      "description": "Pinecone managed vector database for production semantic search and RAG. Use this skill when picking serverless vs pod-based indexes, designing namespaces for multi-tenancy, writing metadata filters, combining sparse and dense vectors for hybrid search, or using the v3 Python/TypeScript clients (Pinecone, ServerlessSpec, PodSpec).",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "pino-logging",
-      "name": "pino-logging",
-      "description": "Pino structured logging for Node.js. Use this skill when adding or refactoring logging in a Node service, configuring child loggers, setting up transports for files/HTTP/Elastic, redacting secrets from log output, pretty-printing in dev with pino-pretty, integrating with Fastify or Express, or designing log level policy. Triggers: pino, pino-pretty, pino.transport, redact, child logger, structured logging, logger.info, fastify logger.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
-      "id": "playwright",
-      "name": "playwright",
-      "description": "Write Playwright tests in TypeScript with auto-waiting locators, fixtures, traces, network mocking, and parallel projects. Use when authoring page.locator-based specs, debugging with the trace viewer, mocking with page.route, generating tests with codegen, or running cross-browser matrices in CI.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
-    },
-    {
-      "id": "pnpm-workspaces",
-      "name": "pnpm-workspaces",
-      "description": "pnpm package manager with content-addressable store, strict node_modules layout, and workspaces for monorepos. Use this skill when installing/upgrading deps, authoring pnpm-workspace.yaml, configuring .npmrc, using pnpm filters, handling peer dependencies, fixing phantom-dependency issues, working with the lockfile, or setting up CI caching. Triggers: pnpm, pnpm install, pnpm-workspace.yaml, pnpm-lock.yaml, .npmrc, hoist-pattern, shamefully-hoist, pnpm filter, pnpm add, content-addressable store, phantom dependency, peer dependency warnings.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "poetry-python",
-      "name": "poetry-python",
-      "description": "Poetry for Python dependency management, virtualenvs, builds, and publishing using a pyproject.toml-based workflow. Use this skill when initializing a Python project with poetry init, authoring [tool.poetry] tables, adding/locking deps with poetry add/lock/install, managing groups (dev/test), configuring poetry.lock, publishing wheels to PyPI, or migrating to/from pip/uv. Triggers: poetry, poetry add, poetry install, poetry lock, poetry shell, poetry run, poetry publish, poetry build, pyproject.toml poetry, poetry.lock, poetry groups, poetry.toml, python project manager poetry.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
     },
     {
       "id": "postgresql",
@@ -623,24 +218,6 @@
       "category": "databases"
     },
     {
-      "id": "prisma-orm",
-      "name": "prisma-orm",
-      "description": "Model data and write type-safe queries with Prisma. Use for schema.prisma syntax, relations (1:1, 1:n, m:n), prisma generate vs prisma migrate dev, the Prisma Client API (findMany, create, upsert, transactions, $queryRaw), middleware/extensions, and soft-delete patterns.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "prometheus-monitoring",
-      "name": "prometheus-monitoring",
-      "description": "Design Prometheus-based monitoring. Covers PromQL fundamentals, scrape configuration, recording and alerting rules, Alertmanager routing, service discovery, exporters, the four metric types (counter, gauge, histogram, summary), and the RED and USE methods. Use when authoring scrape configs, writing PromQL queries or alert rules, instrumenting an application, or designing dashboards and SLOs.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
       "id": "prompt-engineering",
       "name": "prompt-engineering",
       "description": "Expert guide on prompt engineering patterns, best practices, and optimization techniques. Use when user wants to improve prompts, learn prompting strategies, or debug agent behavior.",
@@ -650,42 +227,6 @@
       "category": "ai-ml"
     },
     {
-      "id": "promptfoo-evals",
-      "name": "promptfoo-evals",
-      "description": "Promptfoo CLI and library for LLM evaluations. Use this skill when writing promptfooconfig.yaml files, defining providers and assertions, running test matrices across prompts and models, comparing model outputs side-by-side, integrating evals into CI, or running red-team scans for safety regressions.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "pydantic-ai-agents",
-      "name": "pydantic-ai-agents",
-      "description": "PydanticAI typed agent framework from the Pydantic team for building production LLM agents with structured outputs and dependency injection. Use this skill when defining an `Agent` with a system prompt and typed `result_type`, registering tools via `@agent.tool`, wiring runtime dependencies through `RunContext[Deps]`, streaming responses with `agent.run_stream`, or switching providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Ollama) without changing agent code.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "pydantic-v2",
-      "name": "pydantic-v2",
-      "description": "Pydantic v2 for Python data validation and settings management using type hints. Use this skill when defining BaseModel classes, field validators (@field_validator, @model_validator), model_config (ConfigDict), computed_field, discriminated unions via Field(discriminator=...), TypeAdapter for arbitrary types, RootModel, integrating with FastAPI, or migrating from Pydantic v1 to v2. Triggers on BaseModel, Field, field_validator, model_validator, model_config, model_dump, model_validate, TypeAdapter, or any Python validation task.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "pytest-expert",
-      "name": "pytest-expert",
-      "description": "Write idiomatic pytest tests with fixtures, parametrize, markers, monkeypatch, tmp_path, and key plugins (pytest-mock, pytest-asyncio, pytest-cov). Use when authoring or refactoring Python tests, structuring conftest.py, debugging fixture scope or finalizer order, or adding coverage gates in CI.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
-    },
-    {
       "id": "python-pro",
       "name": "python-pro",
       "description": "Master Python 3.12+ with modern features, async programming, performance optimization, and production-ready practices. Expert in the latest Python ecosystem including uv, ruff, pydantic, and FastAPI. Use PROACTIVELY for Python development, optimization, or advanced Python patterns.",
@@ -693,15 +234,6 @@
       "type": "skill",
       "source": "local",
       "category": "languages"
-    },
-    {
-      "id": "qdrant-vector-db",
-      "name": "qdrant-vector-db",
-      "description": "Qdrant Rust-based vector database for self-hosted or managed semantic search. Use this skill when designing collections, payload schemas, filter conditions, choosing quantization (scalar, product, binary), running Qdrant locally via Docker, or deciding between self-hosted and Qdrant Cloud for cost/control tradeoffs.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
     },
     {
       "id": "rag-implementation",
@@ -720,42 +252,6 @@
       "type": "skill",
       "source": "local",
       "category": "frontend"
-    },
-    {
-      "id": "react-hook-form",
-      "name": "react-hook-form",
-      "description": "React Hook Form for performant, uncontrolled-by-default form handling in React. Use this skill when building forms with useForm, register, handleSubmit, Controller, useFieldArray, integrating schema validation via @hookform/resolvers (zod, yup, valibot), handling form state, errors, dirty/touched tracking, or optimizing re-renders on large forms. Triggers on useForm, register, Controller, formState, resolver, useFieldArray, or any React form work.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "redis-caching",
-      "name": "redis-caching",
-      "description": "Use Redis as a cache, session store, queue, or real-time pub/sub layer. Covers data types (string, hash, list, set, sorted set, stream, hyperloglog, geo), TTL and eviction policies, Lua scripting with EVAL, pipelining, MULTI/EXEC transactions, RDB vs AOF persistence, and Redis Streams.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "redux-toolkit",
-      "name": "redux-toolkit",
-      "description": "Redux Toolkit (RTK) -- the official, opinionated way to write Redux. Use this skill when configuring a Redux store with configureStore, defining slices via createSlice (Immer-backed reducers), writing async logic with createAsyncThunk, building data-fetching endpoints with RTK Query (createApi, fetchBaseQuery), or migrating legacy Redux to RTK. Triggers on createSlice, configureStore, createAsyncThunk, createApi, RTK Query, useSelector, useDispatch, or any Redux task.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "resend-email",
-      "name": "resend-email",
-      "description": "Resend transactional email API with the Node.js SDK and React Email templates. Use this skill when sending transactional emails, building React Email templates, managing audiences and broadcasts, setting up sending domains with DKIM/SPF, or handling delivery webhooks.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
     },
     {
       "id": "ruby-pro",
@@ -803,15 +299,6 @@
       "category": "security"
     },
     {
-      "id": "sentry-error-tracking",
-      "name": "sentry-error-tracking",
-      "description": "Sentry error tracking and performance monitoring across JavaScript, Python, Go, and other runtimes. Use this skill when configuring Sentry SDKs, uploading source maps, setting up release tracking, instrumenting performance traces, defining alerts, or adding breadcrumbs and custom context for debugging.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
       "id": "shadcn",
       "name": "shadcn",
       "description": "Manages shadcn/ui components and projects, providing context, documentation, and usage patterns for building modern design systems.",
@@ -819,87 +306,6 @@
       "type": "skill",
       "source": "local",
       "category": "frontend"
-    },
-    {
-      "id": "socketio-realtime",
-      "name": "socketio-realtime",
-      "description": "Socket.IO bidirectional realtime library with WebSocket-with-fallback transport, rooms, namespaces, ack callbacks, and horizontal scaling via Redis adapter. Use this skill when building chat, presence, live dashboards, or collaborative apps that need rooms, broadcasting, server-to-server emit across multiple nodes, or acknowledgements with timeouts.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
-      "id": "spring-boot-expert",
-      "name": "spring-boot-expert",
-      "description": "Build and operate Spring Boot 3 services on Java 21. Covers auto-configuration, starters, REST controllers, Spring Data JPA, Jakarta Bean Validation, profiles, Actuator, externalized configuration, and testing with @SpringBootTest plus Testcontainers.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "sqlalchemy-orm",
-      "name": "sqlalchemy-orm",
-      "description": "SQLAlchemy 2.0 ORM with typed declarative models, async sessions, Alembic migrations, and relationship loading strategies. Use this skill when defining models with `Mapped[]` and `mapped_column`, picking between `selectinload`, `joinedload`, and `subqueryload`, managing `AsyncSession` lifecycles, or generating Alembic autogenerated migrations.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "sqlite-expert",
-      "name": "sqlite-expert",
-      "description": "Use SQLite for embedded, single-file databases. Covers file-based deployment, WAL journal mode, PRAGMA tuning (synchronous, foreign_keys, journal_mode), FTS5 full-text search, the JSON1 extension, common table expressions, the sqlite3 CLI, and when SQLite is the right choice vs a client-server database.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "databases"
-    },
-    {
-      "id": "storybook-component-docs",
-      "name": "storybook-component-docs",
-      "description": "Storybook 8+ for component development and documentation. Use this skill when authoring stories in CSF 3.0, configuring args and controls, adding decorators, writing interaction tests with play functions, integrating addons (a11y, viewport, interactions, themes), composing MDX docs pages, or deploying a static Storybook. Triggers: storybook, stories.ts, stories.tsx, CSF, args, argTypes, play function, addon-a11y, addon-interactions, chromatic.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "stripe-payments",
-      "name": "stripe-payments",
-      "description": "Stripe payments integration covering charges, customers, subscriptions, Checkout, webhooks, refunds, and PaymentIntents. Use this skill when accepting credit cards, building subscription billing, handling Stripe webhooks, implementing idempotent payment flows, or working with Stripe SDKs (stripe-node, stripe-python, stripe.js).",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "vendor"
-    },
-    {
-      "id": "supabase-backend",
-      "name": "supabase-backend",
-      "description": "Build backends on Supabase (Postgres, Auth, Storage, Edge Functions, Realtime). Covers Row Level Security policies, the supabase-js client, realtime subscriptions, storage buckets, edge functions in Deno, and database migrations via the Supabase CLI. Use when designing RLS, wiring a frontend to Supabase, writing edge functions, managing migrations, or debugging auth and JWT claims.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "svelte-expert",
-      "name": "svelte-expert",
-      "description": "Build Svelte 5 components and SvelteKit apps using runes ($state, $derived, $effect, $props), stores, actions, transitions, and file-based routing. Use when authoring .svelte or .svelte.ts files, migrating from legacy reactivity, or wiring +page/+server endpoints.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "swiftui-app",
-      "name": "swiftui-app",
-      "description": "SwiftUI for iOS 17+ and macOS 14+ apps. Covers declarative views, the @Observable macro and the older @State/@Binding/@StateObject family, NavigationStack, environment values, async data loading with .task, sheet/alert/fullScreenCover modifiers, and Xcode Previews. Use this skill when building, refactoring, or debugging SwiftUI user interfaces on Apple platforms.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
     },
     {
       "id": "systematic-debugging",
@@ -920,60 +326,6 @@
       "category": "frontend"
     },
     {
-      "id": "tanstack-query",
-      "name": "tanstack-query",
-      "description": "TanStack Query (formerly React Query) for async server-state management. Use this skill when fetching, caching, synchronizing, or mutating remote data in React/Vue/Solid/Svelte apps. Covers useQuery, useMutation, query keys, staleTime/gcTime, query invalidation, infinite queries, optimistic updates, suspense mode, and prefetching. Triggers on useQuery, useMutation, queryClient, queryKey, invalidateQueries, useInfiniteQuery, or any data-fetching/caching task.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "tauri-desktop",
-      "name": "tauri-desktop",
-      "description": "Tauri 2 for cross-platform desktop and mobile apps with a Rust backend and a web frontend (any JS framework). Covers project structure, IPC commands with",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
-    },
-    {
-      "id": "terraform",
-      "name": "terraform",
-      "description": "Write and review Terraform code for cloud infrastructure. Covers providers, resources, modules, remote state backends (S3, GCS, azurerm), variables and outputs, for_each and count, workspaces, drift detection, terraform import, and the plan/apply lifecycle. Use when authoring HCL, refactoring modules, fixing state issues, importing existing resources, or reviewing IaC changes.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "devops"
-    },
-    {
-      "id": "trpc-typesafe-api",
-      "name": "trpc-typesafe-api",
-      "description": "tRPC for end-to-end type-safe RPC between TypeScript client and server with no codegen. Use this skill when defining routers and procedures, validating inputs with Zod, adding context and middleware (auth, logging), wiring up the React Query integration, or choosing between query/mutation/subscription procedure types.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "backend"
-    },
-    {
-      "id": "turborepo-monorepo",
-      "name": "turborepo-monorepo",
-      "description": "Turborepo for monorepo task orchestration, incremental builds, and remote caching. Use this skill when setting up turbo.json, defining task pipelines with dependsOn, configuring inputs/outputs for caching, wiring remote cache (Vercel or self-hosted), filtering tasks with --filter, integrating with pnpm/npm/yarn workspaces, or migrating from Lerna/Nx. Triggers: turborepo, turbo.json, turbo run, turbo build, remote cache, task pipeline, monorepo build, dependsOn, ^build, turbo prune, vercel monorepo.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "typescript-advanced-types",
-      "name": "typescript-advanced-types",
-      "description": "TypeScript advanced type patterns and type-level programming. Use this skill when working with conditional types, mapped types, template literal types, infer, satisfies, branded/nominal types, recursive types, variance, key remapping, distributive conditionals, or building library-grade generic APIs. Triggers on extends ? :, infer, keyof, typeof, satisfies, as const, Mapped types, Template literal types, brand types, or any non-trivial TypeScript type work.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "languages"
-    },
-    {
       "id": "typescript-lsp",
       "name": "typescript-lsp",
       "description": "TypeScript and JavaScript expert with deep knowledge of type-level programming, performance optimization, monorepo management, migration strategies, and modern tooling.",
@@ -981,96 +333,6 @@
       "type": "skill",
       "source": "local",
       "category": "languages"
-    },
-    {
-      "id": "unity-csharp-gamedev",
-      "name": "unity-csharp-gamedev",
-      "description": "Unity game development in C#. Covers MonoBehaviour lifecycle (Awake/Start/Update/FixedUpdate/LateUpdate/OnEnable/OnDisable), ScriptableObjects for shared data, prefab workflows, Addressables for asset loading, the new Input System, an overview of DOTS/ECS, and performance practices (avoid GameObject.Find, pool objects, cache components). Use this skill when writing or reviewing C# scripts for Unity 2022 LTS or newer.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "mobile-game"
-    },
-    {
-      "id": "uv-python-packaging",
-      "name": "uv-python-packaging",
-      "description": "Astral's uv, a single high-speed Python package and project manager that replaces pip, pip-tools, pipx, poetry, pyenv, virtualenv, and twine. Use this skill when initializing a Python project, authoring pyproject.toml, managing dependencies with uv add/remove/lock/sync, pinning Python versions with uv python, running scripts with PEP 723 inline metadata, building or publishing wheels, or migrating from Poetry/pip-tools. Triggers: uv, uv add, uv sync, uv lock, uv run, uv pip, uv python install, uv tool, uv init, uv build, uv publish, PEP 723, astral, ruff sibling, Python project manager.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "vite-build-tool",
-      "name": "vite-build-tool",
-      "description": "Vite build tool for fast development servers and optimized production builds. Use this skill when scaffolding a React, Vue, Svelte, Solid, Preact, or vanilla TS/JS project, configuring vite.config.ts, setting up dev/build/preview scripts, defining plugins, handling env vars (import.meta.env, VITE_ prefix), troubleshooting HMR, dep pre-bundling, asset imports, SSR mode, or library mode. Triggers: vite, vite.config, HMR, esbuild dev, rollup build, import.meta.env, vite plugin, vite-plugin-react, vite preview, vite dev server.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "vitest-pro",
-      "name": "vitest-pro",
-      "description": "Configure and write Vitest tests with Vite-native speed, ESM-first semantics, in-source testing, vi.mock hoisting, browser mode, and Jest migration. Use when setting up vitest.config.ts, picking between c8 and istanbul coverage, debugging vi.mock hoist order, or porting a Jest suite over.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "testing"
-    },
-    {
-      "id": "vllm-serving",
-      "name": "vllm-serving",
-      "description": "vLLM for high-throughput production GPU serving of large language models with PagedAttention and continuous batching. Use this skill when deploying an OpenAI-compatible inference server with `vllm serve`, tuning `--tensor-parallel-size` and `--pipeline-parallel-size` across GPUs, configuring AWQ/GPTQ/FP8 quantization, enabling speculative decoding or prefix caching, or benchmarking throughput and latency for Llama, Qwen, Mixtral, or DeepSeek models.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "ai-ml"
-    },
-    {
-      "id": "vue-pro",
-      "name": "vue-pro",
-      "description": "Build production Vue 3 apps with the Composition API, script setup, Pinia, and Vue Router. Use when writing or refactoring Vue single-file components, designing reactive state, wiring routes, or tuning render performance.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "web-accessibility-wcag",
-      "name": "web-accessibility-wcag",
-      "description": "Make web UIs conform to WCAG 2.2 AA using semantic HTML, correct ARIA, keyboard support, focus management, and sufficient color contrast. Use when reviewing components for a11y, fixing axe/Lighthouse findings, building forms or modals, or auditing keyboard navigation.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
-    },
-    {
-      "id": "webpack-config",
-      "name": "webpack-config",
-      "description": "Webpack 5 configuration including entry/output, loaders, plugins, code-splitting, module federation, asset modules, tree-shaking, source maps, and dev server. Use this skill when editing webpack.config.js, debugging bundle size or build errors, configuring babel-loader/ts-loader/css-loader, setting up SplitChunksPlugin, MiniCssExtractPlugin, HtmlWebpackPlugin, DefinePlugin, or migrating from Webpack 4. Triggers: webpack, webpack.config, webpack-dev-server, module federation, splitChunks, optimization.minimize, HMR webpack, babel-loader, ts-loader, css-loader, MiniCssExtractPlugin, asset modules.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "zod-validation",
-      "name": "zod-validation",
-      "description": "Zod TypeScript-first schema validation library. Use this skill when defining input validation, parsing untrusted data (API requests, form inputs, env vars, third-party JSON), generating static types from runtime schemas via z.infer, building discriminated unions, or integrating validation with react-hook-form. Triggers on z.object, z.infer, safeParse, schema.parse, .refine, .transform, ZodError, or any TypeScript validation/parsing task.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "build-tooling"
-    },
-    {
-      "id": "zustand-state",
-      "name": "zustand-state",
-      "description": "Zustand minimal client-state store for React. Use this skill when building a small-to-medium global store without Redux boilerplate, with create(), selector-based subscriptions, slices pattern, persist middleware (localStorage), immer middleware, devtools, subscribeWithSelector, or vanilla (non-React) stores. Triggers on zustand, create((set, get) =>), useStore, persist, immer middleware, slice pattern, or any lightweight global-state task.",
-      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
-      "type": "skill",
-      "source": "local",
-      "category": "frontend"
     },
     {
       "id": "claude-scientific-skills--scientific-skills--biopython",
@@ -1450,6 +712,1036 @@
       "type": "skill",
       "source": "claude-plugins-official",
       "relativeSkillDir": "plugins/plugin-dev/skills/skill-development",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--brainstorming",
+      "name": "brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/brainstorming",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--dispatching-parallel-agents",
+      "name": "dispatching-parallel-agents",
+      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/dispatching-parallel-agents",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--executing-plans",
+      "name": "executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/executing-plans",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--finishing-a-development-branch",
+      "name": "finishing-a-development-branch",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/finishing-a-development-branch",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--receiving-code-review",
+      "name": "receiving-code-review",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/receiving-code-review",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--requesting-code-review",
+      "name": "requesting-code-review",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/requesting-code-review",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--subagent-driven-development",
+      "name": "subagent-driven-development",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/subagent-driven-development",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--systematic-debugging",
+      "name": "systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/systematic-debugging",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--test-driven-development",
+      "name": "test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/test-driven-development",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--using-git-worktrees",
+      "name": "using-git-worktrees",
+      "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/using-git-worktrees",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--using-superpowers",
+      "name": "using-superpowers",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/using-superpowers",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--verification-before-completion",
+      "name": "verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/verification-before-completion",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--writing-plans",
+      "name": "writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/writing-plans",
+      "category": "workflow"
+    },
+    {
+      "id": "superpowers--skills--writing-skills",
+      "name": "writing-skills",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+      "repository": "https://github.com/obra/superpowers",
+      "type": "skill",
+      "source": "superpowers",
+      "relativeSkillDir": "skills/writing-skills",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--deprecated--design-an-interface",
+      "name": "design-an-interface",
+      "description": "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\".",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/deprecated/design-an-interface",
+      "category": "frontend"
+    },
+    {
+      "id": "mattpocock-skills--skills--deprecated--qa",
+      "name": "qa",
+      "description": "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions \"QA session\".",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/deprecated/qa",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--deprecated--request-refactor-plan",
+      "name": "request-refactor-plan",
+      "description": "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/deprecated/request-refactor-plan",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--deprecated--ubiquitous-language",
+      "name": "ubiquitous-language",
+      "description": "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions \"domain model\" or \"DDD\".",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/deprecated/ubiquitous-language",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--diagnose",
+      "name": "diagnose",
+      "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/diagnose",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--grill-with-docs",
+      "name": "grill-with-docs",
+      "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/grill-with-docs",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--improve-codebase-architecture",
+      "name": "improve-codebase-architecture",
+      "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/improve-codebase-architecture",
+      "category": "architecture"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--prototype",
+      "name": "prototype",
+      "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/prototype",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--setup-matt-pocock-skills",
+      "name": "setup-matt-pocock-skills",
+      "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/setup-matt-pocock-skills",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--tdd",
+      "name": "tdd",
+      "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/tdd",
+      "category": "testing"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--to-issues",
+      "name": "to-issues",
+      "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/to-issues",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--to-prd",
+      "name": "to-prd",
+      "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/to-prd",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--triage",
+      "name": "triage",
+      "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/triage",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--engineering--zoom-out",
+      "name": "zoom-out",
+      "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/engineering/zoom-out",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--in-progress--review",
+      "name": "review",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/in-progress/review",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--in-progress--writing-beats",
+      "name": "writing-beats",
+      "description": "Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write only that beat, then offer options for where to pivot next, beat by beat, until the article reaches a natural end. Use when the user has raw material and wants to assemble it as a narrative rather than an argument.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/in-progress/writing-beats",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--in-progress--writing-fragments",
+      "name": "writing-fragments",
+      "description": "Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions \"fragments\", \"ideate\", or \"raw material\" for writing.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/in-progress/writing-fragments",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--in-progress--writing-shape",
+      "name": "writing-shape",
+      "description": "Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and wants help turning it into something publishable.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/in-progress/writing-shape",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--misc--git-guardrails-claude-code",
+      "name": "git-guardrails-claude-code",
+      "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/misc/git-guardrails-claude-code",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--misc--migrate-to-shoehorn",
+      "name": "migrate-to-shoehorn",
+      "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/misc/migrate-to-shoehorn",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--misc--scaffold-exercises",
+      "name": "scaffold-exercises",
+      "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/misc/scaffold-exercises",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--misc--setup-pre-commit",
+      "name": "setup-pre-commit",
+      "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/misc/setup-pre-commit",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--personal--edit-article",
+      "name": "edit-article",
+      "description": "Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/personal/edit-article",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--personal--obsidian-vault",
+      "name": "obsidian-vault",
+      "description": "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/personal/obsidian-vault",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--productivity--caveman",
+      "name": "caveman",
+      "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.\n",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/productivity/caveman",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--productivity--grill-me",
+      "name": "grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/productivity/grill-me",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--productivity--handoff",
+      "name": "handoff",
+      "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/productivity/handoff",
+      "category": "workflow"
+    },
+    {
+      "id": "mattpocock-skills--skills--productivity--write-a-skill",
+      "name": "write-a-skill",
+      "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
+      "repository": "https://github.com/mattpocock/skills",
+      "type": "skill",
+      "source": "mattpocock-skills",
+      "relativeSkillDir": "skills/productivity/write-a-skill",
+      "category": "workflow"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-actor-component-architecture",
+      "name": "ue-actor-component-architecture",
+      "description": "Use this skill when working with Actor and component design in Unreal Engine. Triggers on: Actor, component, BeginPlay, Tick, SpawnActor, lifecycle, CreateDefaultSubobject, composition, EndPlay, PostInitializeComponents, UActorComponent, USceneComponent, UINTERFACE, attachment, spawn, interface. See references/actor-lifecycle.md and references/component-types.md for detailed tables.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-actor-component-architecture",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-ai-navigation",
+      "name": "ue-ai-navigation",
+      "description": "Use this skill when implementing AI, AIController, behavior tree, blackboard, AI perception, NavMesh, EQS, navigation, pathfinding, State Tree, or Smart Objects in Unreal Engine. See references/behavior-tree-patterns.md for BT patterns and references/eqs-reference.md for EQS configuration. For AI ability use, see ue-gameplay-abilities.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-ai-navigation",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-animation-system",
+      "name": "ue-animation-system",
+      "description": "Use this skill when working with Unreal Engine animation: AnimInstance, montage playback, blend space, state machine, anim notify, IK, AnimGraph, skeletal mesh, or linked anim graphs. See references/anim-notify-reference.md for notify patterns and references/locomotion-setup.md for locomotion setup. For montage integration with GAS, see ue-gameplay-abilities.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-animation-system",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-async-threading",
+      "name": "ue-async-threading",
+      "description": "Use this skill when working with Unreal Engine async operations, threading, parallel execution, or concurrency. Also use when the user mentions 'FRunnable', 'FAsyncTask', 'TaskGraph', 'UE::Tasks', 'ParallelFor', 'TFuture', 'TPromise', 'Async()', 'thread safety', 'FCriticalSection', 'FRWLock', 'background thread', 'game thread dispatch', or 'thread pool'. For networking async (RPCs, replication), see ue-networking-replication. For asset streaming, see ue-data-assets-tables.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-async-threading",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-audio-system",
+      "name": "ue-audio-system",
+      "description": "Use this skill when working with audio, sound, music, UAudioComponent, PlaySoundAtLocation, SoundCue, MetaSound, attenuation, submix, concurrency, SFX, or spatial audio in Unreal Engine. See references/audio-setup-patterns.md for music system and ambient soundscape architectures. For VFX audio synchronization, see ue-niagara-effects.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-audio-system",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-character-movement",
+      "name": "ue-character-movement",
+      "description": "Use this skill when working with character movement, CharacterMovementComponent, CMC, movement modes, walking, falling, swimming, flying, custom movement, network prediction, FSavedMove, root motion, floor detection, step-up, or character physics. Also use for 'PhysWalking', 'PhysCustom', 'LaunchCharacter', 'WalkableFloor', or 'movement replication'. See references/ for CMC extension patterns and movement pipeline details.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-character-movement",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-cpp-foundations",
+      "name": "ue-cpp-foundations",
+      "description": "Use when writing Unreal Engine C++ code involving UPROPERTY, UFUNCTION, UCLASS, TArray, TMap, delegates, FString, garbage collection, or smart pointers. Also use when the user asks about \"UE C++\", USTRUCT, UENUM, FName, FText, TObjectPtr, TWeakObjectPtr, UObject lifetime, UE_LOG, or UE subsystems. For module build configuration, see ue-module-build-system. For Actor/Component architecture, see ue-actor-component-architecture.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-cpp-foundations",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-data-assets-tables",
+      "name": "ue-data-assets-tables",
+      "description": "Use when working with DataAsset, DataTable, soft reference, hard reference, TSoftObjectPtr, async loading, Asset Manager, StreamableManager, or game data structures in Unreal Engine. See references/asset-loading-patterns.md for async loading and StreamableManager patterns. See references/data-driven-design.md for data-driven gameplay architecture. For serialization, see ue-serialization-savegames. For C++ foundations, see ue-cpp-foundations.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-data-assets-tables",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-editor-tools",
+      "name": "ue-editor-tools",
+      "description": "Use when extending the Unreal Editor with editor tool, editor utility widget, Blutility, detail customization, property customization, editor mode, asset editor, editor subsystem, editor extension, UToolMenus, or scripted asset operations. For Slate fundamentals, see ue-ui-umg-slate. For module build config, see ue-module-build-system.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-editor-tools",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-game-features",
+      "name": "ue-game-features",
+      "description": "Use this skill when working with Game Feature plugins, modular gameplay, GameFeatureAction, GameFeatureData, GameFrameworkComponentManager, init state system, experience system, modular components, UPawnComponent, UControllerComponent, UGameStateComponent, UPlayerStateComponent, or Lyra-style modular architecture. See references/ for code templates and experience system patterns.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-game-features",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-gameplay-abilities",
+      "name": "ue-gameplay-abilities",
+      "description": "Use this skill when working with GAS, Gameplay Ability System, GameplayAbility, GameplayEffect, AttributeSet, GameplayTags, ability system, buffs, debuffs, cooldowns, or attribute modification. See references/ for detailed setup patterns, effect configuration, and ability task usage.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-gameplay-abilities",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-gameplay-framework",
+      "name": "ue-gameplay-framework",
+      "description": "Use this skill when working with Unreal Engine's gameplay framework classes: GameMode, GameState, PlayerController, PlayerState, Pawn, Character, or GameInstance. Also use when the user mentions 'gameplay framework', 'game rules', 'player management', 'match flow', or 'player spawning'. See references/framework-class-map.md for the full authority/presence matrix. For networking/replication, see ue-networking-replication. For input setup, see ue-input-system.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-gameplay-framework",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-input-system",
+      "name": "ue-input-system",
+      "description": "Use this skill when implementing player input with Unreal Engine's Enhanced Input system. Also use when the user mentions 'Enhanced Input', 'input', 'input action', 'InputAction', 'mapping context', 'InputMappingContext', 'input binding', 'key binding', 'input trigger', 'input modifier', 'gamepad', or 'keyboard'. Covers ETriggerEvent, built-in triggers (Hold, Tap, Pulse, ChordAction, Combo), built-in modifiers (DeadZone, Scalar, Negate, SwizzleAxis), and custom trigger/modifier authoring. See references/input-action-reference.md for the full catalogue. For UI input modes, see ue-ui-umg-slate.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-input-system",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-mass-entity",
+      "name": "ue-mass-entity",
+      "description": "Use this skill when working with Mass Entity, MassEntity, Mass AI, MassProcessor, MassFragment, MassTag, MassObserver, MassSpawner, MassCrowd, Mass ECS, entity archetype, ForEachEntityChunk, FMassEntityQuery, FMassEntityManager, ISM crowd, or large-scale entity simulation in Unreal Engine. See references/mass-entity-patterns.md for processor and observer templates. See references/mass-fragment-reference.md for built-in fragment types.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-mass-entity",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-materials-rendering",
+      "name": "ue-materials-rendering",
+      "description": "Use when the user is working with material, shader, MID, dynamic material, material instance, post-process, render target, parameter collection, decal, Nanite, Lumen, or rendering in Unreal Engine. See references/material-parameter-reference.md for parameter patterns and references/post-process-settings.md for post-process settings. For particle rendering, see ue-niagara-effects.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-materials-rendering",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-module-build-system",
+      "name": "ue-module-build-system",
+      "description": "Use when working with Build.cs, Target.cs, module creation, plugin setup, or build errors in Unreal Engine — including \"unresolved external symbol,\" \"cannot open include file,\" IWYU violations, missing API macros, or dependency configuration. See also ue-cpp-foundations for UObject macro patterns.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-module-build-system",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-networking-replication",
+      "name": "ue-networking-replication",
+      "description": "Use this skill when working on multiplayer networking, replication, RPC calls, net role logic, server/client authority, prediction, or synchronizing game state. Also use when the user mentions 'DOREPLIFETIME', 'dedicated server', 'replicated', or 'net role'. See references/replication-patterns.md for common patterns and references/rpc-decision-guide.md for RPC type selection. For GAS networking, see ue-gameplay-abilities.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-networking-replication",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-niagara-effects",
+      "name": "ue-niagara-effects",
+      "description": "Use this skill when working with Niagara particle systems, VFX, effects, emitter, Niagara component, or Niagara parameter in Unreal Engine C++. Covers spawning systems, setting parameters, data interfaces (SkeletalMesh, StaticMesh, Curve, Array), OnSystemFinished delegate, and performance tuning. See references/niagara-parameter-types.md for type mapping and references/niagara-data-interfaces.md for data interface catalogue. For particle materials, see ue-materials-rendering.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-niagara-effects",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-physics-collision",
+      "name": "ue-physics-collision",
+      "description": "Use when implementing collision detection, trace queries, physics simulation, or physical interactions in Unreal Engine. Triggers on: 'collision', 'trace', 'LineTrace', 'line trace', 'overlap', 'physics', 'hit result', 'sweep', 'collision channel', 'physics body', 'Chaos', 'raytrace', 'OnHit', 'OnBeginOverlap'. See related skills for component architecture and AI navigation.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-physics-collision",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-procedural-generation",
+      "name": "ue-procedural-generation",
+      "description": "Use this skill when working with procedural generation in Unreal Engine: PCG framework, ProceduralMesh, instanced mesh, HISM, spline, runtime mesh, noise, terrain generation, or dungeon generation. See references/pcg-node-reference.md for PCG node types and references/procedural-mesh-patterns.md for mesh generation patterns. For physics on procedural geometry, see ue-physics-collision.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-procedural-generation",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-project-context",
+      "name": "ue-project-context",
+      "description": "When the user wants to create or update their Unreal Engine project context document. Use when the user says 'project context,' 'set up context,' 'UE context,' 'configure project,' or wants to avoid repeating their project setup across UE development tasks. Creates `.agents/ue-project-context.md` that all other UE skills reference. See related skills footer for skills that depend on this context.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-project-context",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-sequencer-cinematics",
+      "name": "ue-sequencer-cinematics",
+      "description": "Use this skill when working with Sequencer, LevelSequence, cutscene, cinematic, camera, movie scene, sequencer event, or Movie Render Queue in Unreal Engine. See references/sequencer-patterns.md for dialogue cutscene, in-game camera, and scripted event patterns. For animation playback, see ue-animation-system.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-sequencer-cinematics",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-serialization-savegames",
+      "name": "ue-serialization-savegames",
+      "description": "Use when implementing save/load systems, player progress persistence, or data serialization in Unreal Engine. Triggers on: save game, USaveGame, FArchive, serialization, SaveGameToSlot, config, persist data, save file, load game. See references/save-system-architecture.md for full slot management and multi-user patterns.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-serialization-savegames",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-state-trees",
+      "name": "ue-state-trees",
+      "description": "Use this skill when working with State Tree, StateTree, UStateTree, state machine, StateTreeTask, StateTreeCondition, StateTreeEvaluator, StateTreeSchema, AI State Tree, Mass StateTree, FStateTreeExecutionContext, or data-driven state logic in Unreal Engine. See references/state-tree-patterns.md for task/condition/evaluator templates and references/state-tree-mass-integration.md for Mass Entity integration.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-state-trees",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-testing-debugging",
+      "name": "ue-testing-debugging",
+      "description": "Use when writing automation tests, functional tests, or any test in Unreal Engine. Also use when the user asks about \"UE_LOG\", logging, log categories, assertion, check, ensure, verify, DrawDebug, debug draw, console command, profiling, Unreal Insights, stat commands, or debugging techniques. See ue-module-build-system for test module setup, and ue-cpp-foundations for general C++ logging patterns.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-testing-debugging",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-ui-umg-slate",
+      "name": "ue-ui-umg-slate",
+      "description": "Use this skill when working with UMG, UI, widget, UserWidget, Slate, HUD, BindWidget, Common UI, menu, or UMG binding in Unreal Engine. See references/widget-types.md for widget type reference and references/common-ui-setup.md for Common UI plugin setup. For Slate in editor tools, see ue-editor-tools. For input mode management, see ue-input-system.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-ui-umg-slate",
+      "category": "mobile-game"
+    },
+    {
+      "id": "unreal-engine-skills--skills--ue-world-level-streaming",
+      "name": "ue-world-level-streaming",
+      "description": "Use this skill when working with World Partition, level streaming, level travel, OpenLevel, ServerTravel, data layer, world subsystem, level instance, sub-level, seamless travel, open world, or HLOD. See references/streaming-patterns.md for configuration patterns by game type.",
+      "repository": "https://github.com/quodsoler/unreal-engine-skills",
+      "type": "skill",
+      "source": "unreal-engine-skills",
+      "relativeSkillDir": "skills/ue-world-level-streaming",
+      "category": "mobile-game"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--coding-tutor--skills--coding-tutor",
+      "name": "coding-tutor",
+      "description": "Personalized coding tutorials that build on your existing knowledge and use your actual codebase for examples. Creates a persistent learning trail that compounds over time using the power of AI, spaced repetition and quizes.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/coding-tutor/skills/coding-tutor",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-agent-native-architecture",
+      "name": "ce-agent-native-architecture",
+      "description": "Build applications where agents are first-class citizens. Use this skill when designing autonomous agents, creating MCP tools, implementing self-modifying systems, or building apps where features are outcomes achieved by agents operating in a loop.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-agent-native-architecture",
+      "category": "architecture"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-agent-native-audit",
+      "name": "ce-agent-native-audit",
+      "description": "Run comprehensive agent-native architecture review with scored principles",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-agent-native-audit",
+      "category": "architecture"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-brainstorm",
+      "name": "ce-brainstorm",
+      "description": "Explore requirements and approaches through collaborative dialogue, then write a right-sized requirements document. Use when the user says \"let's brainstorm\", \"what should we build\", or \"help me think through X\", presents a vague or ambitious feature request, or seems unsure about scope or direction -- even without explicitly asking to brainstorm.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-brainstorm",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-clean-gone-branches",
+      "name": "ce-clean-gone-branches",
+      "description": "Clean up local branches whose remote tracking branch is gone. Use when the user says \"clean up branches\", \"delete gone branches\", \"prune local branches\", \"clean gone\", or wants to remove stale local branches that no longer exist on the remote. Also handles removing associated worktrees for branches that have them.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-clean-gone-branches",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-code-review",
+      "name": "ce-code-review",
+      "description": "Structured code review using tiered persona agents, confidence-gated findings, and a merge/dedup pipeline. Use when reviewing code changes before creating a PR.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-code-review",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-commit",
+      "name": "ce-commit",
+      "description": "Create a git commit with a clear, value-communicating message. Use when the user says \"commit\", \"commit this\", \"save my changes\", \"create a commit\", or wants to commit staged or unstaged work. Produces well-structured commit messages that follow repo conventions when they exist, and defaults to conventional commit format otherwise.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-commit",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-commit-push-pr",
+      "name": "ce-commit-push-pr",
+      "description": "Commit, push, and open a PR with an adaptive, value-first description that scales in depth with the change. Use when the user says \"commit and PR\", \"ship this\", \"create a PR\", or \"open a pull request\". Also handles description-only flows (\"write a PR description\", \"rewrite the PR body\", \"describe this PR\") without committing or pushing.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-commit-push-pr",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-compound",
+      "name": "ce-compound",
+      "description": "Document a recently solved problem to compound your team's knowledge",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-compound",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-compound-refresh",
+      "name": "ce-compound-refresh",
+      "description": "Refresh stale learning and pattern docs under docs/solutions/ by reviewing them against the current codebase, then updating, consolidating, or deleting drifted ones. Use when the user asks to \"refresh my learnings\", \"audit docs/solutions/\", \"clean up stale learnings\", or \"consolidate overlapping docs\", or when ce-compound flags an older doc as superseded. Do not trigger for general refactor, debugging, or code-review work unless the user has explicitly pointed at docs/solutions/.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-compound-refresh",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-debug",
+      "name": "ce-debug",
+      "description": "Systematically find root causes and fix bugs. Use when debugging errors, investigating test failures, reproducing bugs from issue trackers (GitHub, Linear, Jira), or when stuck on a problem after failed fix attempts. Also use when the user says 'debug this', 'why is this failing', 'fix this bug', 'trace this error', or pastes stack traces, error messages, or issue references.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-debug",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-doc-review",
+      "name": "ce-doc-review",
+      "description": "Review requirements or plan documents using parallel persona agents that surface role-specific issues. Use when a requirements document or plan document exists and the user wants to improve it.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-doc-review",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-frontend-design",
+      "name": "ce-frontend-design",
+      "description": "Build web interfaces with genuine design quality, not AI slop. Use for any frontend work - landing pages, web apps, dashboards, admin panels, components, interactive experiences. Activates for both greenfield builds and modifications to existing applications. Detects existing design systems and respects them. Covers composition, typography, color, motion, and copy. Verifies results via screenshots before declaring done.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-frontend-design",
+      "category": "frontend"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-gemini-imagegen",
+      "name": "ce-gemini-imagegen",
+      "description": "This skill should be used when generating and editing images using the Gemini API (Nano Banana Pro). It applies when creating images from text prompts, editing existing images, applying style transfers, generating logos with text, creating stickers, product mockups, or any image generation/manipulation task. Supports text-to-image, image editing, multi-turn refinement, and composition from multiple reference images.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-gemini-imagegen",
+      "category": "ai-ml"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-ideate",
+      "name": "ce-ideate",
+      "description": "Generate and critically evaluate grounded ideas about a topic. Use when asking what to improve, requesting idea generation, exploring surprising directions, or wanting the AI to proactively suggest strong options before brainstorming one in depth. Triggers on phrases like 'what should I improve', 'give me ideas', 'ideate on X', 'surprise me', 'what would you change', or any request for AI-generated suggestions rather than refining the user's own idea.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-ideate",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-optimize",
+      "name": "ce-optimize",
+      "description": "Run metric-driven iterative optimization loops -- define a measurable goal, run parallel experiments, measure each against hard gates or LLM-as-judge scores, keep improvements, and converge on the best solution. Use when optimizing clustering quality, search relevance, build performance, prompt quality, or any measurable outcome that benefits from systematic experimentation.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-optimize",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-plan",
+      "name": "ce-plan",
+      "description": "Create structured plans for multi-step tasks -- software features, research workflows, events, study plans, or any goal that benefits from breakdown. Also deepens existing plans with interactive sub-agent review. Use when the user says 'plan this', 'create a plan', 'how should we build', 'break this down', or when a brainstorm doc is ready for planning. Use 'deepen the plan' or 'deepening pass' for the deepening flow. For exploratory requests, prefer ce-brainstorm first.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-plan",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-polish-beta",
+      "name": "ce-polish-beta",
+      "description": "[BETA] Start the dev server, open the feature in a browser, and iterate on improvements together.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-polish-beta",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-proof",
+      "name": "ce-proof",
+      "description": "Run human-in-the-loop review loops over markdown via Proof (proofeditor.ai) — share, view, comment on, edit, and sync collaborative docs. Use when the user says \"view this in proof\", \"share to proof\", \"HITL this doc\", or wants a shared markdown review surface for a spec, plan, or draft, including handoffs from ce-brainstorm, ce-ideate, or ce-plan. Do not trigger on \"proof\" meaning evidence, math proofs, proof-of-concept, or \"proofread this\".",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-proof",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-resolve-pr-feedback",
+      "name": "ce-resolve-pr-feedback",
+      "description": "Resolve PR review feedback by evaluating validity and fixing issues in parallel. Use when addressing PR review comments, resolving review threads, or fixing code review feedback.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-resolve-pr-feedback",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-sessions",
+      "name": "ce-sessions",
+      "description": "Search and ask questions about coding agent session history across Claude Code, Codex, and Cursor. Use when asking what was worked on, what was tried before, how a problem was investigated across sessions, what happened recently, or any question about past agent sessions. Also use when the user references prior sessions, previous attempts, or past investigations — even without saying 'sessions' explicitly.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-sessions",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-setup",
+      "name": "ce-setup",
+      "description": "Diagnose and configure compound-engineering environment. Checks CLI dependencies, plugin version, and repo-local config. Offers guided installation for missing tools. Use when troubleshooting missing tools, verifying setup, or before onboarding.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-setup",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-simplify-code",
+      "name": "ce-simplify-code",
+      "description": "Simplify and refine recently changed code for clarity, reuse, quality, and efficiency while preserving behavior.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-simplify-code",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-strategy",
+      "name": "ce-strategy",
+      "description": "Create or maintain STRATEGY.md - the product's target problem, approach, users, key metrics, and tracks of work. Use when starting a new product, updating direction, or when prompts like 'write our strategy', 'update the roadmap', 'what are we working on', or 'set up the strategy doc' come up. Also triggers when ce-ideate, ce-brainstorm, or ce-plan need upstream grounding and no strategy doc exists yet.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-strategy",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-test-browser",
+      "name": "ce-test-browser",
+      "description": "Run browser tests on pages affected by current PR or branch",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-test-browser",
+      "category": "testing"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-work",
+      "name": "ce-work",
+      "description": "Execute work efficiently while maintaining quality and finishing features",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-work",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-work-beta",
+      "name": "ce-work-beta",
+      "description": "[BETA] Execute work with external delegate support. Same as ce-work but includes experimental Codex delegation mode for token-conserving code implementation.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-work-beta",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--ce-worktree",
+      "name": "ce-worktree",
+      "description": "Create an isolated git worktree for parallel feature work or PR review. Use when starting work that should not disturb the current checkout, or when `ce-work` or `ce-code-review` offers a worktree option.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/ce-worktree",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--plugins--compound-engineering--skills--lfg",
+      "name": "lfg",
+      "description": "Run the full autonomous engineering pipeline end-to-end (plan, work, code review, test, commit, push, open PR, watch CI, fix CI failures until green). Use only when the user explicitly requests hands-off execution of a software task and provides a feature description; do not auto-route casual conversation here.",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "plugins/compound-engineering/skills/lfg",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--tests--fixtures--custom-paths--custom-skills--custom-skill",
+      "name": "custom-skill",
+      "description": "No description available",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "tests/fixtures/custom-paths/custom-skills/custom-skill",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--tests--fixtures--custom-paths--skills--default-skill",
+      "name": "default-skill",
+      "description": "No description available",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "tests/fixtures/custom-paths/skills/default-skill",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--tests--fixtures--sample-plugin--skills--claude-only-skill",
+      "name": "claude-only-skill",
+      "description": "A skill restricted to Claude Code only",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "tests/fixtures/sample-plugin/skills/claude-only-skill",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--tests--fixtures--sample-plugin--skills--disabled-skill",
+      "name": "disabled-skill",
+      "description": "A skill with model invocation disabled",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "tests/fixtures/sample-plugin/skills/disabled-skill",
+      "category": "workflow"
+    },
+    {
+      "id": "compound-engineering-plugin--tests--fixtures--sample-plugin--skills--skill-one",
+      "name": "skill-one",
+      "description": "Sample skill",
+      "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "type": "skill",
+      "source": "compound-engineering-plugin",
+      "relativeSkillDir": "tests/fixtures/sample-plugin/skills/skill-one",
       "category": "workflow"
     }
   ]
