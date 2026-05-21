@@ -35,23 +35,21 @@
   "dependencies": {
     "@clack/prompts": "^1.4.0",
     "@inquirer/prompts": "^8.4.3",
-    "axios": "^1.16.1",
-    "boxen": "^8.0.1",
     "chalk": "^4.1.2",
-    "cli-table3": "^0.6.5",
-    "commander": "^14.0.3",
     "fs-extra": "^11.3.5",
     "fuse.js": "^7.3.0",
-    "js-yaml": "^4.1.1",
-    "ora": "^9.4.0"
+    "js-yaml": "^4.1.1"
   },
   "devDependencies": {
     "vitest": "^4.1.6"
   },
   "files": [
-    "src",
+    "src/**/*.js",
+    "!src/**/*.test.js",
     "plugins",
-    "scripts",
+    "scripts/create-skill.js",
+    "scripts/update-registry.js",
+    "scripts/validate-plugin.js",
     "registry.json",
     "sources.json",
     "curated-skills.json",

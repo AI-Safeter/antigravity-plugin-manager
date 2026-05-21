@@ -12,10 +12,11 @@ Adding a new skill involves creating a folder, writing a structured markdown ins
 
 ### Step 1: Fork and Clone
 1. Fork this repository on GitHub.
-2. Clone your fork locally:
+2. Clone your fork locally and install dependencies:
    ```bash
    git clone https://github.com/YOUR_USERNAME/ag_plugin.git
    cd ag_plugin
+   npm install
    ```
 
 ### Step 2: Scaffold a New Skill Automatically

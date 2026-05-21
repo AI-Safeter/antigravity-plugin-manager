@@ -6,7 +6,7 @@ const path = require('path');
 const os = require('os');
 const { spinner, note, confirm, isCancel } = require('@clack/prompts');
 const { checkbox, select, input } = require('@inquirer/prompts');
-const { generateRegistry, REGISTRY_SCHEMA_VERSION } = require('../scripts/update-registry');
+const { generateRegistry, REGISTRY_SCHEMA_VERSION, mergeBuiltinFlags } = require('../scripts/update-registry');
 
 const DEFAULT_REGISTRY_PATH = path.join(__dirname, '../registry.json');
 const USER_REGISTRY_PATH = path.join(os.homedir(), '.antigravity/registry.json');
@@ -46,7 +46,15 @@ async function readRegistryFile(p) {
 
 async function getRegistry() {
   const rebuildAndRead = async () => {
-    await generateRegistry({ registryPath: USER_REGISTRY_PATH, allowEmptyCache: true });
+    // Try a best-effort sync so users on a schema bump still get the full
+    // remote catalog. If the network is unreachable, fall back to whatever
+    // is already cached and warn — better than silently dropping ~170 entries.
+    try {
+      await generateRegistry({ registryPath: USER_REGISTRY_PATH, autoSync: true, allowEmptyCache: true });
+    } catch (syncErr) {
+      console.warn(chalk.yellow(`Could not refresh remote sources (${syncErr.message}). Continuing with locally-cached sources.`));
+      await generateRegistry({ registryPath: USER_REGISTRY_PATH, allowEmptyCache: true });
+    }
     return readRegistryFile(USER_REGISTRY_PATH);
   };
 
@@ -379,20 +387,31 @@ const DEFAULT_SOURCES_PATH = path.join(__dirname, '../sources.json');
 const USER_SOURCES_PATH = path.join(os.homedir(), '.antigravity/sources.json');
 
 async function loadSources() {
+  let shipped = null;
+  try {
+    if (await fs.pathExists(DEFAULT_SOURCES_PATH)) {
+      shipped = await fs.readJson(DEFAULT_SOURCES_PATH);
+    }
+  } catch (err) {
+    // ignore; we'll fall back below
+  }
+
   try {
     if (await fs.pathExists(USER_SOURCES_PATH)) {
-      return await fs.readJson(USER_SOURCES_PATH);
+      const userSources = await fs.readJson(USER_SOURCES_PATH);
+      // Stamp builtin=true onto entries an upgrading user has at the legacy shape.
+      // Without this, the "Remove Source" filter would treat shipped registries as removable.
+      return mergeBuiltinFlags(userSources, shipped);
     }
-    if (await fs.pathExists(DEFAULT_SOURCES_PATH)) {
-      const defaultSources = await fs.readJson(DEFAULT_SOURCES_PATH);
+    if (shipped) {
       await fs.ensureDir(path.dirname(USER_SOURCES_PATH));
-      await fs.writeJson(USER_SOURCES_PATH, defaultSources, { spaces: 2 });
-      return defaultSources;
+      await fs.writeJson(USER_SOURCES_PATH, shipped, { spaces: 2 });
+      return shipped;
     }
   } catch (err) {
     // Ignore error
   }
-  return [{ id: 'local', name: 'Local Core Plugins', url: 'local', enabled: true }];
+  return [{ id: 'local', name: 'Local Core Plugins', url: 'local', enabled: true, builtin: true }];
 }
 
 async function saveSources(sources) {
@@ -602,7 +621,10 @@ async function mainDashboard() {
     await fs.ensureDir(LOCAL_PLUGIN_DIR);
     await fs.ensureDir(LOCAL_SKILLS_DIR);
 
-    // One-shot migration from the pre-v2 global skills path.
+    // One-shot migration from the pre-v2 global skills path. Mirror to both
+    // GLOBAL_SKILLS_DIR (runtime path) and GLOBAL_PLUGIN_DIR (canonical
+    // "installed" marker — getInstalledPlugins reads this one) so migrated
+    // skills remain manageable from the UI.
     const migrationFlag = path.join(os.homedir(), '.antigravity/.legacy-skills-migrated');
     if (!(await fs.pathExists(migrationFlag))) {
       const oldGlobalSkillsDir = path.join(os.homedir(), '.gemini/antigravity/skills');
@@ -610,9 +632,11 @@ async function mainDashboard() {
         const skills = await fs.readdir(oldGlobalSkillsDir);
         for (const skill of skills) {
           const oldPath = path.join(oldGlobalSkillsDir, skill);
-          const newPath = path.join(GLOBAL_SKILLS_DIR, skill);
-          if (!(await fs.pathExists(newPath))) {
-            await fs.copy(oldPath, newPath);
+          for (const dest of [GLOBAL_SKILLS_DIR, GLOBAL_PLUGIN_DIR]) {
+            const newPath = path.join(dest, skill);
+            if (!(await fs.pathExists(newPath))) {
+              await fs.copy(oldPath, newPath);
+            }
           }
         }
       }

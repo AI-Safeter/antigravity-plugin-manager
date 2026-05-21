@@ -168,8 +168,26 @@ async function installPluginsCore(selectedIds, registry, scope) {
 
       await fs.ensureDir(path.dirname(skillTarget));
       await fs.ensureDir(path.dirname(pluginTarget));
-      await fs.copy(sourceDir, skillTarget);
-      await fs.copy(sourceDir, pluginTarget);
+
+      // Untrusted remote sources: reject any symlinks before they hit the
+      // user's filesystem. A skill repo with `link -> ~/.ssh/id_rsa` would
+      // otherwise become a readable file in ~/.antigravity/plugins/<id>/.
+      const copyOpts = {};
+      if (plugin.source && plugin.source !== 'local') {
+        copyOpts.filter = (src) => {
+          const stat = fs.lstatSync(src);
+          if (stat.isSymbolicLink()) {
+            throw new Error(`Refusing to copy symlink from remote source: ${path.relative(sourceDir, src) || src}`);
+          }
+          return true;
+        };
+      }
+
+      // PLUGIN_DIR is the canonical "installed" marker (see getInstalledPlugins).
+      // Copy SKILLS_DIR first so an interruption between the two leaves the user
+      // with "not installed" rather than "half installed, can't uninstall".
+      await fs.copy(sourceDir, skillTarget, copyOpts);
+      await fs.copy(sourceDir, pluginTarget, copyOpts);
       results.success.push(plugin.name);
     } catch (err) {
       results.fail.push(`${plugin.name}: ${err.message}`);

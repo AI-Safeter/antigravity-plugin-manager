@@ -73,7 +73,7 @@ Provide clear before-and-after examples or code blocks.
     console.log(chalk.green(`\n✔ Created skill directory and template at plugins/${id}/SKILL.md`));
 
     console.log(chalk.gray('Recompiling central registry...'));
-    await generateRegistry();
+    await generateRegistry({ autoSync: true });
 
     console.log(chalk.bold.green(`\n🎉 Success! Your skill "${name}" is registered and ready.`));
     console.log(chalk.gray(`Next steps:`));

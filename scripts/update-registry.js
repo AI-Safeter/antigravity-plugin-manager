@@ -2,6 +2,22 @@ const fs = require('fs-extra');
 const path = require('path');
 const yaml = require('js-yaml');
 const os = require('os');
+const { spawnSync } = require('child_process');
+
+// Local minimal runGit so this script stays free of the CLI's UI deps.
+function runGit(args, opts = {}) {
+  const result = spawnSync('git', args, {
+    stdio: ['ignore', 'pipe', 'pipe'],
+    encoding: 'utf8',
+    ...opts
+  });
+  if (result.error) throw new Error(`git ${args[0]} failed to launch: ${result.error.message}`);
+  if (result.status !== 0) {
+    const stderr = (result.stderr || '').toString().trim();
+    throw new Error(`git ${args[0]} exited with code ${result.status}${stderr ? `: ${stderr}` : ''}`);
+  }
+  return result;
+}
 
 // Bump this when changing the registry.json shape so old user-side registries
 // at ~/.antigravity/registry.json get rebuilt automatically on next launch.
@@ -44,23 +60,79 @@ async function findSkills(dir) {
   return results;
 }
 
+// Forward-fix for users whose ~/.antigravity/sources.json predates the "builtin"
+// flag: stamp builtin=true onto entries whose id matches a shipped default.
+// Without this, the "Remove Source" flow would treat all built-in registries
+// as removable for upgrading users.
+function mergeBuiltinFlags(userSources, shippedSources) {
+  if (!Array.isArray(userSources)) return userSources;
+  const builtinIds = new Set(
+    (shippedSources || [])
+      .filter(s => s && s.builtin)
+      .map(s => s.id)
+  );
+  return userSources.map(s => {
+    if (s && !s.builtin && builtinIds.has(s.id)) {
+      return { ...s, builtin: true };
+    }
+    return s;
+  });
+}
+
 async function loadSources(explicit) {
   if (explicit) return explicit;
 
   const userSourcesPath = path.join(os.homedir(), '.antigravity/sources.json');
   const defaultSourcesPath = path.join(__dirname, '../sources.json');
 
-  for (const p of [userSourcesPath, defaultSourcesPath]) {
-    if (await fs.pathExists(p)) {
-      try {
-        const sources = await fs.readJson(p);
-        if (Array.isArray(sources) && sources.length > 0) return sources;
-      } catch (err) {
-        // try next
+  let shipped = null;
+  if (await fs.pathExists(defaultSourcesPath)) {
+    try { shipped = await fs.readJson(defaultSourcesPath); } catch (err) { /* ignore */ }
+  }
+
+  if (await fs.pathExists(userSourcesPath)) {
+    try {
+      const userSources = await fs.readJson(userSourcesPath);
+      if (Array.isArray(userSources) && userSources.length > 0) {
+        return mergeBuiltinFlags(userSources, shipped);
       }
+    } catch (err) {
+      // fall through to shipped
     }
   }
+
+  if (Array.isArray(shipped) && shipped.length > 0) return shipped;
   return DEFAULT_SOURCES;
+}
+
+async function isCachePopulated(cacheDir) {
+  // A bare-existing directory isn't enough: an interrupted clone leaves an
+  // empty folder that would silently produce zero entries. Require a .git
+  // subdir to consider the cache usable.
+  if (!(await fs.pathExists(cacheDir))) return false;
+  if (!(await fs.pathExists(path.join(cacheDir, '.git')))) return false;
+  return true;
+}
+
+async function syncMissingRemoteCaches(sources, { onProgress } = {}) {
+  const log = onProgress || ((msg) => console.log(msg));
+  for (const src of sources) {
+    if (!src.enabled || src.id === 'local') continue;
+    const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', src.id);
+    if (await isCachePopulated(cacheDir)) continue;
+    log(`Cloning ${src.name} (${src.url}) ...`);
+    // If a stale empty/partial directory exists, remove it before cloning.
+    if (await fs.pathExists(cacheDir)) await fs.remove(cacheDir);
+    await fs.ensureDir(path.dirname(cacheDir));
+    try {
+      runGit(['clone', '--depth', '1', '--', src.url, cacheDir]);
+    } catch (err) {
+      throw new Error(
+        `Failed to clone source '${src.id}' from ${src.url}: ${err.message}. ` +
+        `Check your network, or clone the source manually into ${cacheDir} and re-run.`
+      );
+    }
+  }
 }
 
 async function generateRegistry(options = {}) {
@@ -81,6 +153,13 @@ async function generateRegistry(options = {}) {
   const sources = await loadSources(options.sources);
   const curated = loadCuratedSkills();
 
+  // Optionally clone any missing remote source caches up-front. This is what
+  // `npm run registry` does so a first-time contributor doesn't need to know
+  // about the in-CLI Sync flow before regenerating.
+  if (options.autoSync) {
+    await syncMissingRemoteCaches(sources);
+  }
+
   // Guard contributors from accidentally clobbering the shipped registry by running
   // `npm run registry` without first populating the remote source cache. The CLI
   // (which writes to USER_REGISTRY_PATH) bypasses this on purpose.
@@ -89,12 +168,12 @@ async function generateRegistry(options = {}) {
     for (const src of sources) {
       if (!src.enabled || src.id === 'local') continue;
       const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', src.id);
-      if (!(await fs.pathExists(cacheDir))) missing.push(src.id);
+      if (!(await isCachePopulated(cacheDir))) missing.push(src.id);
     }
     if (missing.length > 0) {
       throw new Error(
-        `Refusing to write shipped registry.json: missing remote source cache for [${missing.join(', ')}]. ` +
-        `Run the CLI ("ag-plugin" → "Manage Skill Sources" → "Sync") first, or call generateRegistry with allowEmptyCache=true.`
+        `Refusing to write shipped registry.json: missing or empty remote source cache for [${missing.join(', ')}]. ` +
+        `Re-run with autoSync (default for "npm run registry"), or remove the empty cache directories and retry.`
       );
     }
   }
@@ -204,9 +283,10 @@ async function generateRegistry(options = {}) {
     }
   }
 
+  // generatedAt is intentionally omitted to keep the committed registry.json
+  // diff-stable across regenerations. Schema mismatches drive rebuilds, not age.
   const registry = {
     schemaVersion: REGISTRY_SCHEMA_VERSION,
-    generatedAt: new Date().toISOString(),
     plugins
   };
 
@@ -220,10 +300,15 @@ async function generateRegistry(options = {}) {
   }
 }
 
-module.exports = { generateRegistry, REGISTRY_SCHEMA_VERSION };
+module.exports = {
+  generateRegistry,
+  REGISTRY_SCHEMA_VERSION,
+  mergeBuiltinFlags,
+  syncMissingRemoteCaches
+};
 
 if (require.main === module) {
-  generateRegistry().catch(err => {
+  generateRegistry({ autoSync: true }).catch(err => {
     console.error('Critical error generating registry:', err.message);
     process.exit(1);
   });
