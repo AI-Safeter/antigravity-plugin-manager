@@ -34,8 +34,6 @@ The tool will automatically:
 - Generate a beautifully structured `SKILL.md` template with best-practice headers.
 - Recompile the central `registry.json` automatically so your skill is registered instantly.
 
-*(Note: If you prefer a non-interactive scaffold via arguments, you can alternatively run `node scripts/new-skill.js my-custom-skill`)*
-
 ### Step 3: Customize your `SKILL.md` Instructions
 Open the newly created `plugins/<id>/SKILL.md` file. Write a highly specific, clean, and comprehensive instruction set that guides the AI agent. A high-quality skill details:
 - **Exact Guidelines**: Precise rules explaining what files or folders the agent should target.

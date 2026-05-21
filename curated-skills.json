@@ -1,0 +1,162 @@
+{
+  "claude-skills-official--skills--pdf": {
+    "name": "Official PDF Analyst Pro",
+    "description": "Anthropic's official pipeline for high-fidelity PDF text extraction, document layout analysis, and semantic query answering."
+  },
+  "claude-skills-official--skills--docx": {
+    "name": "Official DOCX Co-Author",
+    "description": "Official Anthropic guidelines and automated structures for drafting, reviewing, and style-aligning Word documents."
+  },
+  "claude-skills-official--skills--xlsx": {
+    "name": "Official XLSX Modeler",
+    "description": "Expert-led data structuring, financial calculation modeling, and cell-formula optimization for Excel workbooks."
+  },
+  "claude-skills-official--skills--pptx": {
+    "name": "Official PPTX Storyboarder",
+    "description": "Structured workflows to translate codebases, articles, or reports into premium PowerPoint outlines and presentation templates."
+  },
+  "claude-skills-official--skills--mcp-builder": {
+    "name": "Official MCP Server Builder",
+    "description": "Anthropic's developer blueprint for building, debugging, and registering custom Model Context Protocol (MCP) servers."
+  },
+  "claude-skills-official--skills--skill-creator": {
+    "name": "Official Skill Forge",
+    "description": "Automated meta-compiler that guides users step-by-step in creating, testing, and packaging new agentic skills."
+  },
+  "claude-skills-official--skills--canvas-design": {
+    "name": "Official Canvas UI/UX Designer",
+    "description": "Highly interactive visual workspace designed to sketch, prototype, and build beautiful front-end designs inside Claude Canvas."
+  },
+  "claude-skills-official--skills--web-artifacts-builder": {
+    "name": "Official React & Web Artifacts Builder",
+    "description": "Expert prompt compiler for generating gorgeous, standalone, interactive Single Page Apps and React components in Claude."
+  },
+  "claude-skills-official--skills--webapp-testing": {
+    "name": "Official E2E Webapp Tester",
+    "description": "Professional browser automation patterns, test suite scaffolding, and visual regression suites for web applications."
+  },
+  "claude-skills-official--skills--claude-api": {
+    "name": "Official Claude API Orchestrator",
+    "description": "Developer toolkit for optimal Claude REST API integrations, prompt caching, token-saving configurations, and streaming."
+  },
+  "claude-scientific-skills--scientific-skills--scientific-writing": {
+    "name": "LaTeX Academic Paper Writer",
+    "description": "Curated scientific paper drafting tool specialized in LaTeX syntax, formal academic prose, and structured abstract design."
+  },
+  "claude-scientific-skills--scientific-skills--literature-review": {
+    "name": "Systematic Literature Reviewer",
+    "description": "Comprehensive academic research aggregator, synthesis engine, and bibliography organizer using formal citation formats."
+  },
+  "claude-scientific-skills--scientific-skills--research-lookup": {
+    "name": "Semantic Research Lookup",
+    "description": "Semantic paper fetcher across PubMed, arXiv, and Google Scholar to source relevant journals and empirical findings."
+  },
+  "claude-scientific-skills--scientific-skills--scientific-visualization": {
+    "name": "Scientific Figure Designer",
+    "description": "Advanced data rendering, multi-panel academic figure plotting, and coordinate system styling for publication-grade charts."
+  },
+  "claude-scientific-skills--scientific-skills--biopython": {
+    "name": "Biopython Genomic Analyzer",
+    "description": "Computational biology toolkit for genomic sequence alignment, DNA transcription, and high-performance molecular simulations."
+  },
+  "claude-scientific-skills--scientific-skills--qiskit": {
+    "name": "Qiskit Quantum Circuit Designer",
+    "description": "Quantum programming assistant for constructing, optimizing, and simulating quantum circuits using the IBM Qiskit framework."
+  },
+  "claude-scientific-skills--scientific-skills--matplotlib": {
+    "name": "Matplotlib Data Plotter Pro",
+    "description": "Custom figure layouts, publication-quality chart adjustments, custom color maps, and micro-animation graph builders."
+  },
+  "claude-scientific-skills--scientific-skills--seaborn": {
+    "name": "Seaborn Statistical Charting",
+    "description": "Elegant statistical data modeling, HSL tailormade visual themes, multi-plot grids, and complex distribution charts."
+  },
+  "claude-scientific-skills--scientific-skills--sympy": {
+    "name": "SymPy Symbolic Calculus",
+    "description": "Symbolic algebra, integration, differentiation, differential equations, and formal algebraic solver."
+  },
+  "claude-scientific-skills--scientific-skills--scikit-learn": {
+    "name": "Scikit-Learn Machine Learning Pro",
+    "description": "Step-by-step classifier building, hyperparameter tuning, feature engineering, and cross-validation pipelines."
+  },
+  "claude-scientific-skills--scientific-skills--pytorch-lightning": {
+    "name": "PyTorch Lightning Deep Learning",
+    "description": "Structured deep learning model training, custom callbacks, multi-GPU scalability, and modular train/validation loops."
+  },
+  "claude-scientific-skills--scientific-skills--transformers": {
+    "name": "HuggingFace Transformers Expert",
+    "description": "Natural Language Processing and LLM loader, tokenizer configuration, and transfer learning fine-tuning guide."
+  },
+  "claude-scientific-skills--scientific-skills--astropy": {
+    "name": "Astropy Space Data Analyst",
+    "description": "Astronomical calculations, coordinate frame conversions, FITS file loading, and cosmological model evaluations."
+  },
+  "claude-scientific-skills--scientific-skills--matlab": {
+    "name": "MATLAB Scientific Calculator",
+    "description": "High-level matrix computation, signal processing filters, SIMULINK mapping, and legacy script optimization."
+  },
+  "claude-scientific-skills--scientific-skills--polars": {
+    "name": "Polars Fast Dataframes Engine",
+    "description": "Rust-backed, ultra-fast dataframe queries, lazy evaluation optimization, and large-scale tabular analysis."
+  },
+  "claude-skills-alireza--.gemini--skills--aws-solution-architect": {
+    "name": "AWS Solutions Architect Pro",
+    "description": "Enterprise AWS cloud infrastructure blueprints, secure VPC topologies, serverless IAM permissions, and cost optimization."
+  },
+  "claude-skills-alireza--.gemini--skills--azure-cloud-architect": {
+    "name": "Azure Cloud Infrastructure Architect",
+    "description": "Enterprise Azure cloud solutions design, active directory sync, secure networking, and AKS cluster patterns."
+  },
+  "claude-skills-alireza--.gemini--skills--ci-cd-pipeline-builder": {
+    "name": "CI/CD GitOps Pipeline Builder",
+    "description": "Optimal GitHub Actions, GitLab CI/CD, and CircleCI declarative YAML automation pipelines with advanced caching."
+  },
+  "claude-skills-alireza--.gemini--skills--api-test-suite-builder": {
+    "name": "REST API Test Suite Builder",
+    "description": "Scaffolding and automation for testing API endpoints using Supertest, Jest, and Mocha with comprehensive assertions."
+  },
+  "claude-skills-alireza--.gemini--skills--api-design-reviewer": {
+    "name": "OpenAPI Design Compliance Reviewer",
+    "description": "Comprehensive REST API schema audits, OpenAPI 3.0 specification consistency, and security header evaluations."
+  },
+  "claude-skills-alireza--.gemini--skills--ai-security": {
+    "name": "AI & LLM Hardening Expert",
+    "description": "Prompt injection prevention, OWASP LLM Top 10 vulnerabilities mitigation, and semantic safety input filters."
+  },
+  "claude-skills-alireza--.gemini--skills--a11y-audit": {
+    "name": "WCAG 2.2 Accessibility Auditor",
+    "description": "Automated and manual accessibility inspection, screen reader optimization, and semantic ARIA tag injection."
+  },
+  "claude-skills-alireza--.gemini--skills--browser-automation": {
+    "name": "Playwright Browser Automation Pro",
+    "description": "Resilient web scraping, headless end-to-end user flows, and automated shadow DOM element interaction."
+  },
+  "claude-skills-alireza--.gemini--skills--agile-product-owner": {
+    "name": "Agile Product Backlog Owner",
+    "description": "High-impact Product Requirement Documents (PRD), epic user story mapping, and structured feature prioritization."
+  },
+  "claude-skills-alireza--.gemini--skills--codebase-onboarding": {
+    "name": "Architectural Codebase Tour Guide",
+    "description": "Scans modern applications and automatically compiles high-level developer guides, code tours, and interactive maps."
+  },
+  "antigravity-awesome-skills--plugins--antigravity-awesome-skills-claude--skills--devcontainer-setup": {
+    "name": "VSCode Dev Container Architect",
+    "description": "Scaffolding custom development environments using devcontainer.json, Dockerfile layers, and VSCode extensions automation."
+  },
+  "antigravity-awesome-skills--plugins--antigravity-awesome-skills-claude--skills--docker-expert": {
+    "name": "Docker Container Optimizer",
+    "description": "Dockerfile image optimization, multi-stage compilation builds, strict minimal root-user security, and volume mappings."
+  },
+  "antigravity-awesome-skills--plugins--antigravity-awesome-skills-claude--skills--git-hooks-automation": {
+    "name": "Pre-Commit Quality Automator",
+    "description": "Husky, lint-staged, and Git hook pipeline design to prevent bad code, missing tests, or secrets from committing."
+  },
+  "antigravity-awesome-skills--plugins--antigravity-awesome-skills-claude--skills--github-actions-templates": {
+    "name": "GitHub Workflows Automator",
+    "description": "Reusable GitHub Actions YAML blueprints for CI test runners, semantic versioning, release triggers, and chat alerts."
+  },
+  "antigravity-awesome-skills--plugins--antigravity-awesome-skills-claude--skills--gitops-workflow": {
+    "name": "GitOps Declarative Orchestrator",
+    "description": "Automated Kubernetes cluster state reconciliation via GitOps patterns using ArgoCD, Flux, and custom Helm charts."
+  }
+}

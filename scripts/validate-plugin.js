@@ -14,7 +14,14 @@ async function validate() {
   let registryLoadFailed = false;
   try {
     if (await fs.pathExists(registryPath)) {
-      registry = await fs.readJson(registryPath);
+      const raw = await fs.readJson(registryPath);
+      if (Array.isArray(raw)) {
+        registry = raw;
+      } else if (raw && Array.isArray(raw.plugins)) {
+        registry = raw.plugins;
+      } else {
+        throw new Error('Registry is not an array and has no plugins[] field.');
+      }
     }
   } catch (err) {
     console.error(`❌ Error reading registry.json: ${err.message}`);
@@ -106,10 +113,15 @@ async function validate() {
         });
       }
 
-      // 6. Check for non-ASCII characters (e.g. Korean) in instruction files to guarantee English only
+      // 6. English-only enforcement (Hangul detection). Bypass with AG_ALLOW_NON_ASCII=1.
       const hangulRegex = /[\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F\uA960-\uA97F\uD7B0-\uD7FF]/;
       if (hangulRegex.test(content)) {
-        console.warn(`⚠️  [${folder}] Contains non-ASCII (Hangul/Korean) characters. Please ensure the skill instruction is fully in English.`);
+        if (process.env.AG_ALLOW_NON_ASCII) {
+          console.warn(`⚠️  [${folder}] Contains Hangul characters (allowed via AG_ALLOW_NON_ASCII).`);
+        } else {
+          console.error(`❌ [${folder}] Contains Hangul/Korean characters. Skill instructions must be in English. Set AG_ALLOW_NON_ASCII=1 to bypass.`);
+          errorCount++;
+        }
       }
 
       successCount++;
@@ -145,6 +157,10 @@ async function validate() {
       }
 
       for (const regSkill of registry) {
+        if (regSkill.source && regSkill.source !== 'local') {
+          // Skip remote skills in local disk validation
+          continue;
+        }
         if (!diskSkills.has(regSkill.id)) {
           console.error(`❌ [registry] Orphaned registry entry found for skill ID: "${regSkill.id}" (no corresponding folder in plugins/). Please run "npm run registry".`);
           errorCount++;

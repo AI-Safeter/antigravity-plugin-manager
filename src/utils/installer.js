@@ -2,6 +2,7 @@ const path = require('path');
 const os = require('os');
 const fs = require('fs-extra');
 const chalk = require('chalk');
+const { spawnSync } = require('child_process');
 const { spinner, note, confirm, isCancel } = require('@clack/prompts');
 const { select, input } = require('@inquirer/prompts');
 
@@ -33,6 +34,22 @@ const CLACK_THEME = {
     }
   }
 };
+
+function runGit(args, opts = {}) {
+  const result = spawnSync('git', args, {
+    stdio: ['ignore', 'pipe', 'pipe'],
+    encoding: 'utf8',
+    ...opts
+  });
+  if (result.error) {
+    throw new Error(`git ${args[0]} failed to launch: ${result.error.message}`);
+  }
+  if (result.status !== 0) {
+    const stderr = (result.stderr || '').toString().trim();
+    throw new Error(`git ${args[0]} exited with code ${result.status}${stderr ? `: ${stderr}` : ''}`);
+  }
+  return result;
+}
 
 function safeResolve(baseDir, targetName) {
   const resolvedBase = path.resolve(baseDir);
@@ -80,13 +97,11 @@ async function getInstalledPlugins() {
     return entries.filter(e => e.isDirectory()).map(e => e.name);
   };
 
-  const globalPlugins = await readDirs(GLOBAL_PLUGIN_DIR);
-  const globalSkills = await readDirs(GLOBAL_SKILLS_DIR);
-  const globalList = Array.from(new Set([...globalPlugins, ...globalSkills]));
-
-  const localPlugins = await readDirs(LOCAL_PLUGIN_DIR);
-  const localSkills = await readDirs(LOCAL_SKILLS_DIR);
-  const localList = Array.from(new Set([...localPlugins, ...localSkills]));
+  // PLUGIN_DIR is the canonical source of truth. SKILLS_DIR is a mirror
+  // installPluginsCore writes for runtime path compatibility; reading it too
+  // would cause stale entries to "linger" after a partial uninstall.
+  const globalList = await readDirs(GLOBAL_PLUGIN_DIR);
+  const localList = await readDirs(LOCAL_PLUGIN_DIR);
 
   const allInstalled = Array.from(new Set([...globalList, ...localList]));
   return {
@@ -109,12 +124,27 @@ async function installPluginsCore(selectedIds, registry, scope) {
     if (!plugin) continue;
 
     try {
-      const sourceDir = safeResolve(path.join(__dirname, '../../plugins'), plugin.id);
+      let sourceDir;
+      if (plugin.source && plugin.source !== 'local') {
+        const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', plugin.source);
+        if (!(await fs.pathExists(cacheDir))) {
+          await fs.ensureDir(path.dirname(cacheDir));
+          try {
+            runGit(['clone', '--depth', '1', '--', plugin.repository, cacheDir]);
+          } catch (cloneErr) {
+            throw new Error(`Failed to clone remote repository '${plugin.repository}': ${cloneErr.message}`);
+          }
+        }
+        sourceDir = safeResolve(cacheDir, plugin.relativeSkillDir);
+      } else {
+        sourceDir = safeResolve(path.join(__dirname, '../../plugins'), plugin.id);
+      }
+
       const skillTarget = safeResolve(baseSkillDir, plugin.id);
       const pluginTarget = safeResolve(basePluginDir, plugin.id);
 
       if (!(await fs.pathExists(sourceDir))) {
-        throw new Error(`Source plugin directory does not exist for '${id}'`);
+        throw new Error(`Source plugin directory does not exist at ${sourceDir} for '${id}'`);
       }
 
       // Remove pre-existing directories, files, or symlinks to ensure clean & safe copying
@@ -171,5 +201,6 @@ module.exports = {
   safeResolve,
   uninstallPlugin,
   runWithEscape,
+  runGit,
   CLACK_THEME
 };

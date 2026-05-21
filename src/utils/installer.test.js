@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-const { safeResolve, installPluginsCore } = require('./installer');
+const { safeResolve, installPluginsCore, runGit } = require('./installer');
 const path = require('path');
 const os = require('os');
 
@@ -58,6 +58,19 @@ describe('installer.js', () => {
       expect(() => {
         safeResolve(baseDir, targetName);
       }).toThrow(/Security Exception: Path traversal/);
+    });
+  });
+
+  describe('runGit', () => {
+    it('treats URL-like arguments as path values, not shell tokens', () => {
+      // If runGit used a shell, this would attempt rm. Because we use spawnSync with
+      // an argv array, git just sees an unknown subcommand and exits non-zero.
+      const malicious = 'https://example.com; rm -rf /tmp/should-not-exist';
+      expect(() => runGit(['ls-remote', '--', malicious])).toThrow(/git ls-remote/);
+    });
+
+    it('throws a helpful error when git itself fails', () => {
+      expect(() => runGit(['this-subcommand-does-not-exist'])).toThrow(/git this-subcommand-does-not-exist/);
     });
   });
 

@@ -10,7 +10,7 @@
   <a href="https://www.npmjs.com/package/@beidawuli/antigravity-plugin-manager"><img src="https://img.shields.io/badge/npm-v2.0.0-blue.svg" alt="npm version"></a>
 </p>
 
-The `ag-plugin` CLI is a package manager for the `antigravity-cli` tool. It provides a terminal interface to discover, validate, and install over 150 agent skills into your workspace.
+The `ag-plugin` CLI is a package manager for the `antigravity-cli` tool. It provides a terminal interface to discover, validate, and install agent skills from a curated set of registries — including Anthropic's official skills, K-Dense scientific skills, and the local core collection — into your workspace.
 
 ## Prerequisites
 

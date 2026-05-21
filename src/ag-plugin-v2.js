@@ -6,9 +6,10 @@ const path = require('path');
 const os = require('os');
 const { spinner, note, confirm, isCancel } = require('@clack/prompts');
 const { checkbox, select, input } = require('@inquirer/prompts');
-const { generateRegistry } = require('../scripts/update-registry');
+const { generateRegistry, REGISTRY_SCHEMA_VERSION } = require('../scripts/update-registry');
 
-const REGISTRY_PATH = path.join(__dirname, '../registry.json');
+const DEFAULT_REGISTRY_PATH = path.join(__dirname, '../registry.json');
+const USER_REGISTRY_PATH = path.join(os.homedir(), '.antigravity/registry.json');
 
 const {
   GLOBAL_PLUGIN_DIR,
@@ -20,6 +21,7 @@ const {
   isInquirerCancel,
   uninstallPlugin,
   runWithEscape,
+  runGit,
   CLACK_THEME
 } = require('./utils/installer');
 
@@ -28,25 +30,46 @@ const { interactiveSearchCheckbox } = require('./ui/search-prompt');
 const V2_CYAN = chalk.hex('#22D3EE');
 const V2_VIOLET = chalk.hex('#8B5CF6');
 
+function extractPlugins(data) {
+  // Accept both new schema { schemaVersion, plugins: [...] } and legacy bare array.
+  if (Array.isArray(data)) return { plugins: data, schemaVersion: 0 };
+  if (data && Array.isArray(data.plugins)) {
+    return { plugins: data.plugins, schemaVersion: data.schemaVersion || 0 };
+  }
+  throw new Error('Registry format is invalid.');
+}
+
+async function readRegistryFile(p) {
+  const data = await fs.readJson(p);
+  return extractPlugins(data);
+}
+
 async function getRegistry() {
+  const rebuildAndRead = async () => {
+    await generateRegistry({ registryPath: USER_REGISTRY_PATH, allowEmptyCache: true });
+    return readRegistryFile(USER_REGISTRY_PATH);
+  };
+
   try {
-    if (!(await fs.pathExists(REGISTRY_PATH))) {
-      await generateRegistry();
+    if (await fs.pathExists(USER_REGISTRY_PATH)) {
+      const { plugins, schemaVersion } = await readRegistryFile(USER_REGISTRY_PATH);
+      if (schemaVersion !== REGISTRY_SCHEMA_VERSION) {
+        console.warn(chalk.yellow(`\nRegistry schema is outdated (${schemaVersion} -> ${REGISTRY_SCHEMA_VERSION}). Rebuilding...`));
+        return (await rebuildAndRead()).plugins;
+      }
+      return plugins;
     }
-    const registry = await fs.readJson(REGISTRY_PATH);
-    if (!Array.isArray(registry)) {
-      throw new Error('Registry format is invalid (not an array).');
+
+    if (!(await fs.pathExists(DEFAULT_REGISTRY_PATH))) {
+      return (await rebuildAndRead()).plugins;
     }
-    return registry;
+    const { plugins } = await readRegistryFile(DEFAULT_REGISTRY_PATH);
+    return plugins;
   } catch (err) {
     console.warn(chalk.yellow(`\nRegistry is missing or corrupt: ${err.message}. Attempting to rebuild registry...`));
     try {
-      await generateRegistry();
-      const registry = await fs.readJson(REGISTRY_PATH);
-      if (!Array.isArray(registry)) {
-        throw new Error('Rebuilt registry is invalid.');
-      }
-      return registry;
+      const { plugins } = await rebuildAndRead();
+      return plugins;
     } catch (rebuildErr) {
       throw new Error(`Unable to load registry: ${rebuildErr.message}`);
     }
@@ -103,12 +126,15 @@ async function handleInstall(selectedIds, registry) {
 
 
 async function browseAndInstall(registry) {
+  const { all: installed } = await getInstalledPlugins();
+  const installedSet = new Set(installed);
+
   let selectedIds;
   try {
     selectedIds = await runWithEscape(checkbox, {
       message: `Select plugins (Space: toggle, Enter: install, Esc: go back):`,
       choices: registry.map(p => ({
-        name: `${p.name} (${p.id})`,
+        name: `${installedSet.has(p.id) ? chalk.green('● ') : '  '}${p.name} (${p.id})`,
         value: p.id,
         description: p.description.substring(0, 80)
       })),
@@ -349,6 +375,225 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
+const DEFAULT_SOURCES_PATH = path.join(__dirname, '../sources.json');
+const USER_SOURCES_PATH = path.join(os.homedir(), '.antigravity/sources.json');
+
+async function loadSources() {
+  try {
+    if (await fs.pathExists(USER_SOURCES_PATH)) {
+      return await fs.readJson(USER_SOURCES_PATH);
+    }
+    if (await fs.pathExists(DEFAULT_SOURCES_PATH)) {
+      const defaultSources = await fs.readJson(DEFAULT_SOURCES_PATH);
+      await fs.ensureDir(path.dirname(USER_SOURCES_PATH));
+      await fs.writeJson(USER_SOURCES_PATH, defaultSources, { spaces: 2 });
+      return defaultSources;
+    }
+  } catch (err) {
+    // Ignore error
+  }
+  return [{ id: 'local', name: 'Local Core Plugins', url: 'local', enabled: true }];
+}
+
+async function saveSources(sources) {
+  await fs.ensureDir(path.dirname(USER_SOURCES_PATH));
+  await fs.writeJson(USER_SOURCES_PATH, sources, { spaces: 2 });
+}
+
+async function manageSources() {
+  while (true) {
+    const sources = await loadSources();
+    
+    showHeader();
+    const titleLine = ` ${V2_CYAN.bold('⚙️  MANAGE SKILL SOURCES')} `;
+    const decorationLine = V2_VIOLET('━'.repeat(titleLine.length));
+    console.log(`\n${decorationLine}\n${titleLine}\n${decorationLine}\n`);
+
+    console.log(chalk.bold('Active Sources:'));
+    sources.forEach(src => {
+      const status = src.enabled ? chalk.green('● Enabled') : chalk.gray('○ Disabled');
+      const urlText = src.url === 'local' ? chalk.dim('(Local plugins/)') : chalk.dim(`(${src.url})`);
+      console.log(` - ${chalk.cyan(src.name)} [${src.id}] : ${status} ${urlText}`);
+    });
+    console.log('\n');
+
+    let action;
+    try {
+      action = await runWithEscape(select, {
+        message: 'Manage Skill Sources Action:',
+        choices: [
+          { name: '🔄 Sync & Rebuild Registry', value: 'sync', description: 'Clone/pull enabled repositories and scan for skills' },
+          { name: '✏️  Enable/Disable Sources', value: 'toggle', description: 'Choose which sources to index' },
+          { name: '➕ Add Custom Git Source', value: 'add', description: 'Register a new external git repository' },
+          { name: '🗑️  Remove Custom Git Source', value: 'remove', description: 'Delete a registered custom source' },
+          { name: '⬅️  Go Back', value: 'back' }
+        ],
+        theme: CLACK_THEME
+      });
+    } catch (err) {
+      return; // Return silently on Escape/Ctrl+C
+    }
+
+    if (action === 'back') {
+      return;
+    }
+
+    if (action === 'sync') {
+      const s = spinner();
+      s.start('Syncing skill sources and rebuilding registry...');
+
+      let successCount = 0;
+      let failCount = 0;
+      const fails = [];
+
+      for (const src of sources) {
+        if (!src.enabled || src.id === 'local') continue;
+
+        const targetPath = path.join(os.homedir(), '.antigravity/cache/sources', src.id);
+        s.message(`Syncing ${src.name}...`);
+
+        try {
+          await fs.ensureDir(path.dirname(targetPath));
+          if (await fs.pathExists(targetPath)) {
+            try {
+              runGit(['fetch', '--depth', '1'], { cwd: targetPath });
+              runGit(['reset', '--hard', 'origin/HEAD'], { cwd: targetPath });
+            } catch (pullErr) {
+              await fs.remove(targetPath);
+              runGit(['clone', '--depth', '1', '--', src.url, targetPath]);
+            }
+          } else {
+            runGit(['clone', '--depth', '1', '--', src.url, targetPath]);
+          }
+          successCount++;
+        } catch (err) {
+          failCount++;
+          fails.push(`${src.name}: ${err.message}`);
+        }
+      }
+
+      s.message('Compiling unified registry...');
+      try {
+        await generateRegistry({
+          registryPath: USER_REGISTRY_PATH,
+          sources,
+          allowEmptyCache: true
+        });
+        
+        s.stop(`Registry rebuilt successfully! Synced ${successCount} repos, ${failCount} failed.`);
+        if (fails.length > 0) {
+          note(fails.join('\n'), 'Sync Failures');
+        } else {
+          note('All sources synced successfully. The registry is fully updated!', 'Sync Success');
+        }
+      } catch (err) {
+        s.stop(`Failed to rebuild registry: ${err.message}`);
+      }
+
+      await input({ message: 'Press Enter to continue' }).catch(() => {});
+    }
+
+    if (action === 'toggle') {
+      let selectedIds;
+      try {
+        selectedIds = await runWithEscape(checkbox, {
+          message: 'Select sources to enable:',
+          choices: sources.map(src => ({
+            name: src.name,
+            value: src.id,
+            checked: src.enabled
+          })),
+          theme: CLACK_THEME
+        });
+      } catch (err) {
+        continue;
+      }
+
+      if (selectedIds) {
+        sources.forEach(src => {
+          src.enabled = selectedIds.includes(src.id);
+        });
+        await saveSources(sources);
+        note('Source settings updated.', 'Sources');
+        await input({ message: 'Press Enter to continue' }).catch(() => {});
+      }
+    }
+
+    if (action === 'add') {
+      let id, name, url;
+      try {
+        id = await runWithEscape(input, {
+          message: 'Enter unique source ID (kebab-case):',
+          validate: (val) => {
+            if (!val) return 'ID is required.';
+            if (!/^[a-z0-9-]+$/.test(val)) return 'Must be lowercase kebab-case.';
+            if (sources.some(s => s.id === val)) return 'Source ID already exists.';
+            return true;
+          }
+        });
+
+        name = await runWithEscape(input, {
+          message: 'Enter human-readable source name:',
+          validate: (val) => (val ? true : 'Name is required.')
+        });
+
+        url = await runWithEscape(input, {
+          message: 'Enter Git repository URL:',
+          validate: (val) => {
+            if (!val) return 'URL is required.';
+            if (!val.startsWith('http://') && !val.startsWith('https://') && !val.startsWith('git@') && !val.startsWith('git+https://')) {
+              return 'Must be a valid HTTP/HTTPS or SSH git URL.';
+            }
+            return true;
+          }
+        });
+      } catch (err) {
+        continue;
+      }
+
+      sources.push({ id, name, url, enabled: true });
+      await saveSources(sources);
+      note(`Added source "${name}". Run 'Sync & Rebuild Registry' to index it.`, 'Sources');
+      await input({ message: 'Press Enter to continue' }).catch(() => {});
+    }
+
+    if (action === 'remove') {
+      const customSources = sources.filter(s => !s.builtin && s.id !== 'local');
+      if (customSources.length === 0) {
+        note('No custom sources available to remove.', 'Sources');
+        await input({ message: 'Press Enter to continue' }).catch(() => {});
+        continue;
+      }
+
+      let selectedId;
+      try {
+        selectedId = await runWithEscape(select, {
+          message: 'Select custom source to remove:',
+          choices: [
+            ...customSources.map(s => ({ name: s.name, value: s.id })),
+            { name: '⬅️ Go back', value: 'back' }
+          ],
+          theme: CLACK_THEME
+        });
+      } catch (err) {
+        continue;
+      }
+
+      if (selectedId && selectedId !== 'back') {
+        const confirmed = await confirm({
+          message: `Are you sure you want to remove the source "${selectedId}"? This will not delete its local cache.`
+        });
+        if (confirmed && !isCancel(confirmed)) {
+          const updatedSources = sources.filter(s => s.id !== selectedId);
+          await saveSources(updatedSources);
+          note(`Removed source "${selectedId}".`, 'Sources');
+          await input({ message: 'Press Enter to continue' }).catch(() => {});
+        }
+      }
+    }
+  }
+}
+
 async function mainDashboard() {
   // Ensure target directories are ready
   try {
@@ -357,26 +602,30 @@ async function mainDashboard() {
     await fs.ensureDir(LOCAL_PLUGIN_DIR);
     await fs.ensureDir(LOCAL_SKILLS_DIR);
 
-    // Migrate previously installed global skills if they exist
-    const oldGlobalSkillsDir = path.join(os.homedir(), '.gemini/antigravity/skills');
-    if (await fs.pathExists(oldGlobalSkillsDir)) {
-      const skills = await fs.readdir(oldGlobalSkillsDir);
-      for (const skill of skills) {
-        const oldPath = path.join(oldGlobalSkillsDir, skill);
-        const newPath = path.join(GLOBAL_SKILLS_DIR, skill);
-        if (!(await fs.pathExists(newPath))) {
-          await fs.copy(oldPath, newPath);
+    // One-shot migration from the pre-v2 global skills path.
+    const migrationFlag = path.join(os.homedir(), '.antigravity/.legacy-skills-migrated');
+    if (!(await fs.pathExists(migrationFlag))) {
+      const oldGlobalSkillsDir = path.join(os.homedir(), '.gemini/antigravity/skills');
+      if (await fs.pathExists(oldGlobalSkillsDir)) {
+        const skills = await fs.readdir(oldGlobalSkillsDir);
+        for (const skill of skills) {
+          const oldPath = path.join(oldGlobalSkillsDir, skill);
+          const newPath = path.join(GLOBAL_SKILLS_DIR, skill);
+          if (!(await fs.pathExists(newPath))) {
+            await fs.copy(oldPath, newPath);
+          }
         }
       }
+      await fs.ensureDir(path.dirname(migrationFlag));
+      await fs.writeFile(migrationFlag, new Date().toISOString());
     }
   } catch (err) {
     console.warn(chalk.yellow(`\nWarning: Cannot access target directories or migrate old skills.\nGlobal: ${GLOBAL_PLUGIN_DIR}\nLocal: ${LOCAL_PLUGIN_DIR}\nReason: ${err.message}\n`));
   }
 
-  const registry = await getRegistry();
-
   while (true) {
     try {
+      const registry = await getRegistry();
       showHeader();
       
       const choice = await runWithEscape(select, {
@@ -385,6 +634,7 @@ async function mainDashboard() {
           { name: '📦 Browse & Install Selected', value: 'browse', description: `Explore all ${registry.length} plugins` },
           { name: '🔍 Search & Install Selected', value: 'search', description: 'Find plugins by keyword' },
           { name: '✅ Installed Plugins', value: 'status', description: 'Manage currently installed plugins' },
+          { name: '⚙️  Manage Skill Sources', value: 'sources', description: 'Enable, disable, or add community skill repositories' },
           { name: '🚪 Exit', value: 'exit' }
         ],
         theme: CLACK_THEME
@@ -397,6 +647,7 @@ async function mainDashboard() {
       if (choice === 'browse') await browseAndInstall(registry);
       if (choice === 'search') await searchAndInstall(registry);
       if (choice === 'status') await manageActivePlugins(registry);
+      if (choice === 'sources') await manageSources();
     } catch (err) {
       if (isInquirerCancel(err)) {
         console.log(chalk.gray('\nExiting antigravity-cli Plugin Manager...'));

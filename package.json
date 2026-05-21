@@ -1,7 +1,7 @@
 {
   "name": "@beidawuli/antigravity-plugin-manager",
   "version": "2.0.0",
-  "description": "High-performance interactive CLI plugin manager for the antigravity-cli ecosystem. Discover, validate, and batch-integrate 150+ expert agent skills.",
+  "description": "Interactive CLI plugin manager for the antigravity-cli ecosystem. Discover, validate, and install curated agent skills.",
   "main": "src/ag-plugin-v2.js",
   "bin": {
     "ag-plugin": "src/ag-plugin-v2.js"
@@ -53,6 +53,8 @@
     "plugins",
     "scripts",
     "registry.json",
+    "sources.json",
+    "curated-skills.json",
     "README.md",
     "LICENSE",
     "setup.sh"

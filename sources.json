@@ -1,0 +1,37 @@
+[
+  {
+    "id": "local",
+    "name": "Local Core Plugins",
+    "url": "local",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "antigravity-awesome-skills",
+    "name": "Antigravity Awesome Skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "claude-scientific-skills",
+    "name": "K-Dense Scientific Skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "claude-skills-alireza",
+    "name": "Claude Skills (Alireza)",
+    "url": "https://github.com/alirezarezvani/claude-skills",
+    "enabled": true,
+    "builtin": true
+  },
+  {
+    "id": "claude-skills-official",
+    "name": "Claude Official Skills",
+    "url": "https://github.com/anthropics/skills",
+    "enabled": true,
+    "builtin": true
+  }
+]

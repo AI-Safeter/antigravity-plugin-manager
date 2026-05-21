@@ -1,76 +1,226 @@
 const fs = require('fs-extra');
 const path = require('path');
 const yaml = require('js-yaml');
+const os = require('os');
 
-async function generateRegistry() {
-  const pluginsDir = path.join(__dirname, '../plugins');
-  const registryPath = path.join(__dirname, '../registry.json');
-  
-  if (!(await fs.pathExists(pluginsDir))) {
-    throw new Error(`Plugins directory not found at ${pluginsDir}`);
+// Bump this when changing the registry.json shape so old user-side registries
+// at ~/.antigravity/registry.json get rebuilt automatically on next launch.
+const REGISTRY_SCHEMA_VERSION = 1;
+
+const DEFAULT_SOURCES = [
+  { id: 'local', name: 'Local Core Plugins', url: 'local', enabled: true, builtin: true }
+];
+
+function loadCuratedSkills() {
+  const curatedPath = path.join(__dirname, '../curated-skills.json');
+  try {
+    return fs.readJsonSync(curatedPath);
+  } catch (err) {
+    console.warn(`Warning: could not load curated-skills.json (${err.message}). Continuing without curation overrides.`);
+    return {};
   }
+}
 
-  let pkgRepo = 'https://github.com/sickn33/ag_plugin';
+async function findSkills(dir) {
+  const results = [];
+  try {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.name.startsWith('.') && entry.name !== '.gemini') continue;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        const skillFile = path.join(fullPath, 'SKILL.md');
+        if (await fs.pathExists(skillFile)) {
+          results.push(skillFile);
+        } else {
+          const subResults = await findSkills(fullPath);
+          results.push(...subResults);
+        }
+      }
+    }
+  } catch (err) {
+    // Ignore traversal errors so a single bad dir can't sink the whole sync
+  }
+  return results;
+}
+
+async function loadSources(explicit) {
+  if (explicit) return explicit;
+
+  const userSourcesPath = path.join(os.homedir(), '.antigravity/sources.json');
+  const defaultSourcesPath = path.join(__dirname, '../sources.json');
+
+  for (const p of [userSourcesPath, defaultSourcesPath]) {
+    if (await fs.pathExists(p)) {
+      try {
+        const sources = await fs.readJson(p);
+        if (Array.isArray(sources) && sources.length > 0) return sources;
+      } catch (err) {
+        // try next
+      }
+    }
+  }
+  return DEFAULT_SOURCES;
+}
+
+async function generateRegistry(options = {}) {
+  const defaultRegistryPath = path.join(__dirname, '../registry.json');
+  const registryPath = options.registryPath || defaultRegistryPath;
+  const isShippedRegistry = path.resolve(registryPath) === path.resolve(defaultRegistryPath);
+
+  let pkgRepo = 'https://github.com/AI-Safeter/antigravity-plugin-manager';
   try {
     const pkg = await fs.readJson(path.join(__dirname, '../package.json'));
     if (pkg && pkg.repository && pkg.repository.url) {
       pkgRepo = pkg.repository.url.replace(/^git\+/, '').replace(/\.git$/, '');
     }
   } catch (e) {
-    // Fallback to default
+    // Fallback
   }
 
-  const folders = await fs.readdir(pluginsDir);
-  const registry = [];
+  const sources = await loadSources(options.sources);
+  const curated = loadCuratedSkills();
 
-  for (const folder of folders) {
-    const skillPath = path.join(pluginsDir, folder, 'SKILL.md');
-    if (await fs.pathExists(skillPath)) {
-      let content;
-      try {
-        content = await fs.readFile(skillPath, 'utf8');
-      } catch (err) {
-        console.error(`Error reading ${skillPath}:`, err.message);
-        continue;
-      }
-      
-      const match = content.match(/^---([\s\S]*?)---/);
-      
-      let meta = {
-        id: folder,
-        name: folder,
-        description: 'No description available',
-        repository: pkgRepo
-      };
-
-      if (match) {
-        try {
-          const parsed = yaml.load(match[1]);
-          if (parsed && typeof parsed === 'object') {
-            meta.name = parsed.name || meta.name;
-            meta.description = parsed.description || meta.description;
-          }
-        } catch (e) {
-          console.error(`Error parsing YAML in ${folder}:`, e.message);
-        }
-      }
-      
-      registry.push({
-        ...meta,
-        type: 'skill'
-      });
+  // Guard contributors from accidentally clobbering the shipped registry by running
+  // `npm run registry` without first populating the remote source cache. The CLI
+  // (which writes to USER_REGISTRY_PATH) bypasses this on purpose.
+  if (isShippedRegistry && !options.allowEmptyCache) {
+    const missing = [];
+    for (const src of sources) {
+      if (!src.enabled || src.id === 'local') continue;
+      const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', src.id);
+      if (!(await fs.pathExists(cacheDir))) missing.push(src.id);
+    }
+    if (missing.length > 0) {
+      throw new Error(
+        `Refusing to write shipped registry.json: missing remote source cache for [${missing.join(', ')}]. ` +
+        `Run the CLI ("ag-plugin" → "Manage Skill Sources" → "Sync") first, or call generateRegistry with allowEmptyCache=true.`
+      );
     }
   }
 
+  const plugins = [];
+  let localCount = 0;
+  let remoteCount = 0;
+
+  for (const source of sources) {
+    if (!source.enabled) continue;
+
+    if (source.id === 'local') {
+      const pluginsDir = path.join(__dirname, '../plugins');
+      if (!(await fs.pathExists(pluginsDir))) continue;
+
+      const folders = await fs.readdir(pluginsDir);
+      for (const folder of folders) {
+        const skillPath = path.join(pluginsDir, folder, 'SKILL.md');
+        if (!(await fs.pathExists(skillPath))) continue;
+
+        let content;
+        try {
+          content = await fs.readFile(skillPath, 'utf8');
+        } catch (err) {
+          console.error(`Error reading ${skillPath}: ${err.message}`);
+          continue;
+        }
+
+        const meta = {
+          id: folder,
+          name: folder,
+          description: 'No description available',
+          repository: pkgRepo,
+          type: 'skill',
+          source: 'local'
+        };
+
+        const match = content.match(/^---([\s\S]*?)---/);
+        if (match) {
+          try {
+            const parsed = yaml.load(match[1]);
+            if (parsed && typeof parsed === 'object') {
+              meta.name = parsed.name || meta.name;
+              meta.description = parsed.description || meta.description;
+            }
+          } catch (e) {
+            console.error(`Error parsing YAML in local plugin ${folder}: ${e.message}`);
+          }
+        }
+        plugins.push(meta);
+        localCount++;
+      }
+    } else {
+      const cacheDir = path.join(os.homedir(), '.antigravity/cache/sources', source.id);
+      if (!(await fs.pathExists(cacheDir))) continue;
+
+      const skillFiles = await findSkills(cacheDir);
+      for (const skillFile of skillFiles) {
+        const relativeSkillDir = path.relative(cacheDir, path.dirname(skillFile));
+        const idSafeRelative = relativeSkillDir.replace(/[\\/]/g, '--').toLowerCase();
+        const skillId = `${source.id}--${idSafeRelative}`;
+
+        const includeAllFromSource = source.id === 'claude-skills-official' || source.id === 'claude-scientific-skills';
+        const isCurated = !!curated[skillId];
+
+        if (!includeAllFromSource && !isCurated) continue;
+
+        let content;
+        try {
+          content = await fs.readFile(skillFile, 'utf8');
+        } catch (err) {
+          continue;
+        }
+
+        const folderName = path.basename(path.dirname(skillFile));
+        const meta = {
+          id: skillId,
+          name: folderName,
+          description: 'No description available',
+          repository: source.url,
+          type: 'skill',
+          source: source.id,
+          relativeSkillDir
+        };
+
+        if (isCurated) {
+          meta.name = curated[skillId].name;
+          meta.description = curated[skillId].description;
+        } else {
+          const match = content.match(/^---([\s\S]*?)---/);
+          if (match) {
+            try {
+              const parsed = yaml.load(match[1]);
+              if (parsed && typeof parsed === 'object') {
+                meta.name = parsed.name || meta.name;
+                meta.description = parsed.description || meta.description;
+              }
+            } catch (e) {
+              // ignore
+            }
+          }
+        }
+
+        plugins.push(meta);
+        remoteCount++;
+      }
+    }
+  }
+
+  const registry = {
+    schemaVersion: REGISTRY_SCHEMA_VERSION,
+    generatedAt: new Date().toISOString(),
+    plugins
+  };
+
   try {
+    await fs.ensureDir(path.dirname(registryPath));
     await fs.writeJson(registryPath, registry, { spaces: 2 });
-    console.log(`Successfully generated registry with ${registry.length} skills.`);
+    console.log(`Generated registry with ${plugins.length} skills (${localCount} local, ${remoteCount} remote).`);
+    return registry;
   } catch (err) {
     throw new Error(`Failed to write registry.json: ${err.message}`);
   }
 }
 
-module.exports = { generateRegistry };
+module.exports = { generateRegistry, REGISTRY_SCHEMA_VERSION };
 
 if (require.main === module) {
   generateRegistry().catch(err => {
@@ -78,4 +228,3 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-
