@@ -1,17 +1,17 @@
-# React Best Practices
+# React best practices
 
-A structured repository for creating and maintaining React Best Practices optimized for agents and LLMs.
+A structured repository to create and maintain React best practices for agents and LLMs.
 
 ## Structure
 
-- `rules/` - Individual rule files (one per rule)
-  - `_sections.md` - Section metadata (titles, impacts, descriptions)
-  - `_template.md` - Template for creating new rules
-  - `area-description.md` - Individual rule files
-- `src/` - Build scripts and utilities
-- `metadata.json` - Document metadata (version, organization, abstract)
-- __`AGENTS.md`__ - Compiled output (generated)
-- __`test-cases.json`__ - Test cases for LLM evaluation (generated)
+- `rules/`: Individual rule files (one per rule).
+  - `_sections.md`: Section metadata (titles, impacts, descriptions).
+  - `_template.md`: Template for creating new rules.
+  - `area-description.md`: Individual rule files.
+- `src/`: Build scripts and utilities.
+- `metadata.json`: Document metadata (version, organization, abstract).
+- __`AGENTS.md`__: Compiled output (generated).
+- __`test-cases.json`__: Test cases for LLM evaluation (generated).
 
 ## Getting Started
 
@@ -93,19 +93,19 @@ Reference: [Link](https://example.com)
 
 ## Impact Levels
 
-- `CRITICAL` - Highest priority, major performance gains
-- `HIGH` - Significant performance improvements
-- `MEDIUM-HIGH` - Moderate-high gains
-- `MEDIUM` - Moderate performance improvements
-- `LOW-MEDIUM` - Low-medium gains
-- `LOW` - Incremental improvements
+- `CRITICAL`: Highest priority, major performance gains.
+- `HIGH`: Major performance improvements.
+- `MEDIUM-HIGH`: Moderate-high gains.
+- `MEDIUM`: Moderate performance improvements.
+- `LOW-MEDIUM`: Low-medium gains.
+- `LOW`: Incremental improvements.
 
 ## Scripts
 
-- `pnpm build` - Compile rules into AGENTS.md
-- `pnpm validate` - Validate all rule files
-- `pnpm extract-tests` - Extract test cases for LLM evaluation
-- `pnpm dev` - Build and validate
+- `pnpm build`: Compile rules into AGENTS.md.
+- `pnpm validate`: Validate all rule files.
+- `pnpm extract-tests`: Extract test cases for LLM evaluation.
+- `pnpm dev`: Build and validate.
 
 ## Contributing
 
@@ -116,7 +116,7 @@ When adding or modifying rules:
 3. Include clear bad/good examples with explanations
 4. Add appropriate tags
 5. Run `pnpm build` to regenerate AGENTS.md and test-cases.json
-6. Rules are automatically sorted by title - no need to manage numbers!
+6. Rules are automatically sorted by title (no need to manage numbers manually).
 
 ## Acknowledgments
 

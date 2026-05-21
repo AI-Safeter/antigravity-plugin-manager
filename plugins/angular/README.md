@@ -1,32 +1,32 @@
 # Angular
 
-A comprehensive guide to modern Angular development (v20+) optimized for AI agents and LLMs.
+A complete guide to Angular development (v20+) tailored for AI agents and LLMs.
 
 ## Overview
 
-This skill covers modern Angular patterns including:
+This skill covers contemporary Angular patterns, including:
 
-- **Signals** - Angular's reactive primitive for state management
-- **Standalone Components** - Modern component architecture without NgModules
-- **Zoneless Applications** - High-performance apps without Zone.js
-- **SSR & Hydration** - Server-side rendering and client hydration patterns
-- **Modern Routing** - Functional guards, resolvers, and lazy loading
-- **Dependency Injection** - Modern DI with `inject()` function
-- **Reactive Forms** - Type-safe form handling
+- **Signals**: Angular's reactive primitive for state management.
+- **Standalone Components**: Component architecture without NgModules.
+- **Zoneless Applications**: High-performance apps without Zone.js.
+- **SSR & Hydration**: Server-side rendering and client hydration patterns.
+- **Routing**: Functional guards, resolvers, and lazy loading.
+- **Dependency Injection**: DI using the `inject()` function.
+- **Reactive Forms**: Type-safe form handling.
 
 ## Structure
 
-This skill is a single, comprehensive `SKILL.md` file containing:
+This skill is a single, complete `SKILL.md` file containing:
 
-1. Modern component patterns with Signal inputs/outputs
-2. State management with Signals and computed values
-3. Performance optimization techniques
-4. SSR and hydration best practices
-5. Migration strategies from legacy Angular patterns
+1. Component patterns with Signal inputs/outputs.
+2. State management with Signals and computed values.
+3. Performance optimization techniques.
+4. SSR and hydration proven patterns.
+5. Strategies for migrating from legacy Angular patterns.
 
 ## Usage
 
-This skill is designed to be read in full to understand the complete modern Angular development approach, or referenced for specific patterns when needed.
+This skill is designed to be read in full to understand the Angular development approach, or referenced for specific patterns when needed.
 
 ## Version
 
