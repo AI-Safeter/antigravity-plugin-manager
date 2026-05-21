@@ -10,7 +10,7 @@
   <a href="https://www.npmjs.com/package/@beidawuli/antigravity-plugin-manager"><img src="https://img.shields.io/badge/npm-v3.2.1-blue.svg" alt="npm version"></a>
 </p>
 
-`ag-plugin` is a CLI plugin manager for the `antigravity-cli` toolchain. It indexes 309 agent skills across 16 categories, pulling from 13 upstream repositories: Anthropic's official skills, K-Dense's scientific skills, Matt Pocock's skills, obra's superpowers, PatrickJS's awesome-cursorrules, addyosmani's agent-skills, EveryInc's compound-engineering-plugin, quodsoler's unreal-engine-skills, wshobson's agents, TerminalSkills/skills, alirezarezvani's claude-skills, sickn33's antigravity-awesome-skills, and the local plugins shipped with this repo. All content is human-authored and lives upstream. This tool handles discovery, search, and install.
+`ag-plugin` is a CLI plugin manager for `antigravity-cli`. It indexes 309 agent skills across 16 categories from 13 public open-source repositories. The dashboard has four actions: browse by category, fuzzy-search by keyword, list and uninstall what you have, and add or sync upstream sources. Skill content stays at its upstream source; the manager indexes it and routes installs.
 
 ## Prerequisites
 
@@ -31,19 +31,25 @@ On first run, the tool clones each enabled source repo into `~/.antigravity/cach
 
 ## Interface
 
+The dashboard is the entry point. The footer line shows the current catalog size.
+
 ![Main Menu](images/main_menu.png)
 
-**Browse by category** scopes the list to one of 16 categories. From there, "Install all N plugins" grabs the whole category in one go, or you can pick individually with the checkbox.
+**Browse by category** scopes the list to one of 16 categories. Each entry shows the count of skills it contains so you can size the pick before opening it.
 
-![Browse Plugins](images/browse_plugins.png)
+![Browse by Category](images/browse_categories.png)
 
-**Search** fuzzy-matches across name, description, and skill ID.
+**Search** runs a fuzzy match across name, description, and skill ID as you type. Results are ranked, with the description preview shown inline.
 
 ![Search Plugins](images/search_plugins.png)
 
-**Installed plugins** lists everything in your user-global (`~/.antigravity/plugins/`) and project-local (`./.antigravity/plugins/`) scopes.
+**Installed Plugins** lists what you've installed in either scope, with `[Global]` (`~/.antigravity/plugins/`) and `[Local]` (`./.antigravity/plugins/`) labels. Pick a plugin to uninstall it.
 
 ![Installed Plugins](images/installed_plugins.png)
+
+**Manage Skill Sources** lists every upstream repository, its enable state, and its URL. From this view you can sync (clone or pull the latest from each enabled source and rebuild the registry), toggle a source, or add a custom Git URL.
+
+![Manage Sources](images/manage_sources.png)
 
 ## What's inside (v3.2.1)
 
