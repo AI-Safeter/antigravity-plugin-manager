@@ -33,5 +33,12 @@
     "url": "https://github.com/anthropics/skills",
     "enabled": true,
     "builtin": true
+  },
+  {
+    "id": "claude-plugins-official",
+    "name": "Claude Official Plugins",
+    "url": "https://github.com/anthropics/claude-plugins-official",
+    "enabled": true,
+    "builtin": true
   }
 ]

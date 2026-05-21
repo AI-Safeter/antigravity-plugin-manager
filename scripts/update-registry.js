@@ -236,7 +236,10 @@ async function generateRegistry(options = {}) {
         const idSafeRelative = relativeSkillDir.replace(/[\\/]/g, '--').toLowerCase();
         const skillId = `${source.id}--${idSafeRelative}`;
 
-        const includeAllFromSource = source.id === 'claude-skills-official' || source.id === 'claude-scientific-skills';
+        const includeAllFromSource =
+          source.id === 'claude-skills-official' ||
+          source.id === 'claude-scientific-skills' ||
+          source.id === 'claude-plugins-official';
         const isCurated = !!curated[skillId];
 
         if (!includeAllFromSource && !isCurated) continue;

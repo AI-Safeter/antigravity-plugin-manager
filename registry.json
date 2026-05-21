@@ -10,6 +10,14 @@
       "source": "local"
     },
     {
+      "id": "algolia-search",
+      "name": "algolia-search",
+      "description": "Algolia hosted search-as-a-service for indexing, ranking, faceting, and search-as-you-type UIs. Use this skill when integrating Algolia indexing pipelines, configuring relevance and custom ranking, building InstantSearch React or Vue UIs, setting up replicas for sort orders, or using secured API keys for multi-tenant search.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "angular",
       "name": "angular",
       "description": "Modern Angular (v20+) expert with deep knowledge of Signals, Standalone Components, Zoneless applications, SSR/Hydration, and reactive patterns.",
@@ -210,6 +218,14 @@
       "source": "local"
     },
     {
+      "id": "clerk-auth",
+      "name": "clerk-auth",
+      "description": "Clerk authentication for Next.js, React, and Remix apps. Use this skill when integrating ClerkProvider, useUser, useAuth, signIn/signUp components, organizations and multi-tenant auth, JWT templates, webhooks for user sync, or protecting API routes with auth() and clerkMiddleware.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "clickhouse-olap",
       "name": "ClickHouse OLAP",
       "description": "Column-oriented database management systems, massive analytics queries, and real-time clickstream data.",
@@ -290,6 +306,14 @@
       "source": "local"
     },
     {
+      "id": "crewai-agents",
+      "name": "crewai-agents",
+      "description": "CrewAI multi-agent orchestration framework for role-based agents collaborating on tasks. Use this skill when defining `Agent`s with role/goal/backstory, decomposing work into `Task`s with expected outputs, assembling them in a `Crew` with `Process.sequential` or `Process.hierarchical`, attaching tools (Serper, browser, file IO, custom `BaseTool`), enabling short/long-term memory, or running flows with `CrewAI Flow` for deterministic control flow.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "cryptography-expert",
       "name": "Cryptography Expert",
       "description": "Data hashing (bcrypt/argon2), asymmetric keys, secure communication protocols, and signing.",
@@ -301,6 +325,14 @@
       "id": "csharp-pro",
       "name": "csharp-pro",
       "description": "Write modern C# code with advanced features like records, pattern matching, and async/await. Optimizes .NET applications, implements enterprise patterns, and ensures comprehensive testing. Use PROACTIVELY for C# refactoring, performance optimization, or complex .NET solutions.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "cuda-gpu-programming",
+      "name": "cuda-gpu-programming",
+      "description": "NVIDIA CUDA programming for GPU kernels in CUDA C++, PyCUDA, Numba, and CuPy. Use this skill when writing kernels with thread/block/grid indexing, using the memory hierarchy (global, shared, constant, registers, L1/L2), launching with `<<<grid,block>>>`, synchronizing with `__syncthreads()` or cooperative groups, compiling with `nvcc`, profiling with Nsight Systems/Compute, or choosing between raw CUDA, PyCUDA, Numba `@cuda.jit`, and CuPy.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -410,6 +442,14 @@
       "source": "local"
     },
     {
+      "id": "dspy-prompt-optimization",
+      "name": "dspy-prompt-optimization",
+      "description": "DSPy from Stanford NLP for programmatic prompting and automatic prompt/weight optimization. Use this skill when defining LM pipelines with Signatures and Modules (Predict, ChainOfThought, ReAct, ProgramOfThought), compiling them with optimizers (BootstrapFewShot, BootstrapFewShotWithRandomSearch, MIPROv2, COPRO, BootstrapFinetune), measuring quality with `dspy.Evaluate` and metrics, or migrating from hand-tuned prompt strings to declarative LM programs.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "dynamodb-pro",
       "name": "DynamoDB Pro",
       "description": "Serverless NoSQL database designs, single-table design, secondary indexes, and global tables.",
@@ -437,6 +477,14 @@
       "id": "elixir-pro",
       "name": "elixir-pro",
       "description": "Write idiomatic Elixir code with OTP patterns, supervision trees, and Phoenix LiveView. Masters concurrency, fault tolerance, and distributed systems. Use PROACTIVELY for Elixir refactoring, OTP design, or complex BEAM optimizations.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "esbuild-bundler",
+      "name": "esbuild-bundler",
+      "description": "esbuild for extremely fast JS/TS bundling and transpilation. Use this skill when bundling Node libraries, building CLI tools, transpiling TS/JSX without typechecking, replacing babel/tsc for speed, writing esbuild plugins, configuring the JS or Go API, setting up watch mode, or producing ESM/CJS/IIFE outputs. Triggers: esbuild, esbuild.build, esbuild plugin, tsup, bundle TypeScript fast, transpile TSX, replace babel, replace tsc, esbuild loader, jsx factory, esbuild watch.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -482,6 +530,14 @@
       "source": "local"
     },
     {
+      "id": "fastify-nodejs",
+      "name": "fastify-nodejs",
+      "description": "Fastify high-performance Node.js web framework with JSON Schema validation, plugin encapsulation, lifecycle hooks, and type providers. Use this skill when building production HTTP APIs on Node, defining route schemas for validation and serialization, organizing code with `fastify-plugin`, or wiring up TypeBox/Zod type providers for end-to-end types.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "firebase-integration",
       "name": "Firebase Integration",
       "description": "Firestore real-time databases, Google auth, Firebase storage, and cloud messaging.",
@@ -501,6 +557,14 @@
       "id": "flutter-development",
       "name": "Flutter Development",
       "description": "Cross-platform mobile and web application architecture, custom rendering, and BLoC state management.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "foundry-toolkit",
+      "name": "foundry-toolkit",
+      "description": "Foundry toolkit for Solidity development with forge, cast, anvil, and chisel. Covers project setup, unit testing, fuzz testing, invariant testing, fork tests against live RPCs, cheat codes (vm.prank, vm.expectRevert, vm.deal, vm.warp), gas snapshots, and dependency management via forge install for OpenZeppelin and other libraries. Use this skill when testing, deploying, or debugging Solidity contracts with Foundry.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -586,6 +650,14 @@
       "source": "local"
     },
     {
+      "id": "godot-engine",
+      "name": "godot-engine",
+      "description": "Godot 4 game development. Covers the node and scene system, GDScript syntax (typed variables, signals, await), exported variables shown in the Inspector, physics layers and masks, AnimationPlayer vs Tween for animation, autoload singletons, and when to choose C# over GDScript. Use this skill when authoring or reviewing Godot 4 projects in GDScript or C#.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "graphql-architect",
       "name": "graphql-architect",
       "description": "Master modern GraphQL with federation, performance optimization, and enterprise security. Build scalable schemas, implement advanced caching, and design real-time systems. Use PROACTIVELY for GraphQL architecture or performance optimization.",
@@ -618,9 +690,25 @@
       "source": "local"
     },
     {
+      "id": "hono-edge-framework",
+      "name": "hono-edge-framework",
+      "description": "Hono ultralight web framework that runs on Cloudflare Workers, Bun, Deno, Node, Vercel, and Lambda. Use this skill when building edge APIs, picking the right adapter, using middleware (cors, logger, jwt), serving JSX at the edge, or exporting a type-safe `hc` RPC client from a Hono app.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "huggingface-models",
       "name": "Hugging Face Models",
       "description": "Model repository hubs, transformer pipelines, local model execution, and tokenizers.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "i18next-internationalization",
+      "name": "i18next-internationalization",
+      "description": "i18next for application internationalization. Use this skill when adding or refactoring translations in JavaScript/TypeScript apps, organizing namespaces, writing plural and ICU rules, wiring react-i18next hooks, configuring language detection, or lazy-loading translation bundles. Triggers: i18next, react-i18next, i18n, l10n, translation, locale, plural rule, ICU MessageFormat, useTranslation, Trans component.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -666,6 +754,14 @@
       "source": "local"
     },
     {
+      "id": "jetpack-compose",
+      "name": "jetpack-compose",
+      "description": "Jetpack Compose for Android UI. Covers composable functions, state hoisting, remember and mutableStateOf, side-effect APIs (LaunchedEffect, DisposableEffect, rememberCoroutineScope, produceState), Material 3 components and theming, Compose Navigation with type-safe routes, and previews. Use this skill when building or refactoring Android UI in Kotlin with Jetpack Compose.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "julia-pro",
       "name": "Julia Pro",
       "description": "Expert in scientific computing, numerical analysis, performance optimization, and high-performance algorithms.",
@@ -677,6 +773,14 @@
       "id": "junit-testing",
       "name": "JUnit Testing",
       "description": "Java testing frameworks, JUnit 5 features, Mockito mocking, and backend transaction tests.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "jupyter-notebooks",
+      "name": "jupyter-notebooks",
+      "description": "Jupyter notebook patterns and discipline. Use this skill when authoring or refactoring .ipynb files, debugging hidden-state and out-of-order execution bugs, extracting cells into Python modules, parameterizing notebooks with papermill, version-controlling notebooks via jupytext, or using cell/line magics. Triggers: jupyter, ipynb, notebook, kernel, magic, papermill, jupytext, nbconvert, ipykernel.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -722,9 +826,25 @@
       "source": "local"
     },
     {
+      "id": "langfuse-observability",
+      "name": "langfuse-observability",
+      "description": "Langfuse LLM observability for traces, generations, scoring, prompt versioning, datasets, and eval pipelines. Use this skill when instrumenting LLM apps with traces and spans, capturing token usage and latency, managing prompts as versioned assets, running offline evals against datasets, or integrating with LangChain, LlamaIndex, OpenAI SDK, or Vercel AI SDK.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "laravel-pro",
       "name": "Laravel Pro",
       "description": "PHP Laravel expert implementing Eloquent ORM, Blade, queues, routing, and clean MVC patterns.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "llama-cpp-inference",
+      "name": "llama-cpp-inference",
+      "description": "llama.cpp for portable LLM inference across CPU, Apple Metal, CUDA, ROCm, and Vulkan using GGUF model files. Use this skill when running models with `llama-cli` or `llama-server`, choosing GGUF quantizations (Q4_K_M, Q5_K_M, Q6_K, Q8_0, IQ-quants), tuning `-ngl`/`-c`/`-t`, applying grammar-constrained sampling (GBNF), or using the Python binding `llama-cpp-python` and its OpenAI-compatible server.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -757,6 +877,22 @@
       "id": "mcp-builder",
       "name": "mcp-builder",
       "description": "Guide for developing high-quality Model Context Protocol (MCP) servers in Python and TypeScript. Focuses on proper input/output schemas, error boundaries, tool definitions, and evaluation practices.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "mdx-content",
+      "name": "mdx-content",
+      "description": "MDX (Markdown + JSX) authoring and tooling. Use this skill when writing or fixing .mdx files, configuring remark/rehype plugins, wiring MDX into Next.js, Astro, or Docusaurus, defining MDXProvider component mappings, handling frontmatter, or debugging MDX v3 vs v2 compilation errors. Triggers: mdx, @mdx-js, remark, rehype, MDXProvider, next-mdx-remote, contentlayer, astro mdx, docusaurus.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "meilisearch",
+      "name": "meilisearch",
+      "description": "Meilisearch open-source search engine for fast, typo-tolerant search. Use this skill when self-hosting Meilisearch or using Meilisearch Cloud, defining indexes and documents, configuring filterable and sortable attributes, tuning ranking rules, building search-as-you-type UIs, or comparing against Algolia and Typesense.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -834,6 +970,14 @@
       "source": "local"
     },
     {
+      "id": "nextauth-authjs",
+      "name": "nextauth-authjs",
+      "description": "Auth.js (formerly NextAuth.js) v5 for Next.js authentication. Use this skill when configuring providers (OAuth, credentials, email), callbacks (jwt, session, signIn), session strategies (JWT vs database), Edge-compatible middleware, or migrating from NextAuth v4 to Auth.js v5.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "nextjs-app-router-patterns",
       "name": "nextjs-app-router-patterns",
       "description": "Master Next.js 14+ App Router with Server Components, streaming, parallel routes, and advanced data fetching. Use when building Next.js applications, implementing SSR/SSG, or optimizing React Server Components.",
@@ -850,9 +994,41 @@
       "source": "local"
     },
     {
+      "id": "nx-monorepo",
+      "name": "nx-monorepo",
+      "description": "Nx for monorepo management with code generation, project dependency graph, affected commands, and computation caching. Use this skill when initializing an Nx workspace, authoring project.json or nx.json, defining targets and executors, running nx generate for scaffolding, using nx affected, nx graph, nx run-many, or migrating from Lerna/Turborepo. Triggers: nx, nx.json, project.json, nx generate, nx affected, nx graph, nx run-many, nx migrate, nx release, nx cloud, target defaults, named inputs, executors.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "ollama-local-llm",
+      "name": "ollama-local-llm",
+      "description": "Ollama for running open-source large language models locally on Mac, Linux, and Windows. Use this skill when setting up local LLM inference, pulling models like Llama 3.1, Qwen2.5, DeepSeek-R1, or Mistral, writing Modelfiles, calling the OpenAI-compatible API at localhost:11434, choosing quantization levels (Q4_K_M, Q5_K_M, Q8_0, FP16), or integrating Ollama with LangChain, LlamaIndex, LiteLLM, or Open WebUI.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "openai-api-expert",
       "name": "OpenAI API Expert",
       "description": "OpenAI API integration, GPT models, embedding generation, tool calling, and fine-tuning configurations.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "opentelemetry-instrumentation",
+      "name": "opentelemetry-instrumentation",
+      "description": "OpenTelemetry instrumentation for traces, metrics, and logs using the OTLP exporter, auto-instrumentation libraries, and semantic conventions. Use this skill when adding distributed tracing to services, exporting telemetry to Jaeger/Tempo/Honeycomb/Datadog, configuring the OTel Collector, or following OpenTelemetry semantic conventions.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "pandas-numpy",
+      "name": "pandas-numpy",
+      "description": "pandas and NumPy idiomatic Python data manipulation. Use this skill when loading or cleaning tabular data, writing vectorized operations instead of for-loops, choosing between .loc/.iloc/.at/.iat, performing groupby aggregations, merging or joining DataFrames, or optimizing memory usage with categorical and nullable dtypes. Triggers: pandas, numpy, DataFrame, Series, iterrows, vectorize, groupby, merge, SettingWithCopyWarning.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -874,6 +1050,14 @@
       "source": "local"
     },
     {
+      "id": "pgvector-postgres",
+      "name": "pgvector-postgres",
+      "description": "pgvector extension for storing and searching vector embeddings in PostgreSQL. Use this skill when adding semantic search to a Postgres database, building RAG over existing relational data, choosing between HNSW and IVFFlat indexes, or combining vector similarity with metadata filters and full-text search (tsvector).",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "phoenix-elixir",
       "name": "Phoenix Elixir",
       "description": "Phoenix framework, LiveView real-time systems, PubSub event flows, and high-concurrency websockets.",
@@ -890,9 +1074,41 @@
       "source": "local"
     },
     {
+      "id": "pinecone-vector-db",
+      "name": "pinecone-vector-db",
+      "description": "Pinecone managed vector database for production semantic search and RAG. Use this skill when picking serverless vs pod-based indexes, designing namespaces for multi-tenancy, writing metadata filters, combining sparse and dense vectors for hybrid search, or using the v3 Python/TypeScript clients (Pinecone, ServerlessSpec, PodSpec).",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "pino-logging",
+      "name": "pino-logging",
+      "description": "Pino structured logging for Node.js. Use this skill when adding or refactoring logging in a Node service, configuring child loggers, setting up transports for files/HTTP/Elastic, redacting secrets from log output, pretty-printing in dev with pino-pretty, integrating with Fastify or Express, or designing log level policy. Triggers: pino, pino-pretty, pino.transport, redact, child logger, structured logging, logger.info, fastify logger.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "playwright",
       "name": "Playwright E2E Testing",
       "description": "Playwright browser automation, cross-browser tests, page object models, and test reporters.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "pnpm-workspaces",
+      "name": "pnpm-workspaces",
+      "description": "pnpm package manager with content-addressable store, strict node_modules layout, and workspaces for monorepos. Use this skill when installing/upgrading deps, authoring pnpm-workspace.yaml, configuring .npmrc, using pnpm filters, handling peer dependencies, fixing phantom-dependency issues, working with the lockfile, or setting up CI caching. Triggers: pnpm, pnpm install, pnpm-workspace.yaml, pnpm-lock.yaml, .npmrc, hoist-pattern, shamefully-hoist, pnpm filter, pnpm add, content-addressable store, phantom dependency, peer dependency warnings.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "poetry-python",
+      "name": "poetry-python",
+      "description": "Poetry for Python dependency management, virtualenvs, builds, and publishing using a pyproject.toml-based workflow. Use this skill when initializing a Python project with poetry init, authoring [tool.poetry] tables, adding/locking deps with poetry add/lock/install, managing groups (dev/test), configuring poetry.lock, publishing wheels to PyPI, or migrating to/from pip/uv. Triggers: poetry, poetry add, poetry install, poetry lock, poetry shell, poetry run, poetry publish, poetry build, pyproject.toml poetry, poetry.lock, poetry groups, poetry.toml, python project manager poetry.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -930,9 +1146,33 @@
       "source": "local"
     },
     {
+      "id": "promptfoo-evals",
+      "name": "promptfoo-evals",
+      "description": "Promptfoo CLI and library for LLM evaluations. Use this skill when writing promptfooconfig.yaml files, defining providers and assertions, running test matrices across prompts and models, comparing model outputs side-by-side, integrating evals into CI, or running red-team scans for safety regressions.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "pwa-implementation",
       "name": "PWA Implementation",
       "description": "Progressive Web Apps, service workers, offline database caching, push notifications, and installation.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "pydantic-ai-agents",
+      "name": "pydantic-ai-agents",
+      "description": "PydanticAI typed agent framework from the Pydantic team for building production LLM agents with structured outputs and dependency injection. Use this skill when defining an `Agent` with a system prompt and typed `result_type`, registering tools via `@agent.tool`, wiring runtime dependencies through `RunContext[Deps]`, streaming responses with `agent.run_stream`, or switching providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Ollama) without changing agent code.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "pydantic-v2",
+      "name": "pydantic-v2",
+      "description": "Pydantic v2 for Python data validation and settings management using type hints. Use this skill when defining BaseModel classes, field validators (@field_validator, @model_validator), model_config (ConfigDict), computed_field, discriminated unions via Field(discriminator=...), TypeAdapter for arbitrary types, RootModel, integrating with FastAPI, or migrating from Pydantic v1 to v2. Triggers on BaseModel, Field, field_validator, model_validator, model_config, model_dump, model_validate, TypeAdapter, or any Python validation task.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -949,6 +1189,14 @@
       "id": "python-pro",
       "name": "python-pro",
       "description": "Master Python 3.12+ with modern features, async programming, performance optimization, and production-ready practices. Expert in the latest Python ecosystem including uv, ruff, pydantic, and FastAPI. Use PROACTIVELY for Python development, optimization, or advanced Python patterns.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "qdrant-vector-db",
+      "name": "qdrant-vector-db",
+      "description": "Qdrant Rust-based vector database for self-hosted or managed semantic search. Use this skill when designing collections, payload schemas, filter conditions, choosing quantization (scalar, product, binary), running Qdrant locally via Docker, or deciding between self-hosted and Qdrant Cloud for cost/control tradeoffs.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -994,6 +1242,14 @@
       "source": "local"
     },
     {
+      "id": "react-hook-form",
+      "name": "react-hook-form",
+      "description": "React Hook Form for performant, uncontrolled-by-default form handling in React. Use this skill when building forms with useForm, register, handleSubmit, Controller, useFieldArray, integrating schema validation via @hookform/resolvers (zod, yup, valibot), handling form state, errors, dirty/touched tracking, or optimizing re-renders on large forms. Triggers on useForm, register, Controller, formState, resolver, useFieldArray, or any React form work.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "react-native-pro",
       "name": "React Native Pro",
       "description": "Advanced hybrid mobile development, native bridge optimization, and high-performance UI components.",
@@ -1005,6 +1261,30 @@
       "id": "redis-caching",
       "name": "Redis Caching",
       "description": "In-memory caching architectures, Redis data structures, pub-sub clusters, and fast session storage.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "redux-toolkit",
+      "name": "redux-toolkit",
+      "description": "Redux Toolkit (RTK) -- the official, opinionated way to write Redux. Use this skill when configuring a Redux store with configureStore, defining slices via createSlice (Immer-backed reducers), writing async logic with createAsyncThunk, building data-fetching endpoints with RTK Query (createApi, fetchBaseQuery), or migrating legacy Redux to RTK. Triggers on createSlice, configureStore, createAsyncThunk, createApi, RTK Query, useSelector, useDispatch, or any Redux task.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "remotion-video",
+      "name": "remotion-video",
+      "description": "Remotion for programmatic React-based video generation. Covers Composition setup, useCurrentFrame, interpolate, spring animations, Sequence and Series for timeline composition, lazy components, audio tracks with Audio and useAudioData, server-side rendering via @remotion/renderer, and Lambda-based parallel rendering. Use this skill when authoring videos as React components or rendering them in CI/cloud.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "resend-email",
+      "name": "resend-email",
+      "description": "Resend transactional email API with the Node.js SDK and React Email templates. Use this skill when sending transactional emails, building React Email templates, managing audiences and broadcasts, setting up sending domains with DKIM/SPF, or handling delivery webhooks.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -1074,6 +1354,14 @@
       "source": "local"
     },
     {
+      "id": "sentry-error-tracking",
+      "name": "sentry-error-tracking",
+      "description": "Sentry error tracking and performance monitoring across JavaScript, Python, Go, and other runtimes. Use this skill when configuring Sentry SDKs, uploading source maps, setting up release tracking, instrumenting performance traces, defining alerts, or adding breadcrumbs and custom context for debugging.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "serverless-architecture",
       "name": "Serverless Architecture",
       "description": "Function-as-a-Service system architectures, cold-start tuning, and cloud-native services.",
@@ -1106,9 +1394,25 @@
       "source": "local"
     },
     {
+      "id": "socketio-realtime",
+      "name": "socketio-realtime",
+      "description": "Socket.IO bidirectional realtime library with WebSocket-with-fallback transport, rooms, namespaces, ack callbacks, and horizontal scaling via Redis adapter. Use this skill when building chat, presence, live dashboards, or collaborative apps that need rooms, broadcasting, server-to-server emit across multiple nodes, or acknowledgements with timeouts.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "software-architecture",
       "name": "software-architecture",
       "description": "Guide for quality focused software architecture. This skill should be used when users want to write code, design architecture, analyze code, in any case that relates to software development.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "solidity-smart-contracts",
+      "name": "solidity-smart-contracts",
+      "description": "Solidity smart contract development covering ERC-20/721/1155 token standards, common vulnerability patterns (reentrancy, integer overflow, access control, tx.origin), Solidity-specific idioms (custom errors, immutable/constant, modifiers, events), and integration with OpenZeppelin contracts. Use this skill when writing, reviewing, or auditing Solidity code for Ethereum or EVM-compatible chains (Polygon, Arbitrum, Optimism, Base).",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -1130,9 +1434,33 @@
       "source": "local"
     },
     {
+      "id": "sqlalchemy-orm",
+      "name": "sqlalchemy-orm",
+      "description": "SQLAlchemy 2.0 ORM with typed declarative models, async sessions, Alembic migrations, and relationship loading strategies. Use this skill when defining models with `Mapped[]` and `mapped_column`, picking between `selectinload`, `joinedload`, and `subqueryload`, managing `AsyncSession` lifecycles, or generating Alembic autogenerated migrations.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "sqlite-expert",
       "name": "SQLite Expert",
       "description": "Embedded database architectures, file systems, ultra-fast queries, and local application caching.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "storybook-component-docs",
+      "name": "storybook-component-docs",
+      "description": "Storybook 8+ for component development and documentation. Use this skill when authoring stories in CSF 3.0, configuring args and controls, adding decorators, writing interaction tests with play functions, integrating addons (a11y, viewport, interactions, themes), composing MDX docs pages, or deploying a static Storybook. Triggers: storybook, stories.ts, stories.tsx, CSF, args, argTypes, play function, addon-a11y, addon-interactions, chromatic.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "stripe-payments",
+      "name": "stripe-payments",
+      "description": "Stripe payments integration covering charges, customers, subscriptions, Checkout, webhooks, refunds, and PaymentIntents. Use this skill when accepting credit cards, building subscription billing, handling Stripe webhooks, implementing idempotent payment flows, or working with Stripe SDKs (stripe-node, stripe-python, stripe.js).",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -1170,6 +1498,14 @@
       "source": "local"
     },
     {
+      "id": "swiftui-app",
+      "name": "swiftui-app",
+      "description": "SwiftUI for iOS 17+ and macOS 14+ apps. Covers declarative views, the @Observable macro and the older @State/@Binding/@StateObject family, NavigationStack, environment values, async data loading with .task, sheet/alert/fullScreenCover modifiers, and Xcode Previews. Use this skill when building, refactoring, or debugging SwiftUI user interfaces on Apple platforms.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "systematic-debugging",
       "name": "systematic-debugging",
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
@@ -1181,6 +1517,22 @@
       "id": "tailwind-design-system",
       "name": "tailwind-design-system",
       "description": "Build production-ready design systems with Tailwind CSS, including design tokens, component variants, responsive patterns, and accessibility.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "tanstack-query",
+      "name": "tanstack-query",
+      "description": "TanStack Query (formerly React Query) for async server-state management. Use this skill when fetching, caching, synchronizing, or mutating remote data in React/Vue/Solid/Svelte apps. Covers useQuery, useMutation, query keys, staleTime/gcTime, query invalidation, infinite queries, optimistic updates, suspense mode, and prefetching. Triggers on useQuery, useMutation, queryClient, queryKey, invalidateQueries, useInfiniteQuery, or any data-fetching/caching task.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "tauri-desktop",
+      "name": "tauri-desktop",
+      "description": "Tauri 2 for cross-platform desktop and mobile apps with a Rust backend and a web frontend (any JS framework). Covers project structure, IPC commands with",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -1218,9 +1570,49 @@
       "source": "local"
     },
     {
+      "id": "trpc-typesafe-api",
+      "name": "trpc-typesafe-api",
+      "description": "tRPC for end-to-end type-safe RPC between TypeScript client and server with no codegen. Use this skill when defining routers and procedures, validating inputs with Zod, adding context and middleware (auth, logging), wiring up the React Query integration, or choosing between query/mutation/subscription procedure types.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "turborepo-monorepo",
+      "name": "turborepo-monorepo",
+      "description": "Turborepo for monorepo task orchestration, incremental builds, and remote caching. Use this skill when setting up turbo.json, defining task pipelines with dependsOn, configuring inputs/outputs for caching, wiring remote cache (Vercel or self-hosted), filtering tasks with --filter, integrating with pnpm/npm/yarn workspaces, or migrating from Lerna/Nx. Triggers: turborepo, turbo.json, turbo run, turbo build, remote cache, task pipeline, monorepo build, dependsOn, ^build, turbo prune, vercel monorepo.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "typescript-advanced-types",
+      "name": "typescript-advanced-types",
+      "description": "TypeScript advanced type patterns and type-level programming. Use this skill when working with conditional types, mapped types, template literal types, infer, satisfies, branded/nominal types, recursive types, variance, key remapping, distributive conditionals, or building library-grade generic APIs. Triggers on extends ? :, infer, keyof, typeof, satisfies, as const, Mapped types, Template literal types, brand types, or any non-trivial TypeScript type work.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "typescript-lsp",
       "name": "typescript-lsp",
       "description": "TypeScript and JavaScript expert with deep knowledge of type-level programming, performance optimization, monorepo management, migration strategies, and modern tooling.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "unity-csharp-gamedev",
+      "name": "unity-csharp-gamedev",
+      "description": "Unity game development in C#. Covers MonoBehaviour lifecycle (Awake/Start/Update/FixedUpdate/LateUpdate/OnEnable/OnDisable), ScriptableObjects for shared data, prefab workflows, Addressables for asset loading, the new Input System, an overview of DOTS/ECS, and performance practices (avoid GameObject.Find, pool objects, cache components). Use this skill when writing or reviewing C# scripts for Unity 2022 LTS or newer.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "uv-python-packaging",
+      "name": "uv-python-packaging",
+      "description": "Astral's uv, a single high-speed Python package and project manager that replaces pip, pip-tools, pipx, poetry, pyenv, virtualenv, and twine. Use this skill when initializing a Python project, authoring pyproject.toml, managing dependencies with uv add/remove/lock/sync, pinning Python versions with uv python, running scripts with PEP 723 inline metadata, building or publishing wheels, or migrating from Poetry/pip-tools. Triggers: uv, uv add, uv sync, uv lock, uv run, uv pip, uv python install, uv tool, uv init, uv build, uv publish, PEP 723, astral, ruff sibling, Python project manager.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -1234,9 +1626,25 @@
       "source": "local"
     },
     {
+      "id": "vite-build-tool",
+      "name": "vite-build-tool",
+      "description": "Vite build tool for fast development servers and optimized production builds. Use this skill when scaffolding a React, Vue, Svelte, Solid, Preact, or vanilla TS/JS project, configuring vite.config.ts, setting up dev/build/preview scripts, defining plugins, handling env vars (import.meta.env, VITE_ prefix), troubleshooting HMR, dep pre-bundling, asset imports, SSR mode, or library mode. Triggers: vite, vite.config, HMR, esbuild dev, rollup build, import.meta.env, vite plugin, vite-plugin-react, vite preview, vite dev server.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "vitest-pro",
       "name": "Vitest Pro",
       "description": "Fast ESM-based test running, mock libraries, Vite environment tests, and watch mode setups.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "vllm-serving",
+      "name": "vllm-serving",
+      "description": "vLLM for high-throughput production GPU serving of large language models with PagedAttention and continuous batching. Use this skill when deploying an OpenAI-compatible inference server with `vllm serve`, tuning `--tensor-parallel-size` and `--pipeline-parallel-size` across GPUs, configuring AWQ/GPTQ/FP8 quantization, enabling speculative decoding or prefix caching, or benchmarking throughput and latency for Llama, Qwen, Mixtral, or DeepSeek models.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -1266,6 +1674,14 @@
       "source": "local"
     },
     {
+      "id": "webpack-config",
+      "name": "webpack-config",
+      "description": "Webpack 5 configuration including entry/output, loaders, plugins, code-splitting, module federation, asset modules, tree-shaking, source maps, and dev server. Use this skill when editing webpack.config.js, debugging bundle size or build errors, configuring babel-loader/ts-loader/css-loader, setting up SplitChunksPlugin, MiniCssExtractPlugin, HtmlWebpackPlugin, DefinePlugin, or migrating from Webpack 4. Triggers: webpack, webpack.config, webpack-dev-server, module federation, splitChunks, optimization.minimize, HMR webpack, babel-loader, ts-loader, css-loader, MiniCssExtractPlugin, asset modules.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
       "id": "xlsx-processor",
       "name": "xlsx-processor",
       "description": "Analyze, filter, process, and generate Excel and CSV documents. Focuses on data processing speed, memory efficiency, and complex formula injections.",
@@ -1277,6 +1693,22 @@
       "id": "zig-pro",
       "name": "Zig Pro",
       "description": "Modern systems programming, manual memory management, compilation efficiency, and safe low-level design.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "zod-validation",
+      "name": "zod-validation",
+      "description": "Zod TypeScript-first schema validation library. Use this skill when defining input validation, parsing untrusted data (API requests, form inputs, env vars, third-party JSON), generating static types from runtime schemas via z.infer, building discriminated unions, or integrating validation with react-hook-form. Triggers on z.object, z.infer, safeParse, schema.parse, .refine, .transform, ZodError, or any TypeScript validation/parsing task.",
+      "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
+      "type": "skill",
+      "source": "local"
+    },
+    {
+      "id": "zustand-state",
+      "name": "zustand-state",
+      "description": "Zustand minimal client-state store for React. Use this skill when building a small-to-medium global store without Redux boilerplate, with create(), selector-based subscriptions, slices pattern, persist middleware (localStorage), immer middleware, devtools, subscribeWithSelector, or vanilla (non-React) stores. Triggers on zustand, create((set, get) =>), useStore, persist, immer middleware, slice pattern, or any lightweight global-state task.",
       "repository": "https://github.com/AI-Safeter/antigravity-plugin-manager",
       "type": "skill",
       "source": "local"
@@ -2819,6 +3251,258 @@
       "type": "skill",
       "source": "claude-skills-official",
       "relativeSkillDir": "template"
+    },
+    {
+      "id": "claude-plugins-official--external_plugins--discord--skills--access",
+      "name": "access",
+      "description": "Manage Discord channel access — approve pairings, edit allowlists, set DM/group policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy for the Discord channel.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "external_plugins/discord/skills/access"
+    },
+    {
+      "id": "claude-plugins-official--external_plugins--discord--skills--configure",
+      "name": "configure",
+      "description": "Set up the Discord channel — save the bot token and review access policy. Use when the user pastes a Discord bot token, asks to configure Discord, asks \"how do I set this up\" or \"who can reach me,\" or wants to check channel status.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "external_plugins/discord/skills/configure"
+    },
+    {
+      "id": "claude-plugins-official--external_plugins--imessage--skills--access",
+      "name": "access",
+      "description": "Manage iMessage channel access — approve pairings, edit allowlists, set DM/group policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy for the iMessage channel.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "external_plugins/imessage/skills/access"
+    },
+    {
+      "id": "claude-plugins-official--external_plugins--imessage--skills--configure",
+      "name": "configure",
+      "description": "Check iMessage channel setup and review access policy. Use when the user asks to configure iMessage, asks \"how do I set this up\" or \"who can reach me,\" or wants to know why texts aren't reaching the assistant.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "external_plugins/imessage/skills/configure"
+    },
+    {
+      "id": "claude-plugins-official--external_plugins--telegram--skills--access",
+      "name": "access",
+      "description": "Manage Telegram channel access — approve pairings, edit allowlists, set DM/group policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy for the Telegram channel.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "external_plugins/telegram/skills/access"
+    },
+    {
+      "id": "claude-plugins-official--external_plugins--telegram--skills--configure",
+      "name": "configure",
+      "description": "Set up the Telegram channel — save the bot token and review access policy. Use when the user pastes a Telegram bot token, asks to configure Telegram, asks \"how do I set this up\" or \"who can reach me,\" or wants to check channel status.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "external_plugins/telegram/skills/configure"
+    },
+    {
+      "id": "claude-plugins-official--plugins--claude-code-setup--skills--claude-automation-recommender",
+      "name": "claude-automation-recommender",
+      "description": "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/claude-code-setup/skills/claude-automation-recommender"
+    },
+    {
+      "id": "claude-plugins-official--plugins--claude-md-management--skills--claude-md-improver",
+      "name": "claude-md-improver",
+      "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintenance\" or \"project memory optimization\".",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/claude-md-management/skills/claude-md-improver"
+    },
+    {
+      "id": "claude-plugins-official--plugins--cwc-makers--skills--cardputer-buddy",
+      "name": "cardputer-buddy",
+      "description": "Iterate on the Cardputer-Adv MicroPython app bundle (Claude Buddy, Snake, Hello) after the device is already provisioned via m5-onboard. Use when the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command. Trigger on \"add an app\", \"push to the cardputer\", \"tail the device\", \"run on the device\", or follow-up work after /maker-setup.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/cwc-makers/skills/cardputer-buddy"
+    },
+    {
+      "id": "claude-plugins-official--plugins--cwc-makers--skills--m5-onboard",
+      "name": "m5-onboard",
+      "description": "End-to-end onboarding for a freshly-plugged-in M5Stack ESP32 device (Cardputer, Cardputer-Adv, Core, CoreS3, Stick) — detect on USB, flash UIFlow 2.0 firmware, and install the Claude Buddy MicroPython app bundle. Use whenever the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 board, or says \"m5-onboard go\".",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/cwc-makers/skills/m5-onboard"
+    },
+    {
+      "id": "claude-plugins-official--plugins--example-plugin--skills--example-command",
+      "name": "example-command",
+      "description": "An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md layout",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/example-plugin/skills/example-command"
+    },
+    {
+      "id": "claude-plugins-official--plugins--example-plugin--skills--example-skill",
+      "name": "example-skill",
+      "description": "This skill should be used when the user asks to \"demonstrate skills\", \"show skill format\", \"create a skill template\", or discusses skill development patterns. Provides a reference template for creating Claude Code plugin skills.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/example-plugin/skills/example-skill"
+    },
+    {
+      "id": "claude-plugins-official--plugins--frontend-design--skills--frontend-design",
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/frontend-design/skills/frontend-design"
+    },
+    {
+      "id": "claude-plugins-official--plugins--hookify--skills--writing-rules",
+      "name": "writing-hookify-rules",
+      "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/hookify/skills/writing-rules"
+    },
+    {
+      "id": "claude-plugins-official--plugins--math-olympiad--skills--math-olympiad",
+      "name": "math-olympiad",
+      "description": "Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify this competition proof', 'find a counterexample', 'is this proof correct', or for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition math' in it. Uses pure reasoning (no tools) — then a fresh-context adversarial verifier attacks the proof using specific failure patterns, not generic 'check logic'. Outputs calibrated confidence — will say 'no confident solution' rather than bluff. If LaTeX is available, produces a clean PDF after verification passes.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/math-olympiad/skills/math-olympiad"
+    },
+    {
+      "id": "claude-plugins-official--plugins--mcp-server-dev--skills--build-mcp-app",
+      "name": "build-mcp-app",
+      "description": "This skill should be used when the user wants to build an \"MCP app\", add \"interactive UI\" or \"widgets\" to an MCP server, \"render components in chat\", build \"MCP UI resources\", make a tool that shows a \"form\", \"picker\", \"dashboard\" or \"confirmation dialog\" inline in the conversation, or mentions \"apps SDK\" in the context of MCP. Use AFTER the build-mcp-server skill has settled the deployment model, or when the user already knows they want UI widgets.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/mcp-server-dev/skills/build-mcp-app"
+    },
+    {
+      "id": "claude-plugins-official--plugins--mcp-server-dev--skills--build-mcp-server",
+      "name": "build-mcp-server",
+      "description": "This skill should be used when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP integration\", \"wrap an API for Claude\", \"expose tools to Claude\", \"make an MCP app\", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development — it interrogates the user about their use case, determines the right deployment model (remote HTTP, MCPB, local stdio), picks a tool-design pattern, and hands off to specialized skills.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/mcp-server-dev/skills/build-mcp-server"
+    },
+    {
+      "id": "claude-plugins-official--plugins--mcp-server-dev--skills--build-mcpb",
+      "name": "build-mcpb",
+      "description": "This skill should be used when the user wants to \"package an MCP server\", \"bundle an MCP\", \"make an MCPB\", \"ship a local MCP server\", \"distribute a local MCP\", discusses \".mcpb files\", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set up.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/mcp-server-dev/skills/build-mcpb"
+    },
+    {
+      "id": "claude-plugins-official--plugins--playground--skills--playground",
+      "name": "playground",
+      "description": "Creates interactive HTML playgrounds — self-contained single-file explorers that let users configure something visually through controls, see a live preview, and copy out a prompt. Use when the user asks to make a playground, explorer, or interactive tool for a topic.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/playground/skills/playground"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--agent-development",
+      "name": "agent-development",
+      "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/agent-development"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--command-development",
+      "name": "command-development",
+      "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/command-development"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--hook-development",
+      "name": "hook-development",
+      "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/hook-development"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--mcp-integration",
+      "name": "mcp-integration",
+      "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/mcp-integration"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--plugin-settings",
+      "name": "plugin-settings",
+      "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/plugin-settings"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--plugin-structure",
+      "name": "plugin-structure",
+      "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/plugin-structure"
+    },
+    {
+      "id": "claude-plugins-official--plugins--plugin-dev--skills--skill-development",
+      "name": "skill-development",
+      "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/plugin-dev/skills/skill-development"
+    },
+    {
+      "id": "claude-plugins-official--plugins--session-report--skills--session-report",
+      "name": "session-report",
+      "description": "Generate an explorable HTML report of Claude Code session usage (tokens, cache, subagents, skills, expensive prompts) from ~/.claude/projects transcripts.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/session-report/skills/session-report"
+    },
+    {
+      "id": "claude-plugins-official--plugins--skill-creator--skills--skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "type": "skill",
+      "source": "claude-plugins-official",
+      "relativeSkillDir": "plugins/skill-creator/skills/skill-creator"
     }
   ]
 }
