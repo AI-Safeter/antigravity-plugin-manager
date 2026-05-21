@@ -1,4 +1,4 @@
-<h1 align="center">antigravity-cli Plugin Manager (`ag-plugin`)</h1>
+<h1 align="center">antigravity-cli Plugin Manager (ag-plugin)</h1>
 
 <p align="center">
   <b>Install and manage custom skills for your AI agent.</b>
